@@ -18,7 +18,11 @@
   --display:@@T_DISPLAYFONT@@; --ui:@@T_UIFONT@@;
 }
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--text);font-family:var(--ui);font-weight:400;
+body{margin:0;color:var(--text);font-family:var(--ui);font-weight:400;
+  background:var(--bg);
+  background-image:radial-gradient(1100px 620px at 50% -8%, #171533 0%, rgba(23,21,51,0) 62%),
+                   radial-gradient(900px 700px at 92% 108%, #120F2A 0%, rgba(18,15,42,0) 64%);
+  background-attachment:fixed;background-repeat:no-repeat;
   -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
@@ -26,19 +30,22 @@ a{color:inherit;text-decoration:none}
 :where(a,button,input):focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:6px}
 .page{max-width:var(--col);margin:0 auto;background:var(--surface);box-shadow:var(--shadow);
   min-height:100vh;min-height:100svh;position:relative;overflow-x:clip}
+@media (min-width:740px){
+  .page{border-left:1px solid var(--edge-soft);border-right:1px solid var(--edge-soft)}
+}
 
 /* ---------------- hero ---------------- */
 .hero{position:relative;overflow:hidden;background-color:#07061A}
 /* photo + veil are one background stack on a single layer -> nothing can cover the copy */
-.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.62;
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;
   filter:saturate(.62) contrast(1.1);transform:scale(1.08);
   animation:heroZoom 2.6s cubic-bezier(.16,.7,.3,1) forwards}
 .hero-veil{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(7,6,26,.52) 0%,rgba(7,6,26,.72) 46%,rgba(7,6,26,.97) 100%)}
-.hero{min-height:clamp(430px,72svh,620px);display:flex;flex-direction:column;justify-content:center}
+  background:linear-gradient(180deg,rgba(7,6,26,.34) 0%,rgba(7,6,26,.58) 44%,rgba(7,6,26,.95) 100%)}
+.hero{min-height:clamp(390px,60svh,520px);display:flex;flex-direction:column;justify-content:center}
 .hero-in{position:relative;text-align:center;color:#F6F1E5;
-  padding:clamp(38px,9vw,72px) var(--pad) clamp(30px,6vw,48px)}
-.hero-in>*{animation:riseIn .9s cubic-bezier(.16,.8,.3,1) backwards}
+  padding:clamp(30px,7vw,54px) var(--pad) clamp(26px,5vw,40px)}
+.js .hero-in>*{animation:riseIn .9s cubic-bezier(.16,.8,.3,1) backwards}
 .eyebrow{margin:0 0 clamp(16px,4vw,26px);font-size:10px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--brass);animation-delay:.05s}
 .hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);animation-delay:.15s}
@@ -52,8 +59,8 @@ a{color:inherit;text-decoration:none}
 .hero-rule i{width:5px;height:5px;background:var(--brass);transform:rotate(45deg);flex:none}
 .band{display:grid;grid-template-columns:repeat(3,1fr);max-width:430px;margin:0 auto;animation-delay:.44s}
 .band>div{padding:0 8px;display:flex;flex-direction:column;gap:4px;position:relative}
-.band>div+div::before{content:"";position:absolute;left:0;top:12%;height:76%;width:1px;
-  background:var(--edge)}
+.band>div+div::before{content:"";position:absolute;left:0;top:10%;height:80%;width:1px;
+  background:rgba(242,234,219,.22)}
 .band b{font-size:14px;font-weight:500;letter-spacing:.02em;display:inline-flex;align-items:center;
   justify-content:center;gap:6px;white-space:nowrap}
 .band span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--dim)}
@@ -75,6 +82,10 @@ a{color:inherit;text-decoration:none}
 /* ---------------- strips & actions ---------------- */
 .strip{height:20px;background-image:url(@@PATTERN@@);background-repeat:repeat-x;background-size:auto 100%;
   background-position:center;opacity:.4;filter:var(--art)}
+.vegnote{display:flex;align-items:center;justify-content:center;gap:9px;margin:0;
+  padding:13px var(--pad);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dim);border-bottom:1px solid var(--edge-soft)}
+.vegnote .veg{width:12px;height:12px}
 .acts{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--edge);
   border-bottom:1px solid var(--edge)}
 .act{background:var(--surface);display:flex;flex-direction:column;align-items:center;gap:8px;
@@ -296,6 +307,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 }
 </style>
 
+<script>document.documentElement.className+=" js";</script>
 <div class="page">
   <header class="hero">
     <img class="hero-bg" src="@@HERO@@" alt="" aria-hidden="true" fetchpriority="high">
@@ -308,7 +320,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
       <div class="band">
         <div><b>@@ISTAR@@@@RATING@@</b><span>@@RATINGCOUNT@@ reviews</span></div>
         <div><b><i class="dot" id="dot"></i><span id="status">Open</span></b><span id="statussub">till late</span></div>
-        <div><b>@@PRICEBAND@@</b><span>for one</span></div>
+        <div><b>@@PRICEBAND@@</b><span>per person</span></div>
       </div>
       <p class="hero-blurb">@@BLURB@@</p>
     </div>
@@ -316,6 +328,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
   </header>
 
   <div class="strip" aria-hidden="true"></div>
+  @@VEGNOTE@@
   <nav class="acts">@@ACTIONS@@</nav>
 
   <div class="bar" id="bar">
@@ -432,7 +445,6 @@ try{
   var reveals=[].slice.call(document.querySelectorAll(".reveal"));
   function showAll(){reveals.forEach(function(el){el.classList.add("in");});}
   if(window.IntersectionObserver){
-    document.documentElement.classList.add("js");
     var ro=new IntersectionObserver(function(es){
       es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add("in"); ro.unobserve(en.target);} });
     },{rootMargin:"0px 0px -8% 0px",threshold:.04});

@@ -50,6 +50,9 @@ def build(cafe_id):
     full_addr = ", ".join([addr["line1"], addr["line2"], addr["line3"],
                            addr["city"], addr["state"], addr["pin"]])
 
+    all_items = [i for sec in menu["sections"] for i in sec["items"]]
+    all_veg = all(i.get("veg") for i in all_items)
+
     # ---- picks (items flagged in the data, never invented here)
     picks = [(s, i) for s in menu["sections"] for i in s["items"] if i.get("tag")]
 
@@ -68,8 +71,9 @@ def build(cafe_id):
 
     # ---- sections
     def item_row(i):
-        veg = ('<span class="veg" title="Vegetarian" aria-label="Vegetarian">'
-               '<i></i></span>') if i.get("veg") else ""
+        veg = "" if all_veg else (
+            '<span class="veg" title="Vegetarian" aria-label="Vegetarian"><i></i></span>'
+            if i.get("veg") else "")
         tag = ('<span class="tag">%s</span>' % esc(i["tag"])) if i.get("tag") else ""
         note = ('<p class="note">%s</p>' % esc(i["note"])) if i.get("note") else ""
         search = esc((i["name"] + " " + i.get("note", "")).lower())
@@ -143,6 +147,8 @@ def build(cafe_id):
         "@@ADDONTITLE@@": esc(ad["title"]), "@@ADDONS@@": addon_groups,
         "@@SHOTS@@": shots, "@@ACTIONS@@": actions,
         "@@ITEMCOUNT@@": str(sum(len(s["items"]) for s in menu["sections"])),
+        "@@VEGNOTE@@": ('<p class="vegnote"><span class="veg"><i></i></span>'
+                        'Pure vegetarian kitchen</p>') if all_veg else "",
         "@@SECCOUNT@@": str(len(menu["sections"])),
         "@@CAPTURED@@": esc(cafe["source"]["capturedOn"]),
         "@@ISTAR@@": icon("star", "ico", "1.3"),
