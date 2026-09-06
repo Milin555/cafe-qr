@@ -91,19 +91,24 @@ a{color:inherit;text-decoration:none}
 .hero{min-height:clamp(390px,60svh,520px);display:flex;flex-direction:column;justify-content:center}
 .hero-in{position:relative;text-align:center;color:#F6F1E5;
   padding:clamp(30px,7vw,54px) var(--pad) clamp(26px,5vw,40px)}
-.js .hero-in>*{animation:riseIn .9s cubic-bezier(.16,.8,.3,1) backwards}
+.js .hero-in>*{opacity:0;transform:translateY(16px)}
+.js .hero-in.lit>*{opacity:1;transform:none;
+  transition:opacity .75s ease var(--d,0s),transform .75s cubic-bezier(.16,.8,.3,1) var(--d,0s)}
+.hero-in>*:nth-child(1){--d:.02s}.hero-in>*:nth-child(2){--d:.12s}
+.hero-in>*:nth-child(3){--d:.24s}.hero-in>*:nth-child(4){--d:.32s}
+.hero-in>*:nth-child(5){--d:.40s}.hero-in>*:nth-child(6){--d:.48s}
 .eyebrow{margin:0 0 clamp(16px,4vw,26px);font-size:10px;letter-spacing:.36em;text-transform:uppercase;
-  color:var(--brass-lt);animation-delay:.05s}
-.hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);animation-delay:.15s}
+  color:var(--brass-lt);animation}
+.hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);}
 .hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:italic;
-  font-size:clamp(18px,4.8vw,23px);letter-spacing:.02em;color:#D9CBAE;animation-delay:.28s}
+  font-size:clamp(18px,4.8vw,23px);letter-spacing:.02em;color:#D9CBAE}
 .hero-rule{display:flex;align-items:center;justify-content:center;gap:10px;
-  margin:clamp(18px,4vw,26px) auto;width:150px;animation-delay:.36s}
+  margin:clamp(18px,4vw,26px) auto;width:150px}
 .hero-rule::before,.hero-rule::after{content:"";height:1px;flex:1;
   background:linear-gradient(90deg,transparent,var(--brass-lt))}
 .hero-rule::after{background:linear-gradient(90deg,var(--brass-lt),transparent)}
 .hero-rule i{width:5px;height:5px;background:var(--brass-lt);transform:rotate(45deg);flex:none}
-.band{display:grid;grid-template-columns:repeat(3,1fr);max-width:430px;margin:0 auto;animation-delay:.44s}
+.band{display:grid;grid-template-columns:repeat(3,1fr);max-width:430px;margin:0 auto}
 .band>div{padding:0 8px;display:flex;flex-direction:column;gap:4px;position:relative}
 .band>div+div::before{content:"";position:absolute;left:0;top:10%;height:80%;width:1px;
   background:rgba(242,234,219,.22)}
@@ -115,13 +120,12 @@ a{color:inherit;text-decoration:none}
   box-shadow:0 0 0 3px rgba(99,211,152,.2);animation:pulse 2.6s ease-in-out infinite}
 .dot.shut{background:#E39273;box-shadow:0 0 0 3px rgba(227,146,115,.2);animation:none}
 .hero-blurb{max-width:42ch;margin:clamp(20px,4.5vw,28px) auto 0;font-size:13.5px;line-height:1.75;
-  color:rgba(240,234,224,.74);font-weight:300;animation-delay:.52s}
+  color:rgba(240,234,224,.74);font-weight:300}
 .cue{position:absolute;left:50%;bottom:14px;z-index:2;width:1px;height:26px;
   background:linear-gradient(180deg,transparent,var(--brass-lt));animation:cue 2.2s ease-in-out infinite}
 
 @keyframes heroZoom{to{transform:scale(1)}}
 @media (prefers-reduced-motion:reduce){.hero-bg{animation:none;transform:none}}
-@keyframes riseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(99,211,152,.2)}50%{box-shadow:0 0 0 6px rgba(99,211,152,0)}}
 @keyframes cue{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:.9;transform:translateY(5px)}}
 
@@ -332,7 +336,8 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 }
 @media (prefers-reduced-motion:reduce){
   .js .reveal,.js .reveal.in{opacity:1;transform:none;transition:none}
-  .hero-bg,.hero-in>*,.dot,.cue{animation:none!important}
+  .hero-bg,.dot,.cue{animation:none!important}
+  .js .hero-in>*{opacity:1;transform:none;transition:none}
   .hero-bg{transform:none}
   *{scroll-behavior:auto!important}
 }
@@ -500,6 +505,10 @@ try{
     reveals.forEach(function(el){ro.observe(el);});
     setTimeout(showAll,2500);
   } else { showAll(); }
+
+  var hin=document.querySelector(".hero-in");
+  if(hin){ requestAnimationFrame(function(){hin.classList.add("lit");});
+           setTimeout(function(){hin.classList.add("lit");}, 400); }
 
   var tbtn=document.getElementById("theme");
   if(tbtn) tbtn.onclick=function(){
