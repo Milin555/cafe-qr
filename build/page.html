@@ -21,22 +21,6 @@
 }
 
 /* ---- dark world: same design, night palette ---- */
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  color-scheme:dark;
-  --veg:#4FBF7A;
-  --bg:#07061A; --surface:#0B0A1E; --raised:#15142F; --sunk:#100F26;
-  --text:#F2EADB; --muted:#9A96BE; --dim:#6E6A93;
-  --edge:#242246; --edge-soft:#1B1A3A;
-  --brass:#C9A45C; --brass-lo:rgba(201,164,92,.30);
-  --footer:#050414;
-  --pill-bg:#C9A45C; --pill-tx:#0B0A1E;
-  --glow-a:#171533; --glow-a0:rgba(23,21,51,0);
-  --glow-b:#120F2A; --glow-b0:rgba(18,15,42,0);
-  --art:invert(1); --art-op:.06;
-  --shadow:0 1px 2px rgba(0,0,0,.6), 0 50px 90px -50px rgba(0,0,0,1);
-}}
-
-/* ---- dark world: same design, night palette ---- */
 :root[data-theme="dark"]{
   color-scheme:dark;
   --veg:#4FBF7A;
@@ -54,14 +38,8 @@
 
 /* toggle shows the world you would switch TO */
 .i-sun{display:none}.i-moon{display:block}
-@media (prefers-color-scheme:dark){
-  :root:not([data-theme="light"]) .i-sun{display:block}
-  :root:not([data-theme="light"]) .i-moon{display:none}
-}
 :root[data-theme="dark"] .i-sun{display:block}
 :root[data-theme="dark"] .i-moon{display:none}
-:root[data-theme="light"] .i-sun{display:none}
-:root[data-theme="light"] .i-moon{display:block}
 .ibtn .ico{pointer-events:none}
 *{box-sizing:border-box}
 body{margin:0;color:var(--text);font-family:var(--ui);font-weight:400;
@@ -513,8 +491,7 @@ try{
   var tbtn=document.getElementById("theme");
   if(tbtn) tbtn.onclick=function(){
     var el=document.documentElement, cur=el.getAttribute("data-theme");
-    var dark = cur ? cur==="dark"
-                   : (window.matchMedia && matchMedia("(prefers-color-scheme:dark)").matches);
+    var dark = cur === "dark";
     var next = dark ? "light" : "dark";
     el.setAttribute("data-theme", next);
     try{ localStorage.setItem("sorriso-theme", next); }catch(x){}
