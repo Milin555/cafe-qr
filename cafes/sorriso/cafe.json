@@ -1,0 +1,95 @@
+{
+  "id": "sorriso",
+  "name": "Sorriso",
+  "legalName": "Sorriso Cafe",
+  "tagline": "Let the smiles brew",
+  "blurb": "Sorriso is Italian for smile. Specialty coffee, Neapolitan pizza, hummus plates and cheesecakes in Nana Varachha — from the first pour at 7:30am to the last cup past midnight.",
+  "meta": {
+    "cuisines": [
+      "Specialty Coffee",
+      "Continental",
+      "Italian"
+    ],
+    "priceForTwo": 500,
+    "priceBand": "₹200–400 per person",
+    "rating": 4.5,
+    "ratingCount": 234,
+    "ratingSource": "Google reviews"
+  },
+  "hours": {
+    "open": "07:30",
+    "close": "00:30",
+    "label": "7:30 AM – 12:30 Midnight",
+    "days": "Open all days"
+  },
+  "contact": {
+    "phone": "+918980152424",
+    "phoneDisplay": "089801 52424",
+    "whatsapp": "https://wa.me/6353473848?text=Hi%20Sorriso%2C%20I%27d%20like%20to%20book%20a%20table",
+    "instagram": "https://www.instagram.com/sorrisosurat",
+    "instagramHandle": "@sorrisosurat",
+    "googleReview": "https://g.page/r/CQxicl6H7V2_EBM/review",
+    "directions": "https://www.google.com/maps/place/Sorriso+Cafe/@21.2291179,72.8993255,17z"
+  },
+  "address": {
+    "line1": "307, Millennium Business Hub",
+    "line2": "Bhagavan Nagar, Sarthana Jakat Naka",
+    "line3": "Sarthi Society, Nana Varachha",
+    "city": "Surat",
+    "state": "Gujarat",
+    "pin": "395013"
+  },
+  "theme": {
+    "ink": "#2E2E65",
+    "inkDeep": "#1C1B45",
+    "inkSoft": "#6B6B96",
+    "cream": "#FBF8F2",
+    "creamDeep": "#F2EDE3",
+    "line": "#E2DACB",
+    "gold": "#B08D57",
+    "veg": "#1F7A3D",
+    "displayFont": "'Cormorant Garamond', Georgia, serif",
+    "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "radius": "18px"
+  },
+  "assets": {
+    "logo": "logo.png",
+    "pattern": "pattern.png",
+    "artCup": "art-cup.png",
+    "artShake": "art-shake.png",
+    "hero": "hero.jpg",
+    "gallery": [
+      "shot-counter.jpg",
+      "shot-rooftop.jpg",
+      "shot-wall.jpg",
+      "shot-entrance.jpg"
+    ]
+  },
+  "galleryCaptions": [
+    "The bar",
+    "Rooftop",
+    "The wall",
+    "Entrance"
+  ],
+  "source": {
+    "primary": "In-store menu card, photographed and published on the cafe's Google listing (4 pages).",
+    "googleListing": "https://www.google.com/maps/place/Sorriso+Cafe",
+    "archivedPdf": "https://drive.google.com/file/d/1dhoapy6H8t4i32xDWxLulUhXpHD1mfyj/view",
+    "capturedOn": "2026-09-07",
+    "priceVerification": "Read from the four in-store menu photos on Google at 1600px, with uncertain prices re-cropped and re-read at 2.2x. The older Linktree PDF was transcribed separately and cross-checked against Zomato's copy (90/90 match) - it is kept as the archive, and the differences are listed below.",
+    "openQuestions": [
+      "THEIR LINKTREE PDF IS OUT OF DATE. The in-store card is a newer edition: it adds Signature Mocktail, Hummus Special and Salads, adds Godfather, Ferrero Rocher Cheesecake, Organic Farm Pizza, Triple Thread Nachos, Arrabbiata, Grilled Veggie Bagel, Avocado Dilight Focaccia and Strawberry/Blueberry Shakes, and drops Kheema Pizza, Farm House, Mexican Quesadilla, Burrito Bowl, Edamame & Mushroom, Paneer Salad Panini, Piri Piri Paneer Open Toast, Fig & Honey and Pineapple Cheesecake, Roasted Almond Hot Chocolate, Pasta Al Pesto, Creamy Bolognese and Modern Indian (Hummus Papdi Chaat, Soya Bhurji). Confirm the card is current before publishing.",
+      "Repricing to confirm: Espresso 140 to 120, Cafe Mocha 240 to 260, Espresso Tonic 220 to 240, frappes 280/300 to 300/320, shakes 280 to 300, mocktails 300/320 down to 250/270, Pesto Veggie Sandwich 295 to 385, Strawberry Cheesecake 320 to 350, Herbs Rice 345 to 375.",
+      "Hours: Google says 7:30 AM-12:30 AM daily; the older printed menu said 10:30 AM. Page shows 7:30 AM.",
+      "PIN: Google 395013 vs printed menu 395006. Page shows 395013.",
+      "Phone: Google lists 089801 52424; Linktree WhatsApp for reservations is 6353473848. Page uses both.",
+      "The new card has no non-vegetarian item (Kheema Pizza is gone), so every item is marked veg. Confirm.",
+      "Menu prints 'Heven Hummus', 'Avocado Dilight Focaccia', 'Tanisia Salad', 'Barry Gingar Twist', 'Citras Bloom' - kept exactly as printed rather than corrected."
+    ]
+  },
+  "geo": {
+    "lat": 21.2291179,
+    "lng": 72.8993255,
+    "plusCode": "6VHX+JP Surat, Gujarat"
+  }
+}

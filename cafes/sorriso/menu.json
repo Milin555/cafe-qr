@@ -1,0 +1,740 @@
+{
+  "currency": "₹",
+  "sections": [
+    {
+      "id": "hot-beverages",
+      "name": "Hot Beverages",
+      "kicker": "Espresso bar",
+      "items": [
+        {
+          "name": "Espresso",
+          "price": 120,
+          "icon": "espresso",
+          "note": "40 ml",
+          "veg": true
+        },
+        {
+          "name": "Americano",
+          "price": 140,
+          "icon": "espresso",
+          "veg": true
+        },
+        {
+          "name": "Flat White",
+          "price": 220,
+          "icon": "cup",
+          "veg": true
+        },
+        {
+          "name": "Cortado",
+          "price": 220,
+          "icon": "cortado",
+          "veg": true
+        },
+        {
+          "name": "Cappuccino",
+          "price": 220,
+          "icon": "cup",
+          "veg": true
+        },
+        {
+          "name": "Cafè Latte",
+          "price": 220,
+          "icon": "latte",
+          "veg": true
+        },
+        {
+          "name": "Cafe Mocha",
+          "price": 260,
+          "icon": "mocha",
+          "veg": true
+        },
+        {
+          "name": "Hot Chocolate",
+          "price": 280,
+          "icon": "hotchoc",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "iced-beverages",
+      "name": "Iced Beverages",
+      "kicker": "Over ice",
+      "items": [
+        {
+          "name": "Iced Espresso",
+          "price": 150,
+          "icon": "icedglass",
+          "veg": true
+        },
+        {
+          "name": "Iced Americano",
+          "price": 160,
+          "icon": "icedglass",
+          "veg": true
+        },
+        {
+          "name": "Iced Latte",
+          "price": 220,
+          "icon": "icedlatte",
+          "veg": true
+        },
+        {
+          "name": "Espresso Tonic",
+          "price": 240,
+          "icon": "tonic",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Espresso Red Bull",
+          "price": 300,
+          "icon": "can",
+          "veg": true
+        },
+        {
+          "name": "Godfather",
+          "price": 320,
+          "icon": "bombon",
+          "veg": true
+        },
+        {
+          "name": "Cold Brew",
+          "price": 220,
+          "icon": "coldbrew",
+          "veg": true
+        },
+        {
+          "name": "Barrel Aged Cold Brew",
+          "price": 270,
+          "icon": "barrel",
+          "veg": true
+        },
+        {
+          "name": "Cold Brew Tonic",
+          "price": 260,
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Barrel Aged Cold Brew Tonic",
+          "price": 270,
+          "icon": "barrel",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Iced BomBon",
+          "price": 220,
+          "icon": "bombon",
+          "veg": true
+        },
+        {
+          "name": "Vietnamese",
+          "price": 240,
+          "icon": "bombon",
+          "veg": true
+        },
+        {
+          "name": "Affogato",
+          "price": 240,
+          "icon": "affogato",
+          "veg": true
+        },
+        {
+          "name": "Tonic",
+          "price": 160,
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Red Bull",
+          "price": 200,
+          "icon": "can",
+          "veg": true
+        },
+        {
+          "name": "Ginger Ale",
+          "price": 180,
+          "icon": "ginger",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "frappe",
+      "name": "Frappe",
+      "kicker": "Blended",
+      "items": [
+        {
+          "name": "Nostalgia Cold Coffee",
+          "price": 300,
+          "icon": "frappe",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Frappe",
+          "price": 320,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Mocha Frappe",
+          "price": 320,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Nutella Frappe",
+          "price": 320,
+          "icon": "frappe",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Shakes",
+      "kicker": "Thick pours",
+      "items": [
+        {
+          "name": "Nutella Shake",
+          "price": 300,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Shake",
+          "price": 300,
+          "icon": "shake",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Brownie Shake",
+          "price": 300,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Oreo Shake",
+          "price": 300,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Alphonso Mango",
+          "price": 320,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Shake",
+          "price": 320,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Blueberry Shake",
+          "price": 320,
+          "icon": "shake",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails",
+      "kicker": "Shaken, no alcohol",
+      "items": [
+        {
+          "name": "Mint Mojito",
+          "price": 250,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Cranberry Passionfruit Splash",
+          "price": 270,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Sunset Bliss",
+          "price": 270,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Litchi Lover",
+          "price": 270,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Orange Mojito",
+          "price": 250,
+          "icon": "mocktail",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "signature-mocktail",
+      "name": "Signature Mocktail",
+      "kicker": "The bar's own",
+      "items": [
+        {
+          "name": "Cranberry Kaffira",
+          "price": 260,
+          "icon": "mocktail",
+          "note": "Coffee",
+          "veg": true
+        },
+        {
+          "name": "Twilight Jamun",
+          "price": 280,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Tropical Heatwave",
+          "price": 300,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Citras Bloom Cold Brew",
+          "price": 300,
+          "icon": "coldbrew",
+          "note": "Coffee",
+          "veg": true
+        },
+        {
+          "name": "Barry Gingar Twist",
+          "price": 300,
+          "icon": "ginger",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "non-coffee",
+      "name": "Non Coffee",
+      "kicker": "Iced teas",
+      "items": [
+        {
+          "name": "Lemon Iced Tea",
+          "price": 240,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Peach Iced Tea",
+          "price": 240,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Passion Fruit Iced Tea",
+          "price": 240,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Kaffir Lime Yuzu Iced Tea",
+          "price": 240,
+          "icon": "icedtea",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "manual-brewing",
+      "name": "Manual Brewing",
+      "kicker": "Brewed to order",
+      "items": [
+        {
+          "name": "V60 PourOver",
+          "price": 180,
+          "icon": "v60",
+          "note": "Hot / Iced",
+          "veg": true
+        },
+        {
+          "name": "Aeropress",
+          "price": 180,
+          "icon": "aeropress",
+          "note": "Hot / Iced",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "appetizers",
+      "name": "Appetizers",
+      "kicker": "To start",
+      "items": [
+        {
+          "name": "Cheese Garlic Bread",
+          "price": 345,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Cheese Chilli Garlic Bread",
+          "price": 365,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Sundried Tomato Garlic Bread",
+          "price": 375,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "French Fries",
+          "price": 215,
+          "icon": "fries",
+          "note": "Salted · Piri-Piri · Indian Chaat Masala · Cajun Spice",
+          "veg": true
+        },
+        {
+          "name": "Potato Wedges",
+          "price": 300,
+          "icon": "wedges",
+          "note": "Salted · Piri-Piri · Indian Chaat Masala · Cajun Spice",
+          "veg": true
+        },
+        {
+          "name": "Triple Thread Nachos",
+          "price": 385,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Loaded Nachos",
+          "price": 345,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Avocado Collegian Bhel",
+          "price": 315,
+          "icon": "bhel",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sandwich",
+      "name": "Sandwich / Open Toast",
+      "kicker": "Pressed & open-faced",
+      "items": [
+        {
+          "name": "Pesto Veggie Sandwich",
+          "price": 385,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Paneer Makhani Sandwich",
+          "price": 345,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Avocado Open Toast",
+          "price": 365,
+          "icon": "toast",
+          "veg": true
+        },
+        {
+          "name": "Shrooms & Pepper Sandwich",
+          "price": 325,
+          "icon": "mushroom",
+          "veg": true
+        },
+        {
+          "name": "Grilled Veggie Bagel",
+          "price": 280,
+          "icon": "bagel",
+          "veg": true
+        },
+        {
+          "name": "Avocado Dilight Focaccia",
+          "price": 330,
+          "icon": "toast",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "hummus-special",
+      "name": "Hummus Special",
+      "kicker": "Mezze plates",
+      "items": [
+        {
+          "name": "Okra Chips with Hummus",
+          "price": 320,
+          "icon": "hummus",
+          "veg": true
+        },
+        {
+          "name": "Loaded Hummus",
+          "price": 345,
+          "icon": "hummus",
+          "veg": true
+        },
+        {
+          "name": "Heven Hummus",
+          "price": 350,
+          "icon": "hummus",
+          "veg": true
+        },
+        {
+          "name": "Cucumber Twist Hummus",
+          "price": 320,
+          "icon": "hummus",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Salads",
+      "kicker": "Fresh bowls",
+      "items": [
+        {
+          "name": "Green With Avocado Salad",
+          "price": 330,
+          "icon": "salad",
+          "veg": true
+        },
+        {
+          "name": "Tanisia Salad",
+          "price": 355,
+          "icon": "salad",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Neapolitan Pizza",
+      "kicker": "Hand-stretched, high heat",
+      "items": [
+        {
+          "name": "Margherita",
+          "price": 455,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "Four Cheese Pizza",
+          "price": 495,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "Paneer Makhni Pizza",
+          "price": 595,
+          "icon": "pizzaslice",
+          "veg": true
+        },
+        {
+          "name": "Pesto Veggies Pizza",
+          "price": 555,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "Piri Piri Paneer Pizza",
+          "price": 575,
+          "icon": "pizzaslice",
+          "veg": true
+        },
+        {
+          "name": "Organic Farm Pizza",
+          "price": 565,
+          "icon": "pizza",
+          "note": "Thin crust",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta Bowls",
+      "kicker": "Choice of penne or spaghetti",
+      "items": [
+        {
+          "name": "Traditional Aglio Olio",
+          "price": 375,
+          "icon": "spaghetti",
+          "veg": true
+        },
+        {
+          "name": "Modern Indian Aglio Olio",
+          "price": 375,
+          "icon": "spaghetti",
+          "veg": true
+        },
+        {
+          "name": "Creamy Pesto",
+          "price": 375,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Arrabbiata Pasta",
+          "price": 365,
+          "icon": "pasta",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Alfredo",
+          "price": 365,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Pink Sauce",
+          "price": 375,
+          "icon": "pasta",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "rice-bowls",
+      "name": "Rice Bowls",
+      "kicker": "One-bowl meals",
+      "items": [
+        {
+          "name": "Burnt Garlic Rice",
+          "price": 375,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Cilantro Rice",
+          "price": 345,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Rice",
+          "price": 375,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Herbs Rice With Queso Sauce",
+          "price": 375,
+          "icon": "ricebowl",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Desserts",
+      "kicker": "Cheesecake counter",
+      "items": [
+        {
+          "name": "Biscoff Cheesecake",
+          "price": 280,
+          "icon": "cheesecake",
+          "tag": "Guest favourite",
+          "veg": true
+        },
+        {
+          "name": "Nutella Cheesecake",
+          "price": 280,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Blueberry Cheesecake",
+          "price": 320,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Ferrero Rocher Cheesecake",
+          "price": 380,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Cheesecake",
+          "price": 350,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "New York Style Cheesecake",
+          "price": 200,
+          "icon": "cheesecake",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "brownies",
+      "name": "Brownies",
+      "kicker": "Warm, if you ask",
+      "items": [
+        {
+          "name": "Biscoff Brownie",
+          "price": 320,
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Nutella Brownie",
+          "price": 320,
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Biscoff with Caramel Brownie",
+          "price": 320,
+          "icon": "brownie",
+          "veg": true
+        }
+      ]
+    }
+  ],
+  "addons": {
+    "title": "Add On",
+    "groups": [
+      {
+        "label": "Extra Flavours",
+        "price": 40,
+        "icon": "droplet",
+        "options": [
+          "Vanilla",
+          "Hazelnut",
+          "Caramel",
+          "Spanish",
+          "Mocha"
+        ]
+      },
+      {
+        "label": "Milk",
+        "price": 70,
+        "icon": "milk",
+        "options": [
+          "Almond Milk",
+          "Coconut Milk"
+        ]
+      }
+    ]
+  }
+}
