@@ -45,12 +45,11 @@ a{color:inherit;text-decoration:none}
 /* ---------------- hero ---------------- */
 .hero{position:relative;overflow:hidden;background-color:#08071A}
 /* photo + veil are one background stack on a single layer -> nothing can cover the copy */
-.hero::before{content:"";position:absolute;inset:-4% -4% -4% -4%;
-  background-image:linear-gradient(180deg,rgba(8,7,26,.34) 0%,rgba(8,7,26,.55) 46%,rgba(8,7,26,.9) 100%),
-    url(assets/hero.jpg);
-  background-size:cover,cover;background-position:center,center;background-repeat:no-repeat,no-repeat;
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
   filter:saturate(.8) contrast(1.06);transform:scale(1.08);
   animation:heroZoom 2.6s cubic-bezier(.16,.7,.3,1) forwards}
+.hero-veil{position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(8,7,26,.32) 0%,rgba(8,7,26,.54) 46%,rgba(8,7,26,.9) 100%)}
 .hero{min-height:clamp(430px,72svh,620px);display:flex;flex-direction:column;justify-content:center}
 .hero-in{position:relative;text-align:center;color:#F6F1E5;
   padding:clamp(38px,9vw,72px) var(--pad) clamp(30px,6vw,48px)}
@@ -79,7 +78,7 @@ a{color:inherit;text-decoration:none}
   background:linear-gradient(180deg,transparent,rgba(233,207,154,.6));animation:cue 2.2s ease-in-out infinite}
 
 @keyframes heroZoom{to{transform:scale(1)}}
-@media (prefers-reduced-motion:reduce){.hero::before{animation:none;transform:none}}
+@media (prefers-reduced-motion:reduce){.hero-bg{animation:none;transform:none}}
 @keyframes riseIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes pulse{0%,100%{box-shadow:0 0 0 3px rgba(99,211,152,.2)}50%{box-shadow:0 0 0 6px rgba(99,211,152,0)}}
 @keyframes cue{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:.9;transform:translateY(5px)}}
@@ -237,8 +236,8 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 .fab.on{opacity:1;pointer-events:auto;transform:none}
 .fab .ico{width:19px;height:19px}
 
-.reveal{opacity:0;transform:translateY(18px)}
-.reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.3,1)}
+.js .reveal{opacity:0;transform:translateY(18px)}
+.js .reveal.in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.16,.8,.3,1)}
 
 /* ---------------- responsive ladder ---------------- */
 @media (max-width:379px){
@@ -285,15 +284,15 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
   .pill{padding:9px 15px}
 }
 @media (prefers-reduced-motion:reduce){
-  .reveal,.reveal.in{opacity:1;transform:none;transition:none}
-  .hero::before,.hero-in>*,.dot,.cue{animation:none!important}
-  .hero::before{transform:none}
+  .js .reveal,.js .reveal.in{opacity:1;transform:none;transition:none}
+  .hero-bg,.hero-in>*,.dot,.cue{animation:none!important}
+  .hero-bg{transform:none}
   *{scroll-behavior:auto!important}
 }
 @media print{
   body{background:#fff}
   .bar,.acts,.fab,.gal-wrap,.rail-wrap,.strip,.empty,.cue,.f-strip{display:none!important}
-  .hero::before{display:none}
+  .hero-bg,.hero-veil{display:none}
   .page{box-shadow:none;max-width:none}
   .hero,.hero::after{background:none}
   .hero::after{display:none}
@@ -310,6 +309,8 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 
 <div class="page">
   <header class="hero">
+    <img class="hero-bg" src="assets/hero.jpg" alt="" aria-hidden="true" fetchpriority="high">
+    <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-in">
       <p class="eyebrow">Specialty coffee · Nana Varachha</p>
       <img class="hero-logo" src="assets/logo.png" alt="Sorriso">
@@ -384,6 +385,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 
 <script>
 (function(){
+try{
   var OPEN="07:30", CLOSE="00:30";
   function mins(s){var p=s.split(":");return +p[0]*60 + +p[1];}
   function pretty(s){var p=s.split(":"),h=+p[0],m=p[1],ap=(h<12||h===24)?"AM":"PM";
@@ -438,10 +440,16 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
     });
   });
 
-  var ro=new IntersectionObserver(function(es){
-    es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add("in"); ro.unobserve(en.target);} });
-  },{rootMargin:"0px 0px -8% 0px",threshold:.04});
-  document.querySelectorAll(".reveal").forEach(function(el){ro.observe(el);});
+  var reveals=[].slice.call(document.querySelectorAll(".reveal"));
+  function showAll(){reveals.forEach(function(el){el.classList.add("in");});}
+  if(window.IntersectionObserver){
+    document.documentElement.classList.add("js");
+    var ro=new IntersectionObserver(function(es){
+      es.forEach(function(en){ if(en.isIntersecting){en.target.classList.add("in"); ro.unobserve(en.target);} });
+    },{rootMargin:"0px 0px -8% 0px",threshold:.04});
+    reveals.forEach(function(el){ro.observe(el);});
+    setTimeout(showAll,2500);
+  } else { showAll(); }
 
   var srch=document.getElementById("srch"), q=document.getElementById("q"),
       sbtn=document.getElementById("sbtn"), empty=document.getElementById("empty");
@@ -466,6 +474,11 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
   q.addEventListener("keydown", function(e){
     if(e.key==="Escape"){q.value="";run();srch.classList.remove("on");q.blur();}
   });
+}catch(err){
+  document.documentElement.classList.remove("js");
+  document.querySelectorAll(".reveal").forEach(function(el){el.classList.add("in");});
+  if(window.console) console.error("[menu]", err);
+}
 })();
 </script>
 </body></html>
