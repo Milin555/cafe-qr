@@ -50,6 +50,12 @@ def build(cafe_id):
     full_addr = ", ".join([addr["line1"], addr["line2"], addr["line3"],
                            addr["city"], addr["state"], addr["pin"]])
 
+    idir = os.path.join(adir, "items")
+    have_photo = set()
+    if os.path.isdir(idir):
+        have_photo = {f[:-4] for f in os.listdir(idir)
+                      if f.endswith(".jpg") and not f.endswith("-lg.jpg")}
+
     all_items = [i for sec in menu["sections"] for i in sec["items"]]
     all_veg = all(i.get("veg") for i in all_items)
 
@@ -76,15 +82,24 @@ def build(cafe_id):
             if i.get("veg") else "")
         tag = ('<span class="tag">%s</span>' % esc(i["tag"])) if i.get("tag") else ""
         note = ('<p class="note">%s</p>' % esc(i["note"])) if i.get("note") else ""
+        ph = i.get("photo") or (slug(i["name"]) if slug(i["name"]) in have_photo else None)
+        if ph:
+            tile = ('<span class="tile photo"><img src="%sitems/%s.jpg" alt="%s" '
+                    'loading="lazy" decoding="async" width="46" height="46"></span>'
+                    % ("__IMGBASE__", ph, esc(i["name"])))
+        else:
+            tile = '<span class="tile">%s</span>' % icon(i["icon"])
+        big = ('<img class="shotbig" src="%sitems/%s-lg.jpg" alt="%s" loading="lazy" '
+               'decoding="async">' % ("__IMGBASE__", ph, esc(i["name"]))) if ph else ""
         desc = i.get("desc", "")
         search = esc((i["name"] + " " + i.get("note", "") + " " + desc).lower())
-        if desc:
+        if desc or ph:
             body = ('<span class="body"><button class="line" type="button" aria-expanded="false">'
                     '<span class="name">%s%s%s<i class="chev"></i></span>'
                     '<span class="dots"></span>'
                     '<span class="price">%s%s</span></button>%s'
-                    '<p class="desc" hidden>%s</p></span>'
-                    % (esc(i["name"]), veg, tag, cur, i["price"], note, esc(desc)))
+                    '<div class="detail" hidden>%s<p class="desc">%s</p></div></span>'
+                    % (esc(i["name"]), veg, tag, cur, i["price"], note, big, esc(desc)))
             cls = "item has-desc"
         else:
             body = ('<span class="body"><span class="line">'
@@ -93,8 +108,7 @@ def build(cafe_id):
                     '<span class="price">%s%s</span></span>%s</span>'
                     % (esc(i["name"]), veg, tag, cur, i["price"], note))
             cls = "item"
-        return ('<li class="%s" data-q="%s"><span class="tile">%s</span>%s</li>'
-                % (cls, search, icon(i["icon"]), body))
+        return '<li class="%s" data-q="%s">%s%s</li>' % (cls, search, tile, body)
 
     secs = "".join(
         '<section class="sec reveal" id="s-%s" data-sec="%s">'
@@ -179,8 +193,8 @@ def build(cafe_id):
     }
     for k, v in t.items():
         rep["@@T_" + k.upper() + "@@"] = v
-    def render(assets, gal):
-        out = TPL
+    def render(assets, gal, imgbase):
+        out = TPL.replace("__IMGBASE__", imgbase)
         local = dict(rep)
         local.update({"@@LOGO@@": assets["logo"], "@@HERO@@": assets["hero"],
                       "@@PATTERN@@": assets["pattern"], "@@ARTCUP@@": assets["artCup"],
@@ -193,13 +207,17 @@ def build(cafe_id):
                esc(caps[n] if n < len(caps) else ""))
             for n, g in enumerate(gal))
         for k, v in local.items():
-            out = out.replace(k, v)
+            out = out.replace(k, v.replace("__IMGBASE__", imgbase) if isinstance(v, str) else v)
         return out
 
     os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)
     frag = os.path.join(ROOT, "dist", "%s.artifact.html" % cafe_id)
     with open(frag, "w", encoding="utf-8") as f:
-        f.write(render(A_data, gal_data))
+        frag_html = render(A_data, gal_data, "assets/")
+        for name in sorted(os.listdir(idir)) if os.path.isdir(idir) else []:
+            frag_html = frag_html.replace('src="assets/items/%s"' % name,
+                                          'src="%s"' % data_uri(os.path.join(idir, name)))
+        f.write(frag_html)
 
     site = os.path.join(ROOT, "docs", cafe_id)
     os.makedirs(site, exist_ok=True)
@@ -208,7 +226,7 @@ def build(cafe_id):
     if os.path.isdir(sassets):
         shutil.rmtree(sassets)
     shutil.copytree(adir, sassets)
-    tpl = render(A_rel, gal_rel)
+    tpl = render(A_rel, gal_rel, "assets/")
     doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
            '<meta name="viewport" content="width=device-width,initial-scale=1">'
            '<meta name="theme-color" content="%s">'
