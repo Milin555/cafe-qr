@@ -157,6 +157,8 @@ def build(cafe_id):
         "@@ISEARCH@@": icon("search", "ico", "1.6"),
         "@@ICLOSE@@": icon("close", "ico", "1.8"),
         "@@IARROW@@": icon("arrow", "ico", "1.7"),
+        "@@ISUN@@": icon("sun", "ico", "1.5"),
+        "@@IMOON@@": icon("moon", "ico", "1.5"),
         "@@ILEAF@@": icon("leaf", "ico", "1.3"),
         "@@IREVIEW@@": icon("star", "ico", "1.4"),
         "@@IINSTA@@": icon("instagram", "ico", "1.4"),
