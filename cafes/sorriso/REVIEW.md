@@ -31,3 +31,24 @@ Confirm the five open questions with the owner before this goes on a table tent.
 
 ## Rebuild
     python3 build/render.py sorriso
+
+## Item descriptions
+
+Tapping an item expands a short description. **18 of 96 items have one.**
+
+The 18 are all coffee preparations whose description is true by definition of
+the drink's own name — a cortado *is* espresso cut with warm milk, wherever it
+is served. Nothing in them claims anything specific to Sorriso's recipe.
+
+**The other 78 have no description, deliberately.** Paneer Makhani Sandwich,
+Heven Hummus, Tanisia Salad, Godfather, Barry Gingar Twist and the rest are the
+cafe's own creations — inventing what is in them would put words in the owner's
+mouth and could be flatly wrong about allergens. Those have to come from them.
+
+To add one, put a `desc` on the item in `menu.json` and rebuild:
+
+    { "name": "Loaded Hummus", "price": 345, "icon": "hummus",
+      "desc": "...", "veg": true }
+
+Ask the owner for a line per dish; it is a 20-minute conversation and it is the
+single biggest upgrade left on this page.

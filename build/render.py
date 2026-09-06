@@ -76,14 +76,25 @@ def build(cafe_id):
             if i.get("veg") else "")
         tag = ('<span class="tag">%s</span>' % esc(i["tag"])) if i.get("tag") else ""
         note = ('<p class="note">%s</p>' % esc(i["note"])) if i.get("note") else ""
-        search = esc((i["name"] + " " + i.get("note", "")).lower())
-        return ('<li class="item" data-q="%s">'
-                '<span class="tile">%s</span>'
-                '<span class="body"><span class="line">'
-                '<span class="name">%s%s%s</span>'
-                '<span class="dots"></span>'
-                '<span class="price">%s%s</span></span>%s</span></li>'
-                % (search, icon(i["icon"]), esc(i["name"]), veg, tag, cur, i["price"], note))
+        desc = i.get("desc", "")
+        search = esc((i["name"] + " " + i.get("note", "") + " " + desc).lower())
+        if desc:
+            body = ('<span class="body"><button class="line" type="button" aria-expanded="false">'
+                    '<span class="name">%s%s%s<i class="chev"></i></span>'
+                    '<span class="dots"></span>'
+                    '<span class="price">%s%s</span></button>%s'
+                    '<p class="desc" hidden>%s</p></span>'
+                    % (esc(i["name"]), veg, tag, cur, i["price"], note, esc(desc)))
+            cls = "item has-desc"
+        else:
+            body = ('<span class="body"><span class="line">'
+                    '<span class="name">%s%s%s</span>'
+                    '<span class="dots"></span>'
+                    '<span class="price">%s%s</span></span>%s</span>'
+                    % (esc(i["name"]), veg, tag, cur, i["price"], note))
+            cls = "item"
+        return ('<li class="%s" data-q="%s"><span class="tile">%s</span>%s</li>'
+                % (cls, search, icon(i["icon"]), body))
 
     secs = "".join(
         '<section class="sec reveal" id="s-%s" data-sec="%s">'

@@ -10,6 +10,7 @@
           "name": "Espresso",
           "price": 120,
           "icon": "espresso",
+          "desc": "A single 40 ml pull. The base every other coffee here is built on.",
           "note": "40 ml",
           "veg": true
         },
@@ -17,36 +18,42 @@
           "name": "Americano",
           "price": 140,
           "icon": "espresso",
+          "desc": "Espresso lengthened with hot water — the same shot, longer and lighter.",
           "veg": true
         },
         {
           "name": "Flat White",
           "price": 220,
           "icon": "cup",
+          "desc": "Espresso under steamed milk with a thin layer of microfoam. Stronger than a latte.",
           "veg": true
         },
         {
           "name": "Cortado",
           "price": 220,
           "icon": "cortado",
+          "desc": "Espresso cut with an equal measure of warm milk. Small, balanced, no foam.",
           "veg": true
         },
         {
           "name": "Cappuccino",
           "price": 220,
           "icon": "cup",
+          "desc": "Equal thirds — espresso, steamed milk, foam.",
           "veg": true
         },
         {
           "name": "Cafè Latte",
           "price": 220,
           "icon": "latte",
+          "desc": "Espresso with a larger volume of steamed milk. The mildest of the milk coffees.",
           "veg": true
         },
         {
           "name": "Cafe Mocha",
           "price": 260,
           "icon": "mocha",
+          "desc": "Espresso and steamed milk with chocolate.",
           "veg": true
         },
         {
@@ -78,12 +85,14 @@
           "name": "Iced Latte",
           "price": 220,
           "icon": "icedlatte",
+          "desc": "Espresso poured over ice and cold milk.",
           "veg": true
         },
         {
           "name": "Espresso Tonic",
           "price": 240,
           "icon": "tonic",
+          "desc": "Espresso over tonic water and ice. Bitter, citric and fizzy rather than sweet.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -103,18 +112,21 @@
           "name": "Cold Brew",
           "price": 220,
           "icon": "coldbrew",
+          "desc": "Coarse grounds steeped in cold water for hours, never heated. Low acidity, naturally sweeter.",
           "veg": true
         },
         {
           "name": "Barrel Aged Cold Brew",
           "price": 270,
           "icon": "barrel",
+          "desc": "Cold brew rested in a wooden barrel, which rounds it out and adds an oaky note.",
           "veg": true
         },
         {
           "name": "Cold Brew Tonic",
           "price": 260,
           "icon": "tonic",
+          "desc": "Cold brew lengthened with tonic water over ice.",
           "veg": true
         },
         {
@@ -128,18 +140,21 @@
           "name": "Iced BomBon",
           "price": 220,
           "icon": "bombon",
+          "desc": "Espresso over condensed milk, served in layers so you stir it yourself.",
           "veg": true
         },
         {
           "name": "Vietnamese",
           "price": 240,
           "icon": "bombon",
+          "desc": "Strong coffee over condensed milk, served iced.",
           "veg": true
         },
         {
           "name": "Affogato",
           "price": 240,
           "icon": "affogato",
+          "desc": "A scoop of ice cream with a hot shot poured over it at the table.",
           "veg": true
         },
         {
@@ -171,6 +186,7 @@
           "name": "Nostalgia Cold Coffee",
           "price": 300,
           "icon": "frappe",
+          "desc": "The thick, blended, ice-cream style cold coffee.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -360,6 +376,7 @@
           "name": "V60 PourOver",
           "price": 180,
           "icon": "v60",
+          "desc": "Hand-poured through a cone filter. Clean cup, clearer separation of flavours.",
           "note": "Hot / Iced",
           "veg": true
         },
@@ -367,6 +384,7 @@
           "name": "Aeropress",
           "price": 180,
           "icon": "aeropress",
+          "desc": "Brewed under gentle pressure in a plunger. Fuller bodied than a pour-over.",
           "note": "Hot / Iced",
           "veg": true
         }
