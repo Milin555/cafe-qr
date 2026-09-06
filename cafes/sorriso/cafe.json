@@ -29,7 +29,8 @@
     "instagram": "https://www.instagram.com/sorrisosurat",
     "instagramHandle": "@sorrisosurat",
     "googleReview": "https://g.page/r/CQxicl6H7V2_EBM/review",
-    "directions": "https://www.google.com/maps/place/Sorriso+Cafe/@21.2291179,72.8993255,17z"
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=21.2291179%2C72.8993255",
+    "mapsPlace": "https://maps.google.com/?cid=13789132521062056460"
   },
   "address": {
     "line1": "307, Millennium Business Hub",
