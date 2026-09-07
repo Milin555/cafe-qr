@@ -109,6 +109,14 @@ def build(cafe_id):
 
     t, c, addr, hrs = cafe["theme"], cafe["contact"], cafe["address"], cafe["hours"]
     cur = menu.get("currency", "₹")
+
+    def price_html(i):
+        if i.get("price") in (None, "", 0):
+            return ('<span class="dots"></span>'
+                    '<span class="price price-ask">at the counter</span>')
+        return ('<span class="dots"></span>'
+                '<span class="price">%s%s</span>' % (cur, i["price"]))
+
     full_addr = ", ".join([addr["line1"], addr["line2"], addr["line3"],
                            addr["city"], addr["state"], addr["pin"]])
 
@@ -133,8 +141,9 @@ def build(cafe_id):
     pick_cards = "".join(
         '<a class="pick" href="#s-%s"><span class="pick-ico">%s</span>'
         '<span class="pick-tag">%s</span><span class="pick-name">%s</span>'
-        '<span class="pick-price">%s%s</span></a>'
-        % (s["id"], icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]), cur, i["price"])
+        '<span class="pick-price">%s</span></a>'
+        % (s["id"], icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]),
+           ("%s%s" % (cur, i["price"])) if i.get("price") else "at the counter")
         for s, i in picks)
 
     # ---- sections
@@ -160,18 +169,16 @@ def build(cafe_id):
             body = ('<span class="body">'
                     '<button class="line" type="button" aria-expanded="false">'
                     '<span class="name">%s%s%s<i class="chev" aria-hidden="true"></i></span>'
-                    '<span class="dots"></span>'
-                    '<span class="price">%s%s</span></button>%s'
+                    '%s</button>%s'
                     '<div class="detail" hidden>%s%s</div></span>'
-                    % (esc(i["name"]), veg, tag, cur, i["price"], note, big,
+                    % (esc(i["name"]), veg, tag, price_html(i), note, big,
                        ('<p class="desc">%s</p>' % esc(desc)) if desc else ""))
             cls = "item has-desc"
         else:
             body = ('<span class="body"><span class="line">'
                     '<span class="name">%s%s%s</span>'
-                    '<span class="dots"></span>'
-                    '<span class="price">%s%s</span></span>%s</span>'
-                    % (esc(i["name"]), veg, tag, cur, i["price"], note))
+                    '%s</span>%s</span>'
+                    % (esc(i["name"]), veg, tag, price_html(i), note))
             cls = "item"
         return '<li class="%s" data-q="%s">%s%s</li>' % (cls, search, tile, body)
 
@@ -187,9 +194,10 @@ def build(cafe_id):
     ad = menu["addons"]
     addon_groups = "".join(
         '<div class="ag"><span class="tile sm">%s</span><div>'
-        '<p class="ag-h">%s<span class="ag-p">%s%s</span></p>'
+        '<p class="ag-h">%s<span class="ag-p">%s</span></p>'
         '<p class="ag-o">%s</p></div></div>'
-        % (icon(g["icon"], "ico", "1.3"), esc(g["label"]), cur, g["price"],
+        % (icon(g["icon"], "ico", "1.3"), esc(g["label"]),
+           ("%s%s" % (cur, g["price"])) if g.get("price") else "",
            esc(" · ".join(g["options"])))
         for g in ad["groups"])
 

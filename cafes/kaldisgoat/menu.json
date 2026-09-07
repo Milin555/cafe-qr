@@ -1,0 +1,530 @@
+{
+  "currency": "₹",
+  "sections": [
+    {
+      "id": "speciality-coffee",
+      "name": "Speciality Coffee",
+      "kicker": "The bar",
+      "items": [
+        {
+          "name": "Espresso",
+          "icon": "espresso",
+          "note": "Hot or iced",
+          "veg": true
+        },
+        {
+          "name": "Doppio",
+          "icon": "espresso",
+          "note": "A double shot",
+          "veg": true
+        },
+        {
+          "name": "Lime Espresso",
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Chocolate Espresso",
+          "icon": "mocha",
+          "veg": true
+        },
+        {
+          "name": "Bom Bon",
+          "icon": "bombon",
+          "veg": true
+        },
+        {
+          "name": "Vietnamese",
+          "icon": "bombon",
+          "veg": true
+        },
+        {
+          "name": "Americano",
+          "icon": "espresso",
+          "veg": true
+        },
+        {
+          "name": "Flat White",
+          "icon": "cup",
+          "veg": true
+        },
+        {
+          "name": "Cappuccino",
+          "icon": "cup",
+          "veg": true
+        },
+        {
+          "name": "Macchiato",
+          "icon": "cortado",
+          "veg": true
+        },
+        {
+          "name": "Affogato",
+          "icon": "affogato",
+          "tag": "House favourite",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "milk-based",
+      "name": "Milk Based",
+      "kicker": "With steamed milk",
+      "items": [
+        {
+          "name": "Latte",
+          "icon": "latte",
+          "note": "Hot or iced · add on: Vanilla · Caramel · Mocha · Hazelnut · Cinnamon · Spanish · Biscoff · Moon mocha · Tiramisu",
+          "veg": true
+        },
+        {
+          "name": "Rose Latte",
+          "icon": "latte",
+          "veg": true
+        },
+        {
+          "name": "Matcha Heaven",
+          "icon": "teacup",
+          "note": "Hot or iced",
+          "veg": true
+        },
+        {
+          "name": "Trioccino",
+          "icon": "mocha",
+          "veg": true
+        },
+        {
+          "name": "Nutella Caramel",
+          "icon": "mocha",
+          "note": "Hot or iced",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "manual-brewing",
+      "name": "Manual Brewing",
+      "kicker": "Brewed to order, one cup at a time",
+      "items": [
+        {
+          "name": "V60 Pour Over",
+          "icon": "v60",
+          "note": "Hot or iced",
+          "veg": true
+        },
+        {
+          "name": "Aeropress",
+          "icon": "aeropress",
+          "note": "Hot or iced",
+          "veg": true
+        },
+        {
+          "name": "Chemex",
+          "icon": "chemex",
+          "note": "3 cup",
+          "veg": true
+        },
+        {
+          "name": "Syphon",
+          "icon": "syphon",
+          "note": "3 cup",
+          "veg": true
+        },
+        {
+          "name": "French Press",
+          "icon": "frenchpress",
+          "veg": true
+        },
+        {
+          "name": "Mokapot With Milk",
+          "icon": "mokapot",
+          "veg": true
+        },
+        {
+          "name": "Vietnamese Pour",
+          "icon": "bombon",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "frappe",
+      "name": "Frappe",
+      "kicker": "Blended",
+      "items": [
+        {
+          "name": "Classic Frappe",
+          "icon": "frappe",
+          "note": "Add on: Vanilla · Caramel · Mocha · Hazelnut · Cinnamon · Spanish · Biscoff · Moon mocha · Tiramisu",
+          "veg": true
+        },
+        {
+          "name": "Cheesy Frappe",
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Double Chocolate",
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Signature Mocha Frappe",
+          "icon": "frappe",
+          "tag": "Signature",
+          "veg": true
+        },
+        {
+          "name": "Brownie Mocha Frappe",
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Java Choco Frappe",
+          "icon": "frappe",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "tonic-base",
+      "name": "Tonic Base",
+      "kicker": "Espresso and cold brew, long and fizzy",
+      "items": [
+        {
+          "name": "Espresso Tonic",
+          "icon": "tonic",
+          "note": "Add on: Blueberry · Strawberry · Irish · Cranberry · Yuzu · Lavender · Blood orange · Pomegranate · Coconut",
+          "tag": "Signature",
+          "veg": true
+        },
+        {
+          "name": "Bitter Lemon",
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Ginger-Ale Espresso",
+          "icon": "ginger",
+          "veg": true
+        },
+        {
+          "name": "Lemon Espresso Tonic",
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Redbull Espresso",
+          "icon": "can",
+          "veg": true
+        },
+        {
+          "name": "Citrus Mix Espresso",
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Orange Espresso Tonic",
+          "icon": "tonic",
+          "veg": true
+        },
+        {
+          "name": "Cold Brew Tonic",
+          "icon": "coldbrew",
+          "veg": true
+        },
+        {
+          "name": "Ginger-Ale Cold Brew",
+          "icon": "ginger",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Shake's",
+      "kicker": "Blended thick",
+      "items": [
+        {
+          "name": "Vanilla",
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Biscoff",
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Strawberry",
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Blueberry",
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Oreo",
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Brownie",
+          "icon": "shake",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "chocolate",
+      "name": "Sp. Chocolate",
+      "kicker": "Drinking chocolate",
+      "items": [
+        {
+          "name": "Hot Chocolate",
+          "icon": "hotchoc",
+          "veg": true
+        },
+        {
+          "name": "Cold Chocolate",
+          "icon": "icedglass",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Hot Chocolate",
+          "icon": "hotchoc",
+          "veg": true
+        },
+        {
+          "name": "Signature Hot Chocolate",
+          "icon": "hotchoc",
+          "tag": "Signature",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "ice-tea",
+      "name": "Ice Tea",
+      "kicker": "Over ice",
+      "items": [
+        {
+          "name": "Peach Ice Tea",
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Lemon Ice Tea",
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Blueberry Ice Tea",
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Cranberry Ice Tea",
+          "icon": "icedtea",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sp-tea",
+      "name": "Sp. Tea",
+      "kicker": "Leaf",
+      "items": [
+        {
+          "name": "Hot Green Tea",
+          "icon": "teacup",
+          "veg": true
+        },
+        {
+          "name": "Fruity Heaven",
+          "icon": "teacup",
+          "veg": true
+        },
+        {
+          "name": "Matcha & Espresso Fusion",
+          "icon": "teacup",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "signature-drinks",
+      "name": "Signature Drinks",
+      "kicker": "Theirs alone",
+      "items": [
+        {
+          "name": "G.O.A.T.",
+          "icon": "mocktail",
+          "tag": "Signature",
+          "veg": true
+        },
+        {
+          "name": "Bhaa Bhaa",
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Apple Ice Tea",
+          "icon": "icedtea",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "cheesecake",
+      "name": "Cheesecake",
+      "kicker": "From the counter",
+      "items": [
+        {
+          "name": "New York Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Blueberry Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Cheesecake",
+          "icon": "cheesecake",
+          "tag": "House favourite",
+          "veg": true
+        },
+        {
+          "name": "Nutella Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Oreo Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Caramel Cheesecake",
+          "icon": "cheesecake",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "croissant",
+      "name": "Croissant",
+      "kicker": "Baked",
+      "items": [
+        {
+          "name": "Butter Croissant",
+          "icon": "croissant",
+          "veg": true
+        },
+        {
+          "name": "Chocolate Croissant",
+          "icon": "croissant",
+          "veg": true
+        },
+        {
+          "name": "Almond Croissant",
+          "icon": "croissant",
+          "veg": true
+        },
+        {
+          "name": "Oreo Nutella Croissant",
+          "icon": "croissant",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "bagel",
+      "name": "Bagel",
+      "kicker": "Savoury",
+      "items": [
+        {
+          "name": "Cream Cheese Bagel",
+          "icon": "bagel",
+          "veg": true
+        },
+        {
+          "name": "Pesto Bagel",
+          "icon": "bagel",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "brownie",
+      "name": "Brownie",
+      "kicker": "Squares",
+      "items": [
+        {
+          "name": "Classic Brownie",
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Nutella Brownie",
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Brownie",
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Walnut Brownie",
+          "icon": "brownie",
+          "veg": true
+        }
+      ]
+    }
+  ],
+  "addons": {
+    "title": "Add On",
+    "groups": [
+      {
+        "label": "Latte & Frappe flavours",
+        "icon": "droplet",
+        "options": [
+          "Vanilla",
+          "Caramel",
+          "Mocha",
+          "Hazelnut",
+          "Cinnamon",
+          "Spanish",
+          "Biscoff",
+          "Moon mocha",
+          "Tiramisu"
+        ]
+      },
+      {
+        "label": "Espresso tonic infusions",
+        "icon": "tonic",
+        "options": [
+          "Blueberry",
+          "Strawberry",
+          "Irish",
+          "Cranberry",
+          "Yuzu",
+          "Lavender",
+          "Blood orange",
+          "Pomegranate",
+          "Coconut"
+        ]
+      }
+    ]
+  }
+}

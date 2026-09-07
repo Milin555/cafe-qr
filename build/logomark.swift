@@ -14,7 +14,7 @@ func draw(_ s: String, _ f: NSFont, _ c: NSColor, _ kern: CGFloat, _ x: CGFloat,
     .draw(at: NSPoint(x: x, y: y))
 }
 let script = NSFont(name: "SnellRoundhand-Bold", size: 165) ?? NSFont.boldSystemFont(ofSize: 150)
-draw("Café Beats", script, cream, 0, 26, 52)
+draw(NAME, script, cream, 0, 26, 52)
 draw("RESTAURANT", NSFont(name: "HelveticaNeue-Medium", size: 34)!, cyan, 18, 250, 12)
 
 img.unlockFocus()
