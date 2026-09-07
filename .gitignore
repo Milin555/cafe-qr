@@ -1,5 +1,6 @@
 .DS_Store
 dist/
+deploy/
 __pycache__/
 *.pyc
-deploy/
+docs/*/[!i]*.html

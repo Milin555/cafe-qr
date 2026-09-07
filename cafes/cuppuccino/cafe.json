@@ -75,7 +75,8 @@
       "shot-pizza.jpg",
       "shot-room.jpg",
       "shot-counter.jpg"
-    ]
+    ],
+    "icon": "icon.png"
   },
   "galleryCaptions": [
     "Club sandwich",
@@ -117,7 +118,8 @@
     "sunk": "#18241A",
     "surface": "#141E15",
     "text": "#F1F0E4",
-    "veg": "#6FCB8E"
+    "veg": "#6FCB8E",
+    "heroVeil": "10,18,11"
   },
   "galleryTitle": "The place",
   "priceLabel": "for two",

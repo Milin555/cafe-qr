@@ -19,7 +19,7 @@
   "hours": {
     "open": "07:30",
     "close": "00:30",
-    "label": "7:30 AM – 12:30 Midnight",
+    "label": "7:30 AM – 12:30 AM",
     "days": "Open all days"
   },
   "contact": {
@@ -79,7 +79,8 @@
       "shot-rooftop.jpg",
       "shot-wall.jpg",
       "shot-entrance.jpg"
-    ]
+    ],
+    "icon": "icon.png"
   },
   "galleryCaptions": [
     "The bar",
@@ -129,7 +130,8 @@
     "sunk": "#100F26",
     "surface": "#0B0A1E",
     "text": "#F2EADB",
-    "veg": "#5CC98A"
+    "veg": "#5CC98A",
+    "heroVeil": "5,4,18"
   },
   "galleryTitle": "The room",
   "priceLabel": "per person",

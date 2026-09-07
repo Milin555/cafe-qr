@@ -72,7 +72,8 @@
       "shot-room.jpg",
       "shot-bar.jpg",
       "shot-seating.jpg"
-    ]
+    ],
+    "icon": "icon.png"
   },
   "galleryCaptions": [
     "The food",
@@ -115,7 +116,8 @@
     "sunk": "#0E262E",
     "surface": "#0A1F26",
     "text": "#E9F4F5",
-    "veg": "#5CC98A"
+    "veg": "#5CC98A",
+    "heroVeil": "4,14,18"
   },
   "galleryTitle": "The place",
   "priceLabel": "for two",

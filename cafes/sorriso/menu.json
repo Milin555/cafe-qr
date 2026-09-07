@@ -584,7 +584,7 @@
       "kicker": "Fresh bowls",
       "items": [
         {
-          "name": "Green With Avocado Salad",
+          "name": "Green with Avocado Salad",
           "price": 330,
           "icon": "salad",
           "desc": "Greens with avocado.",
@@ -727,7 +727,7 @@
           "veg": true
         },
         {
-          "name": "Herbs Rice With Queso Sauce",
+          "name": "Herbs Rice with Queso Sauce",
           "price": 375,
           "icon": "ricebowl",
           "desc": "Herbed rice under queso, the melted cheese sauce.",

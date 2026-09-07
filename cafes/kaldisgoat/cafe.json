@@ -69,7 +69,8 @@
     "veilTop": ".34"
   },
   "assets": {
-    "logo": "logo.png"
+    "logo": "logo.png",
+    "icon": "icon.png"
   },
   "source": {
     "primary": "Menu card photographed and published on their Zomato listing (3 pages).",
@@ -103,7 +104,8 @@
     "sunk": "#16221F",
     "surface": "#121D14",
     "text": "#EFEEDC",
-    "veg": "#6FCB8E"
+    "veg": "#6FCB8E",
+    "heroVeil": "8,15,10"
   },
   "priceLabel": "for two",
   "picksTitle": "House favourites",

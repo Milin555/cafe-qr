@@ -471,7 +471,7 @@
           "veg": true
         },
         {
-          "name": "Stuffed Garlic Rolls With Creamy Curry",
+          "name": "Stuffed Garlic Rolls with Creamy Curry",
           "price": 285,
           "icon": "garlicbread",
           "note": "4 pieces",
@@ -733,13 +733,13 @@
           "veg": true
         },
         {
-          "name": "Paneer Masala With Tawa Paratha",
+          "name": "Paneer Masala with Tawa Paratha",
           "price": 249,
           "icon": "paratha",
           "veg": true
         },
         {
-          "name": "Mix Veg. Curry With Tawa Paratha",
+          "name": "Mix Veg. Curry with Tawa Paratha",
           "price": 249,
           "icon": "paratha",
           "veg": true
@@ -801,7 +801,7 @@
           "veg": true
         },
         {
-          "name": "Exotic Veggies With Herbs",
+          "name": "Exotic Veggies with Herbs",
           "price": 255,
           "icon": "salad",
           "veg": true
@@ -1056,43 +1056,43 @@
       "kicker": "One-bowl meals",
       "items": [
         {
-          "name": "Schezwan Rice With Manchurian",
+          "name": "Schezwan Rice with Manchurian",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Mexican Rice With Hot Pepper Curry",
+          "name": "Mexican Rice with Hot Pepper Curry",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Hyderabadi Biryani With Mirch Salan & Raita",
+          "name": "Hyderabadi Biryani with Mirch Salan & Raita",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Veg. Fried Rice With Paneer Chilly",
+          "name": "Veg. Fried Rice with Paneer Chilly",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Mexican Herbs Rice With Creamy Curry",
+          "name": "Mexican Herbs Rice with Creamy Curry",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Coconut Rice With Thai Curry",
+          "name": "Coconut Rice with Thai Curry",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
         },
         {
-          "name": "Garlic Rice With Paneer Chilly",
+          "name": "Garlic Rice with Paneer Chilly",
           "price": 399,
           "icon": "ricebowl",
           "veg": true

@@ -21,7 +21,7 @@
           "veg": true
         },
         {
-          "name": "Espresso With Cookies",
+          "name": "Espresso with Cookies",
           "price": 210,
           "icon": "espresso",
           "desc": "Espresso shot 30 ml",
@@ -49,14 +49,14 @@
           "veg": true
         },
         {
-          "name": "Double Espresso With Cookies",
+          "name": "Double Espresso with Cookies",
           "price": 280,
           "icon": "espresso",
           "desc": "Espresso shot 60 ml",
           "veg": true
         },
         {
-          "name": "Espresso With Tonic / Ginger Ale",
+          "name": "Espresso with Tonic / Ginger Ale",
           "price": 280,
           "icon": "tonic",
           "desc": "Espresso shot with tonic water or ginger ale",
@@ -106,7 +106,7 @@
           "veg": true
         },
         {
-          "name": "Cold Brew With Tonic / Ginger Ale",
+          "name": "Cold Brew with Tonic / Ginger Ale",
           "price": 250,
           "icon": "coldbrew",
           "desc": "Cold brew with tonic water or ginger ale",
@@ -134,7 +134,7 @@
           "veg": true
         },
         {
-          "name": "Cold Brew With Flavours",
+          "name": "Cold Brew with Flavours",
           "price": 270,
           "icon": "coldbrew",
           "desc": "Cold brew with orange, cranberry, hazelnut, Irish or caramel",
@@ -203,7 +203,7 @@
     {
       "id": "tea",
       "name": "Tea & Refreshers",
-      "kicker": "Over ice",
+      "kicker": "Leaf, over ice",
       "items": [
         {
           "name": "Lemon Iced Tea",
@@ -218,13 +218,13 @@
           "veg": true
         },
         {
-          "name": "Berry Blast Ice Tea",
+          "name": "Berry Blast Iced Tea",
           "price": 230,
           "icon": "icedtea",
           "veg": true
         },
         {
-          "name": "Mint Ice Tea",
+          "name": "Mint Iced Tea",
           "price": 260,
           "icon": "icedtea",
           "veg": true
@@ -258,7 +258,7 @@
           "veg": true
         },
         {
-          "name": "Blue Ocean With Boba",
+          "name": "Blue Ocean with Boba",
           "price": 270,
           "icon": "mocktail",
           "desc": "Blue curacao syrup, lemon, soda, boba",
@@ -850,7 +850,7 @@
           "veg": true
         },
         {
-          "name": "Fusion Of Lollo Rosso",
+          "name": "Fusion of Lollo Rosso",
           "price": 340,
           "icon": "wrap",
           "desc": "Lollo rosso, lettuce, cabbage, onion, olives",
@@ -878,7 +878,7 @@
       "kicker": "Molten, pull apart",
       "items": [
         {
-          "name": "Simply Cheese And Garlic Pull Out",
+          "name": "Simply Cheese and Garlic Pull Out",
           "price": 360,
           "icon": "garlicbread",
           "desc": "Garlic, mozzarella cheese",
@@ -899,7 +899,7 @@
           "veg": true
         },
         {
-          "name": "Roasted Mushroom And Garlic Pull Out",
+          "name": "Roasted Mushroom and Garlic Pull Out",
           "price": 380,
           "icon": "mushroom",
           "desc": "Mushroom, garlic, mozzarella cheese",
@@ -930,7 +930,7 @@
           "name": "Cuppuccino Special Fondue",
           "price": 585,
           "icon": "hotchoc",
-          "tag": "Signature best seller",
+          "tag": "Best seller",
           "desc": "Trio of dips and crunchy bites",
           "veg": true
         }
@@ -966,7 +966,7 @@
           "name": "Truffle Mushroom Creamy Bowl",
           "price": 430,
           "icon": "ricebowl",
-          "tag": "Bestseller",
+          "tag": "Best seller",
           "desc": "White creamy flavour",
           "veg": true
         },
@@ -977,7 +977,7 @@
           "veg": true
         },
         {
-          "name": "Mexican Rice With Salsa Curry",
+          "name": "Mexican Rice with Salsa Curry",
           "price": 510,
           "icon": "ricebowl",
           "veg": true
@@ -1208,7 +1208,7 @@
           "name": "Tex-Mex Sizzled Volcano Pizza",
           "price": 690,
           "icon": "pizzaslice",
-          "tag": "Hero",
+          "tag": "Signature",
           "desc": "Cheese crust, fiery salsa, jalapeño, creamy drizzle",
           "veg": true
         }
@@ -1246,7 +1246,7 @@
           "veg": true
         },
         {
-          "name": "Baked Macaroni With Pineapple",
+          "name": "Baked Macaroni with Pineapple",
           "price": 425,
           "icon": "pasta",
           "veg": true
@@ -1344,7 +1344,7 @@
           "veg": true
         },
         {
-          "name": "Paneer Bhurji With Bread",
+          "name": "Paneer Bhurji with Bread",
           "price": 380,
           "icon": "pav",
           "desc": "3 pieces",
@@ -1429,7 +1429,7 @@
     }
   ],
   "addons": {
-    "title": "Good to know",
+    "title": "Before you order",
     "groups": [
       {
         "label": "Mocktail flavours",
@@ -1440,7 +1440,7 @@
         ]
       },
       {
-        "label": "Good to know",
+        "label": "House notes",
         "icon": "leaf",
         "options": [
           "Jain food available",

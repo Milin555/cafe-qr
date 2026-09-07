@@ -171,7 +171,7 @@ def build(cafe_id):
         if desc or ph:
             body = ('<span class="body">'
                     '<button class="line" type="button" aria-expanded="false">'
-                    '<span class="name">%s%s<i class="chev" aria-hidden="true"></i></span>%s'
+                    '<span class="name">%s%s</span><i class="chev" aria-hidden="true"></i>%s'
                     '%s</button>%s'
                     '<div class="detail" hidden>%s%s</div></span>'
                     % (esc(i["name"]), veg, tag, price_html(i), note, big,
@@ -254,8 +254,9 @@ def build(cafe_id):
         "@@SEARCHHINT@@": esc(cafe.get("searchHint", "Try a name, or an ingredient")),
         "@@PRICELABEL@@": esc(cafe.get("priceLabel", "per person")),
         "@@RATINGCELL@@": ("" if not cafe["meta"].get("showRating", True) else
-            '<div><b>%s%s</b><span>%s reviews</span></div>'
-            % (icon("star", "ico", "1.3"), cafe["meta"]["rating"], cafe["meta"]["ratingCount"])),
+            '<div><b>%s%s</b><span>%s %s</span></div>'
+            % (icon("star", "ico", "1.3"), cafe["meta"]["rating"],
+               cafe["meta"]["ratingCount"], esc(cafe["meta"].get("ratingSource", "reviews")))),
         "@@STRIP@@": ('<div class="strip" aria-hidden="true"></div>'
                       if cafe["assets"].get("pattern") else ""),
         "@@FSTRIP@@": ('<div class="f-strip" aria-hidden="true"></div>'
@@ -355,8 +356,12 @@ def build(cafe_id):
            '<meta property="og:url" content="%s">'
            '<meta property="og:image" content="%s">'
            '<meta name="twitter:card" content="summary_large_image">'
-           '<link rel="icon" href="%s">'
+           '<link rel="icon" type="image/png" href="%s">'
            '<style>html,body{margin:0}img{max-width:100%%}</style>'
+           '<title>%s Menu</title>'
+           '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+           '<link rel="stylesheet" href="%s">'
+           '<meta name="robots" content="noindex,nofollow">'
            '</head><body>%s'
            '<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
            'navigator.serviceWorker.register("sw.js").catch(function(){})});</script>'
@@ -364,7 +369,7 @@ def build(cafe_id):
            % (t["bg"], esc(cafe["blurb"]), esc(cafe["name"]), esc(cafe["name"]),
               esc(cafe["blurb"]), base_url,
               base_url + "assets/" + (cafe["assets"].get("hero") or cafe["assets"]["logo"]),
-              A_rel["logo"], tpl))
+              A_rel.get("icon") or A_rel["logo"], esc(cafe["name"]), t["fontsHref"], tpl))
     with open(os.path.join(site, "index.html"), "w", encoding="utf-8") as f:
         f.write(doc)
 
