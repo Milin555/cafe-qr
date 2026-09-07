@@ -60,7 +60,9 @@
     "surface": "#F8FAF8",
     "text": "#12303A",
     "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    "veg": "#1E7A42"
+    "veg": "#1E7A42",
+    "displayWeight": "400",
+    "veilTop": ".55"
   },
   "assets": {
     "logo": "logo.png",
@@ -92,13 +94,13 @@
       "Instagram handle and the Google review deep link are missing — both buttons are hidden rather than pointed at a search page. Get the profile URL and the g.page/r/… review link from the owner."
     ]
   },
-  "eyebrow": "Coffee with music · Nana Varachha",
-  "liveUrl": "https://cafe-qr-cafebeats.vercel.app/cafebeats/",
+  "eyebrow": "Cafe & restaurant · Nana Varachha",
+  "liveUrl": "https://cafebeats-menu.vercel.app/",
   "themeDark": {
     "accent": "#6FD3E8",
     "accentLo": "rgba(111,211,232,.28)",
     "bg": "#06181D",
-    "dim": "#5F818A",
+    "dim": "#7FA3AC",
     "edge": "#1C3D47",
     "edgeSoft": "#14313A",
     "footer": "#041216",
@@ -115,7 +117,7 @@
     "text": "#E9F4F5",
     "veg": "#5CC98A"
   },
-  "galleryTitle": "The room",
+  "galleryTitle": "The place",
   "priceLabel": "for two",
   "picksTitle": "Most ordered",
   "searchHint": "Try “chai”, “maggi” or “sizzler”"

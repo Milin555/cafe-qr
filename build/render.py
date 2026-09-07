@@ -99,9 +99,12 @@ def build(cafe_id):
              if isinstance(v, str) and os.path.exists(os.path.join(adir, v))}
     A_data = {k: data_uri(os.path.join(adir, v)) for k, v in names.items()}
     A_rel = {k: "assets/" + v for k, v in names.items()}
-    for k in ("logo", "hero", "pattern", "artCup", "artShake"):
+    for k in ("logo", "hero"):
         A_data.setdefault(k, "")
         A_rel.setdefault(k, "")
+    for k in ("pattern", "artCup", "artShake"):          # url(none) is inert; url() is not
+        A_data.setdefault(k, "none")
+        A_rel.setdefault(k, "none")
     gal = [g for g in cafe["assets"].get("gallery", []) if os.path.exists(os.path.join(adir, g))]
     gal_data = [data_uri(os.path.join(adir, g)) for g in gal]
     gal_rel = ["assets/" + g for g in gal]
@@ -194,10 +197,10 @@ def build(cafe_id):
     ad = menu["addons"]
     addon_groups = "".join(
         '<div class="ag"><span class="tile sm">%s</span><div>'
-        '<p class="ag-h">%s<span class="ag-p">%s</span></p>'
+        '<p class="ag-h">%s%s</p>'
         '<p class="ag-o">%s</p></div></div>'
         % (icon(g["icon"], "ico", "1.3"), esc(g["label"]),
-           ("%s%s" % (cur, g["price"])) if g.get("price") else "",
+           ('<span class="ag-p">%s%s</span>' % (cur, g["price"])) if g.get("price") else "",
            esc(" · ".join(g["options"])))
         for g in ad["groups"])
 
@@ -283,6 +286,8 @@ def build(cafe_id):
         "@@IPHONE@@": icon("phone", "ico", "1.4"),
         "@@IDIR@@": icon("directions", "ico", "1.4"),
     }
+    t.setdefault("displayWeight","600")
+    t.setdefault("veilTop",".34")
     for k, v in t.items():
         rep["@@T_" + k.upper() + "@@"] = v
     for k, v in cafe.get("themeDark", {}).items():
@@ -337,15 +342,17 @@ def build(cafe_id):
     with open(os.path.join(site, "sw.js"), "w", encoding="utf-8") as f:
         f.write(sw)
 
+    base_url = (cafe.get("liveUrl") or "").split("#")[0]
+    if base_url and not base_url.endswith("/"): base_url += "/"
     doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
            '<meta name="viewport" content="width=device-width,initial-scale=1">'
-           '<meta name="theme-color" media="(prefers-color-scheme:light)" content="%s">'
-           '<meta name="theme-color" media="(prefers-color-scheme:dark)" content="%s">'
+           '<meta name="theme-color" content="%s">'
            '<meta name="description" content="%s">'
            '<meta property="og:type" content="website">'
            '<meta property="og:site_name" content="%s">'
            '<meta property="og:title" content="%s — Menu">'
            '<meta property="og:description" content="%s">'
+           '<meta property="og:url" content="%s">'
            '<meta property="og:image" content="%s">'
            '<meta name="twitter:card" content="summary_large_image">'
            '<link rel="icon" href="%s">'
@@ -354,8 +361,9 @@ def build(cafe_id):
            '<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
            'navigator.serviceWorker.register("sw.js").catch(function(){})});</script>'
            '</body></html>'
-           % (t["bg"], cafe.get("themeDark", {}).get("bg", t["bg"]), esc(cafe["blurb"]), esc(cafe["name"]), esc(cafe["name"]),
-              esc(cafe["blurb"]), A_rel.get("hero") or A_rel["logo"],
+           % (t["bg"], esc(cafe["blurb"]), esc(cafe["name"]), esc(cafe["name"]),
+              esc(cafe["blurb"]), base_url,
+              base_url + "assets/" + (cafe["assets"].get("hero") or cafe["assets"]["logo"]),
               A_rel["logo"], tpl))
     with open(os.path.join(site, "index.html"), "w", encoding="utf-8") as f:
         f.write(doc)

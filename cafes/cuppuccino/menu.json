@@ -4,7 +4,7 @@
     {
       "id": "coffee-craft",
       "name": "Coffee Craft Collection",
-      "kicker": "230 ml",
+      "kicker": "The espresso bar",
       "items": [
         {
           "name": "Macchiato",
@@ -89,7 +89,7 @@
     {
       "id": "cold-coffee",
       "name": "Cold Coffee Premium",
-      "kicker": "300 ml",
+      "kicker": "Over ice",
       "items": [
         {
           "name": "Iced Americano",
@@ -234,7 +234,7 @@
     {
       "id": "mocktails",
       "name": "Signature Mocktails",
-      "kicker": "300 ml · any added flavour ₹50",
+      "kicker": "Shaken, no alcohol",
       "items": [
         {
           "name": "Classic Virgin Mojito",
@@ -353,7 +353,7 @@
     {
       "id": "shakes",
       "name": "Premium Shakes",
-      "kicker": "330 ml",
+      "kicker": "Blended thick",
       "items": [
         {
           "name": "Oreo Shake",
@@ -420,7 +420,7 @@
     {
       "id": "soups",
       "name": "Soups",
-      "kicker": "210 gm",
+      "kicker": "Warm bowls",
       "items": [
         {
           "name": "Manchow",
@@ -636,7 +636,7 @@
     {
       "id": "appetizers",
       "name": "Appetizers",
-      "kicker": "400 gm",
+      "kicker": "Sharing plates",
       "items": [
         {
           "name": "Plain Nachos",
@@ -714,7 +714,7 @@
     {
       "id": "noodles",
       "name": "Noodles",
-      "kicker": "350 gm",
+      "kicker": "Wok",
       "items": [
         {
           "name": "Hakka Noodles",
@@ -875,7 +875,7 @@
     {
       "id": "pull-outs",
       "name": "Pull Outs",
-      "kicker": "350 gm",
+      "kicker": "Molten, pull apart",
       "items": [
         {
           "name": "Simply Cheese And Garlic Pull Out",
@@ -910,7 +910,7 @@
     {
       "id": "fondue",
       "name": "Fondue",
-      "kicker": "450 gm",
+      "kicker": "To share",
       "items": [
         {
           "name": "Italian Cheese Fondue",
@@ -1306,7 +1306,7 @@
     {
       "id": "platters",
       "name": "Punjabi Platters",
-      "kicker": "350 gm",
+      "kicker": "With parathas",
       "items": [
         {
           "name": "Rajma Masala Platter",
@@ -1429,7 +1429,7 @@
     }
   ],
   "addons": {
-    "title": "Notes",
+    "title": "Good to know",
     "groups": [
       {
         "label": "Mocktail flavours",

@@ -1,4 +1,4 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#E6E9E6"><meta name="description" content="Coffee, chai and a kitchen that runs from Indori poha to sizzlers — the neighbourhood all-rounder in Nana Varachha, open from morning to late."><meta property="og:type" content="website"><meta property="og:site_name" content="Café Beats"><meta property="og:title" content="Café Beats — Menu"><meta property="og:description" content="Coffee, chai and a kitchen that runs from Indori poha to sizzlers — the neighbourhood all-rounder in Nana Varachha, open from morning to late."><meta property="og:url" content="https://cafebeats-menu.vercel.app/"><meta property="og:image" content="https://cafebeats-menu.vercel.app/assets/hero.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/logo.png"><style>html,body{margin:0}img{max-width:100%}</style></head><body><title>Café Beats Menu</title>
+<!doctype html><html lang="en" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" media="(prefers-color-scheme:light)" content="#E6E9E6"><meta name="theme-color" media="(prefers-color-scheme:dark)" content="#06181D"><meta name="description" content="Coffee, chai and a kitchen that runs from Indori poha to sizzlers — the neighbourhood all-rounder in Nana Varachha, open from morning to late."><meta property="og:type" content="website"><meta property="og:site_name" content="Café Beats"><meta property="og:title" content="Café Beats — Menu"><meta property="og:description" content="Coffee, chai and a kitchen that runs from Indori poha to sizzlers — the neighbourhood all-rounder in Nana Varachha, open from morning to late."><meta property="og:image" content="assets/hero.jpg"><meta name="twitter:card" content="summary_large_image"><link rel="icon" href="assets/logo.png"><style>html,body{margin:0}img{max-width:100%}</style></head><body><title>Café Beats Menu</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Jost:wght@300;400;500;600&display=swap">
 <style>
@@ -13,16 +13,16 @@
   --veg:#1E7A42;
   --glow-a:#FFFFFF; --glow-a0:rgba(255,255,255,0);
   --glow-b:#D6E2E1; --glow-b0:rgba(214,226,225,0);
-  --veil:8,26,33; --veil-top:.55;
+  --veil:8,26,33;
   --art:invert(0); --art-op:.05;
   --shadow:0 1px 2px rgba(0,0,0,.05), 0 50px 90px -50px rgba(0,0,0,.35);
   --col:680px; --pad:20px;
-  --display:'Yeseva One', Georgia, serif; --ui:'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --display-weight:400;
+  --display:'Yeseva One', Georgia, serif; --ui:'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
   --bg:#06181D; --surface:#0A1F26; --raised:#122E37; --sunk:#0E262E;
-  --text:#E9F4F5; --muted:#8FB0B8; --dim:#7FA3AC;
+  --text:#E9F4F5; --muted:#8FB0B8; --dim:#5F818A;
   --edge:#1C3D47; --edge-soft:#14313A;
   --brass:#6FD3E8; --brass-lo:rgba(111,211,232,.28); --brass-lt:#6FD3E8;
   --footer:#041216; --pill-bg:#6FD3E8; --pill-tx:#06181D;
@@ -61,7 +61,7 @@ a{color:inherit;text-decoration:none}
   filter:saturate(.62) contrast(1.1);transform:scale(1.08);
   animation:heroZoom 2.6s cubic-bezier(.16,.7,.3,1) forwards}
 .hero-veil{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(var(--veil),var(--veil-top,.34)) 0%,rgba(var(--veil),.62) 44%,rgba(var(--veil),.95) 100%)}
+  background:linear-gradient(180deg,rgba(var(--veil),.34) 0%,rgba(var(--veil),.58) 44%,rgba(var(--veil),.95) 100%)}
 .hero{min-height:clamp(390px,60svh,520px);display:flex;flex-direction:column;justify-content:center}
 .hero-in{position:relative;text-align:center;color:#F6F1E5;
   padding:clamp(30px,7vw,54px) var(--pad) clamp(26px,5vw,40px)}
@@ -72,7 +72,7 @@ a{color:inherit;text-decoration:none}
 .hero-in>*:nth-child(3){--d:.24s}.hero-in>*:nth-child(4){--d:.32s}
 .hero-in>*:nth-child(5){--d:.40s}.hero-in>*:nth-child(6){--d:.48s}
 .eyebrow{margin:0 0 clamp(16px,4vw,26px);font-size:10px;letter-spacing:.36em;text-transform:uppercase;
-  color:var(--brass-lt)}
+  color:var(--brass-lt);animation}
 .hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);}
 .hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:italic;
   font-size:clamp(18px,4.8vw,23px);letter-spacing:.02em;color:#D9CBAE}
@@ -104,7 +104,7 @@ a{color:inherit;text-decoration:none}
 @keyframes cue{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:.9;transform:translateY(5px)}}
 
 /* ---------------- strips & actions ---------------- */
-.strip{height:20px;background-image:url(none);background-repeat:repeat-x;background-size:auto 100%;
+.strip{height:20px;background-image:url();background-repeat:repeat-x;background-size:auto 100%;
   background-position:center;opacity:.4;filter:var(--art)}
 .vegnote{display:flex;align-items:center;justify-content:center;gap:9px;margin:0;
   padding:13px var(--pad);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
@@ -126,7 +126,7 @@ a{color:inherit;text-decoration:none}
 .bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--surface) 92%,transparent);
   backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid var(--edge)}
 .bar-top{display:flex;align-items:center;gap:10px;padding:10px 14px 9px 16px}
-.bar-logo{order:1;margin-right:auto;height:26px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
+.bar-logo{order:1;margin-right:auto;height:17px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
   transition:opacity .35s,transform .35s;flex:none}
 .bar.scrolled .bar-logo{opacity:.85;transform:none}
 #theme{order:2;flex:none}
@@ -135,7 +135,7 @@ a{color:inherit;text-decoration:none}
 .srch input{flex:1;min-width:0;max-width:0;opacity:0;padding:0;border:0;background:transparent;
   font-family:var(--ui);font-size:14.5px;color:var(--text);border-bottom:1px solid var(--edge);
   transition:max-width .35s cubic-bezier(.2,.8,.3,1),opacity .3s,padding .3s}
-.srch.on input{max-width:100%;opacity:1;padding:6px 2px;visibility:visible}
+.srch.on input{max-width:100%;opacity:1;padding:6px 2px}
 .srch input::placeholder{color:var(--muted)}
 .srch input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
 .i-clear{display:none}
@@ -186,22 +186,21 @@ mark{background:var(--brass-lo);color:inherit;border-radius:3px;padding:0 2px;
 
 /* ---------------- sections ---------------- */
 main{padding:0 var(--pad)}
-.sec{position:relative;padding:36px 0 6px;scroll-margin-top:124px}
+.sec{position:relative;padding:36px 0 6px;scroll-margin-top:104px}
 .sec::before{content:"";position:absolute;right:-14px;top:18px;width:118px;height:118px;
-  background-image:url(none);background-size:contain;background-repeat:no-repeat;
+  background-image:url();background-size:contain;background-repeat:no-repeat;
   opacity:var(--art-op);filter:var(--art);pointer-events:none}
-.sec:nth-of-type(3n+2)::before{background-image:url(none)}
+.sec:nth-of-type(3n+2)::before{background-image:url()}
 .sec:nth-of-type(3n)::before{background-image:none}
 .sec-h{margin-bottom:18px;position:relative}
 .kicker{margin:0 0 8px;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;
   color:var(--brass);font-weight:500}
 .sec-h h2{margin:0;font-family:var(--display);font-size:clamp(30px,7.4vw,42px);line-height:1.04;
-  font-weight:var(--display-weight,600);letter-spacing:.008em;color:var(--text);text-wrap:balance}
+  font-weight:600;letter-spacing:.008em;color:var(--text);text-wrap:balance}
 .rule{display:block;width:100%;height:1px;margin-top:15px;
   background:linear-gradient(90deg,var(--brass) 0,var(--brass-lo) 44px,var(--edge-soft) 44px,var(--edge-soft) 100%)}
 .items{list-style:none;margin:0;padding:0}
 .item{display:flex;gap:14px;padding:15px 0;align-items:flex-start}
-.item[hidden],.sec[hidden]{display:none!important}
 .item + .item{border-top:1px solid var(--edge-soft)}
 .tile{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
   background:var(--sunk);border:1px solid var(--edge);color:var(--text);opacity:.82;
@@ -220,14 +219,19 @@ main{padding:0 var(--pad)}
 .line{display:flex;align-items:baseline;gap:9px}
 .name{font-size:clamp(14.2px,3.9vw,15.5px);font-weight:500;display:inline-flex;align-items:center;
   gap:5px 9px;flex-wrap:wrap;overflow-wrap:anywhere;min-width:0;line-height:1.3}
-.dots{flex:1 1 0;min-width:26px;overflow:hidden;height:1px;transform:translateY(-3px);
+.dots{flex:1 1 0;min-width:0;overflow:hidden;height:1px;transform:translateY(-3px);
   background-image:radial-gradient(circle,var(--brass-lo) 1px,transparent 1px);
   background-size:5px 1px;background-repeat:repeat-x}
-.price-ask{font-family:var(--ui);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);font-weight:400;white-space:nowrap}
-.price{font-family:var(--ui);font-size:clamp(14px,3.8vw,15.5px);font-weight:500;font-variant-numeric:tabular-nums;white-space:nowrap;color:var(--text);letter-spacing:.01em}
+.price{font-family:var(--display);font-size:clamp(16px,4.3vw,17.5px);font-weight:400;
+  white-space:nowrap;color:var(--text);text-align:right;min-width:4.6ch;
+  /* Cormorant defaults to old-style figures: 1 reads as a small-cap I and 0 drops
+     below the baseline. Prices are the one thing on this page that must be
+     unambiguous, so force lining + tabular so the column also aligns. */
+  font-variant-numeric:lining-nums tabular-nums;
+  font-feature-settings:"lnum" 1,"tnum" 1}
 button.line{background:none;border:0;padding:0;margin:0;width:100%;text-align:left;
   font:inherit;color:inherit;cursor:pointer;display:flex;align-items:baseline;gap:9px}
-.chev{width:6px;height:6px;flex:none;margin-left:2px;opacity:.8;align-self:center;
+.chev{width:6px;height:6px;flex:none;margin-left:2px;opacity:.8;
   border-right:1.5px solid var(--brass);border-bottom:1.5px solid var(--brass);
   transform:rotate(45deg) translateY(-2px);
   transition:transform .3s cubic-bezier(.2,.8,.3,1)}
@@ -248,7 +252,7 @@ button.line{background:none;border:0;padding:0;margin:0;width:100%;text-align:le
 /* ---------------- add-ons, gallery ---------------- */
 .addon{margin:36px 0 8px;background:var(--sunk);border:1px solid var(--edge);border-radius:18px;
   padding:24px 20px}
-.addon h3{margin:0 0 16px;font-family:var(--display);font-size:25px;font-weight:var(--display-weight,600);text-wrap:balance}
+.addon h3{margin:0 0 16px;font-family:var(--display);font-size:25px;font-weight:600;text-wrap:balance}
 .ag{display:flex;gap:13px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--edge)}
 .ag:first-of-type{border-top:0;padding-top:0}
 .ag>div{flex:1;min-width:0}
@@ -287,8 +291,8 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 .f-btn:hover{border-color:var(--brass-lt);color:var(--brass-lt);transform:translateY(-2px)}
 .f-btn.gold{border-color:var(--brass-lt);color:var(--brass-lt)}
 .f-btn.gold:hover{background:var(--brass-lt);color:var(--footer)}
-.f-note{margin:22px 0 0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,234,219,.62)}
-.f-strip{height:18px;margin:26px calc(var(--pad) * -1) -30px;background-image:url(none);
+.f-note{margin:22px 0 0;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:rgba(242,234,219,.4)}
+.f-strip{height:18px;margin:26px calc(var(--pad) * -1) -30px;background-image:url();
   background-repeat:repeat-x;background-size:auto 100%;background-position:center;opacity:.2;filter:invert(1)}
 
 /* Back-to-top lives in the sticky bar, not on a floating disc. A fixed circle
@@ -378,7 +382,7 @@ try{var t=localStorage.getItem("cafebeats-theme");if(t==="light"||t==="dark")e.s
     <img class="hero-bg" src="assets/hero.jpg" alt="" aria-hidden="true" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-in">
-      <p class="eyebrow">Cafe &amp; restaurant · Nana Varachha</p>
+      <p class="eyebrow">Coffee with music · Nana Varachha</p>
       <h1 style="margin:0"><img class="hero-logo" src="assets/logo.png" alt="Café Beats"></h1>
       <p class="hero-tag">Coffee with music</p>
       <span class="hero-rule"><i></i></span>
@@ -424,7 +428,7 @@ try{var t=localStorage.getItem("cafebeats-theme");if(t==="light"||t==="dark")e.s
       <h3>Add On</h3>
       <div class="ag"><span class="tile sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.4"/><circle cx="12" cy="12" r="6.4"/><circle cx="10" cy="10.2" r="1"/><circle cx="14.2" cy="11.4" r=".9"/><circle cx="11.4" cy="14.4" r=".9"/></svg></span><div><p class="ag-h">Cheese Burst<span class="ag-p">₹80</span></p><p class="ag-o">On any pizza</p></div></div>
     </div>
-    <div class="gal-wrap reveal"><div class="rail-h" style="padding-left:0;padding-right:0"><p>The place</p><i></i></div><div class="gal"><figure class="shot"><img src="assets/shot-food.jpg" alt="The food at Café Beats" loading="lazy" decoding="async"><figcaption>The food</figcaption></figure><figure class="shot"><img src="assets/shot-room.jpg" alt="The room at Café Beats" loading="lazy" decoding="async"><figcaption>The room</figcaption></figure><figure class="shot"><img src="assets/shot-bar.jpg" alt="The bar at Café Beats" loading="lazy" decoding="async"><figcaption>The bar</figcaption></figure><figure class="shot"><img src="assets/shot-seating.jpg" alt="Seating at Café Beats" loading="lazy" decoding="async"><figcaption>Seating</figcaption></figure></div></div>
+    <div class="gal-wrap reveal"><div class="rail-h" style="padding-left:0;padding-right:0"><p>The room</p><i></i></div><div class="gal"><figure class="shot"><img src="assets/shot-food.jpg" alt="The food at Café Beats" loading="lazy" decoding="async"><figcaption>The food</figcaption></figure><figure class="shot"><img src="assets/shot-room.jpg" alt="The room at Café Beats" loading="lazy" decoding="async"><figcaption>The room</figcaption></figure><figure class="shot"><img src="assets/shot-bar.jpg" alt="The bar at Café Beats" loading="lazy" decoding="async"><figcaption>The bar</figcaption></figure><figure class="shot"><img src="assets/shot-seating.jpg" alt="Seating at Café Beats" loading="lazy" decoding="async"><figcaption>Seating</figcaption></figure></div></div>
   </main>
 
   <div class="empty" id="empty">

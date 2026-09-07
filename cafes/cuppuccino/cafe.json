@@ -2,10 +2,10 @@
   "id": "cuppuccino",
   "name": "Cuppuccino",
   "legalName": "Cuppuccino Cafe & Kitchen",
-  "eyebrow": "Cafe & kitchen · Nana Varachha",
+  "eyebrow": "Third floor · Nana Varachha",
   "tagline": "We bake our own bread",
   "blurb": "Fourth door on the third floor — volcano pizzas, fondue, matcha and a mocktail list that runs to sixteen. Everything made to order, nothing coloured.",
-  "liveUrl": "https://cafe-qr-cuppuccino.vercel.app/cuppuccino/",
+  "liveUrl": "https://cuppuccino-menu.vercel.app/",
   "meta": {
     "cuisines": [
       "Cafe",
@@ -63,7 +63,9 @@
     "surface": "#F7FAF3",
     "text": "#2C3A2C",
     "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    "veg": "#1E7A42"
+    "veg": "#1E7A42",
+    "displayWeight": "400",
+    "veilTop": ".52"
   },
   "assets": {
     "logo": "logo.png",
@@ -100,7 +102,7 @@
     "accent": "#DCB878",
     "accentLo": "rgba(220,184,120,.28)",
     "bg": "#0F1710",
-    "dim": "#6C7C69",
+    "dim": "#8A9A87",
     "edge": "#28382A",
     "edgeSoft": "#1E2C20",
     "footer": "#0A110B",
@@ -117,7 +119,7 @@
     "text": "#F1F0E4",
     "veg": "#6FCB8E"
   },
-  "galleryTitle": "The room",
+  "galleryTitle": "The place",
   "priceLabel": "for two",
   "picksTitle": "Must try",
   "searchHint": "Try “fondue”, “matcha” or “sizzler”"

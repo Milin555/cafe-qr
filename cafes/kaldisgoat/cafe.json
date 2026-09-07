@@ -4,8 +4,8 @@
   "legalName": "Kaldi's Goat Coffee",
   "eyebrow": "Brew bar · Nana Varachha",
   "tagline": "Named for the goats that found coffee",
-  "blurb": "A brew bar three doors down from Sorriso — V60, Chemex, syphon and French press alongside espresso tonics, cheesecakes and croissants. Coffee taken seriously.",
-  "liveUrl": "https://cafe-qr-kaldisgoat.vercel.app/kaldisgoat/",
+  "blurb": "A brew bar on the third floor — V60, Chemex, syphon and French press alongside espresso tonics, cheesecakes and croissants. Coffee taken seriously.",
+  "liveUrl": "https://kaldisgoat-menu.vercel.app/",
   "meta": {
     "cuisines": [
       "Specialty Coffee",
@@ -64,7 +64,9 @@
     "surface": "#FAF8EA",
     "text": "#1F2E22",
     "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    "veg": "#1E7A42"
+    "veg": "#1E7A42",
+    "displayWeight": "600",
+    "veilTop": ".34"
   },
   "assets": {
     "logo": "logo.png"
@@ -86,7 +88,7 @@
     "accent": "#A9C07E",
     "accentLo": "rgba(169,192,126,.28)",
     "bg": "#0D160F",
-    "dim": "#6E7A64",
+    "dim": "#8B9880",
     "edge": "#26362A",
     "edgeSoft": "#1C2A20",
     "footer": "#080F0A",

@@ -3,7 +3,7 @@
   "sections": [
     {
       "id": "speciality-coffee",
-      "name": "Speciality Coffee",
+      "name": "Specialty Coffee",
       "kicker": "The bar",
       "items": [
         {
@@ -491,7 +491,7 @@
     }
   ],
   "addons": {
-    "title": "Add On",
+    "title": "Add-ons",
     "groups": [
       {
         "label": "Latte & Frappe flavours",

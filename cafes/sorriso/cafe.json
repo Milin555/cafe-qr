@@ -64,7 +64,9 @@
     "surface": "#FBF8F1",
     "text": "#232150",
     "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    "veg": "#1E7A42"
+    "veg": "#1E7A42",
+    "displayWeight": "600",
+    "veilTop": ".34"
   },
   "assets": {
     "logo": "logo.png",
@@ -106,13 +108,13 @@
     "lng": 72.8993255,
     "plusCode": "6VHX+JP Surat, Gujarat"
   },
-  "liveUrl": "https://cafe-qr-sorriso.vercel.app/sorriso/",
+  "liveUrl": "https://sorriso-surat.vercel.app/",
   "eyebrow": "Specialty coffee · Nana Varachha",
   "themeDark": {
     "accent": "#D9B87C",
     "accentLo": "rgba(217,184,124,.30)",
     "bg": "#07061A",
-    "dim": "#6E6A93",
+    "dim": "#8A86B0",
     "edge": "#242246",
     "edgeSoft": "#1B1A3A",
     "footer": "#050414",

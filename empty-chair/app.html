@@ -93,7 +93,8 @@
     cursor:pointer;flex:0 0 auto;white-space:nowrap;
   }
   .send:hover{filter:brightness(1.08)}
-  .send.sent{background:var(--sunken);color:var(--muted);border:1px solid var(--hair)}
+  .send.sent,.send:disabled{background:var(--sunken);color:var(--muted);
+    border:1px solid var(--hair);cursor:not-allowed}
   .back{
     background:none;border:1px solid var(--sage);color:var(--sage);
     border-radius:6px;padding:8px 11px;font-family:inherit;font-size:.78rem;
@@ -383,10 +384,13 @@ function recovered(){
 }
 
 /* ------------------------------------------------------------------ message */
+// Short, in the owner's voice, no discount language, and an opt-out on every
+// send. "Offer"/"sale" wording is what turns a warm message into a marketing
+// blast and gets the salon's own number reported — keep it out.
 const TEMPLATES = {
-  gu: (n,b,d) => `નમસ્તે ${n}, ${b} તરફથી! તમને જોયે ${d} દિવસ થઈ ગયા. આ અઠવાડિયે આવવું છે? અમે તમારા માટે સમય રાખી શકીએ.`,
-  hi: (n,b,d) => `नमस्ते ${n}, ${b} से! आपको देखे ${d} दिन हो गए। इस हफ़्ते आना है? हम आपके लिए समय रख सकते हैं।`,
-  en: (n,b,d) => `Hi ${n}, it's ${b}. It's been ${d} days since we saw you — want to come in this week? We can keep a slot for you.`
+  gu: (n,b,d) => `નમસ્તે ${n}, ${b} તરફથી! તમને જોયે ${d} દિવસ થઈ ગયા. આ અઠવાડિયે આવવું છે? અમે તમારા માટે સમય રાખી શકીએ. — બંધ કરવા "STOP" લખો.`,
+  hi: (n,b,d) => `नमस्ते ${n}, ${b} से! आपको देखे ${d} दिन हो गए। इस हफ़्ते आना है? हम आपके लिए समय रख सकते हैं। — बंद करने के लिए "STOP" लिखें.`,
+  en: (n,b,d) => `Hi ${n}, it's ${b}. It's been ${d} days since we saw you — want to come in this week? We can keep a slot for you. Reply STOP to opt out.`
 };
 function waLink(row){
   const b = Store.business();
@@ -407,7 +411,7 @@ function rowHTML(r, mode){
       <span class="meta ${r.overdue<=r.expected?"q":""}">${meta}</span>
     </div>
     ${ mode==="due"
-        ? `<button class="send ${sent?"sent":""}" data-act="send" data-id="${r.c.id}">${sent?"Sent":"WhatsApp"}</button>
+        ? `<button class="send ${sent?"sent":""}" data-act="send" data-id="${r.c.id}"${sent?' disabled title="Messaged within the last 14 days"':''}>${sent?"Sent":"WhatsApp"}</button>
            <button class="back" data-act="back" data-id="${r.c.id}">Came back</button>`
         : `<button class="back" data-act="back" data-id="${r.c.id}">Came back</button>` }
   </div>`;
@@ -457,8 +461,17 @@ document.addEventListener("click", e => {
   if(!row) return;
 
   if(btn.dataset.act === "send"){
+    // The fortnight cap is a real limit, not a label. A second nudge inside two
+    // weeks is what gets a salon's own number reported and banned.
+    if(row.nudgedRecently){
+      toast(`${row.c.name} was messaged in the last 14 days — leave them`);
+      return;
+    }
     // Open the owner's own WhatsApp with the message written. They press send.
-    // No API, no template approval, no consent exposure — a human sends it.
+    // A human sending from their own number means no API and no template approval.
+    // It does NOT mean no consent obligation: Meta still bans ordinary Business
+    // numbers for spam-shaped bulk sending, and the number lost is the salon's own.
+    // Hence the 14-day cap above and the opt-out line in every template.
     window.open(waLink(row), "_blank", "noopener");
     Store.addNudge(id);
     render();
