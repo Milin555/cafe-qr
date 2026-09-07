@@ -69,6 +69,23 @@ mixed English/Gujarati, decorative fonts, size variants stacked oddly. Vision mo
 ~85–95%, which is fine for drafting and unacceptable for prices. Review screen shows every
 price editable beside the source photo.
 
+**Source the menu from the cafe's own Google listing first.** In that order: the
+in-store card photographed by us, then the photos on the cafe's Google Business
+listing, then their own Instagram or Linktree. Zomato and Swiggy are a
+**cross-check, never the source** — their prices carry aggregator commission
+baked in, they lag the in-store card by months, and a cafe that finds its own
+menu priced off Zomato will read it as us not having visited. Sorriso proved the
+point: the Linktree PDF was a whole edition out of date against the card on the
+table. Record where every price came from in `cafe.json.source`, and list what
+still needs the owner's word in `ASK-THE-OWNER.md`.
+
+**Photographs are of that cafe, never stock.** The hero, the gallery and any dish
+photo come from their Google listing, their Instagram, or a phone on the day. A
+stock flat-white on a specialty cafe's page is worse than no photo — segment C
+spots it instantly and it says we did not go. No photo at all is honest; the
+renderer falls back to line art and the page still looks like theirs. Descriptions
+are written from the item, in the cafe's register, not lifted from an aggregator.
+
 **Customer data is per-cafe and never shared.** Consent checkbox at loyalty signup
 ("I agree to receive offers from [Cafe] on WhatsApp"). Under the DPDP Act the cafe is the
 data fiduciary and we process on its behalf. Never reuse one cafe's list for another — not
