@@ -74,7 +74,8 @@
       "shot-bar.jpg",
       "shot-seating.jpg"
     ],
-    "icon": "icon.png"
+    "icon": "icon.png",
+    "share": "share.jpg"
   },
   "galleryCaptions": [
     "The food",

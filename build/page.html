@@ -109,7 +109,8 @@ a{color:inherit;text-decoration:none}
 /* ---------------- strips & actions ---------------- */
 .strip{height:20px;background-image:url(@@PATTERN@@);background-repeat:repeat-x;background-size:auto 100%;
   background-position:center;opacity:.4;filter:var(--art)}
-.vegnote{display:flex;align-items:center;justify-content:center;gap:9px;margin:0;
+.vegnote{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:9px;
+  text-align:center;margin:0;
   padding:13px var(--pad);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;
   color:var(--dim);border-bottom:1px solid var(--edge-soft)}
 .vegnote .veg{width:12px;height:12px}
@@ -220,6 +221,7 @@ main{padding:0 var(--pad)}
 .shotbig{width:100%;max-width:340px;height:auto;aspect-ratio:16/10;object-fit:cover;
   border-radius:12px;border:1px solid var(--edge);margin:10px 0 4px}
 .body{flex:1;min-width:0;padding-top:3px}
+.item{scroll-margin-top:130px}
 .line{display:flex;align-items:baseline;gap:9px}
 .name{font-size:clamp(14.2px,3.9vw,15.5px);font-weight:500;display:inline-flex;align-items:center;
   gap:5px 9px;flex-wrap:wrap;overflow-wrap:anywhere;min-width:0;line-height:1.3}
@@ -573,6 +575,7 @@ try{
 
   function run(){
     var v=q.value.trim().toLowerCase();
+    sbtn.setAttribute("aria-label", q.value ? "Clear search" : "Search the menu");
     srch.classList.toggle("has", !!q.value);
     document.body.classList.toggle("searching", !!v);
     var hits=0;

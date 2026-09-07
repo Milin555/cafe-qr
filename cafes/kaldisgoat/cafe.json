@@ -71,7 +71,8 @@
   },
   "assets": {
     "logo": "logo.png",
-    "icon": "icon.png"
+    "icon": "icon.png",
+    "share": "share.jpg"
   },
   "source": {
     "primary": "Menu card photographed and published on their Zomato listing (3 pages).",

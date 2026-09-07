@@ -77,7 +77,8 @@
       "shot-room.jpg",
       "shot-counter.jpg"
     ],
-    "icon": "icon.png"
+    "icon": "icon.png",
+    "share": "share.jpg"
   },
   "galleryCaptions": [
     "Club sandwich",

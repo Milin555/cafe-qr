@@ -1440,15 +1440,8 @@
         ]
       },
       {
-        "label": "Prices exclude GST",
-        "icon": "leaf",
-        "options": [
-          "5% GST is added to the bill"
-        ]
-      },
-      {
         "label": "House notes",
-        "icon": "leaf",
+        "icon": "sparkle",
         "options": [
           "Jain food available",
           "We bake our own bread",

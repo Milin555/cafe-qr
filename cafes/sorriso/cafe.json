@@ -25,7 +25,7 @@
   "contact": {
     "phone": "+918980152424",
     "phoneDisplay": "089801 52424",
-    "whatsapp": "https://wa.me/6353473848?text=Hi%20Sorriso%2C%20I%27d%20like%20to%20book%20a%20table",
+    "whatsapp": "https://wa.me/916353473848?text=Hi%20Sorriso%2C%20I%27d%20like%20to%20book%20a%20table",
     "instagram": "https://www.instagram.com/sorrisosurat",
     "instagramHandle": "@sorrisosurat",
     "googleReview": "https://g.page/r/CQxicl6H7V2_EBM/review",
@@ -81,7 +81,8 @@
       "shot-wall.jpg",
       "shot-entrance.jpg"
     ],
-    "icon": "icon.png"
+    "icon": "icon.png",
+    "share": "share.jpg"
   },
   "galleryCaptions": [
     "The bar",
@@ -102,7 +103,8 @@
       "PIN: Google 395013 vs printed menu 395006. Page shows 395013.",
       "Phone: Google lists 089801 52424; Linktree WhatsApp for reservations is 6353473848. Page uses both.",
       "The new card has no non-vegetarian item (Kheema Pizza is gone), so every item is marked veg. Confirm.",
-      "Menu prints 'Heven Hummus', 'Avocado Dilight Focaccia', 'Tanisia Salad', 'Barry Gingar Twist', 'Citras Bloom' - kept exactly as printed rather than corrected."
+      "Menu prints 'Heven Hummus', 'Avocado Dilight Focaccia', 'Tanisia Salad', 'Barry Gingar Twist', 'Citras Bloom' - kept exactly as printed rather than corrected.",
+      "Two numbers are in use: the Google listing gives 089801 52424 and the Linktree WhatsApp is 63534 73848. Confirm which line actually answers WhatsApp."
     ]
   },
   "geo": {

@@ -145,10 +145,10 @@ def build(cafe_id):
 
     # ---- picks rail
     pick_cards = "".join(
-        '<a class="pick" href="#s-%s"><span class="pick-ico">%s</span>'
+        '<a class="pick" href="#i-%s"><span class="pick-ico">%s</span>'
         '<span class="pick-tag">%s</span><span class="pick-name">%s</span>'
         '%s</a>'
-        % (s["id"], icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]),
+        % (slug(i["name"]), icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]),
            ('<span class="pick-price">%s%s</span>' % (cur, i["price"])) if i.get("price") else "")
         for s, i in picks)
 
@@ -172,21 +172,22 @@ def build(cafe_id):
         search = esc((i["name"] + " " + i.get("note", "") + " " + desc
                       + " " + sec_name).lower())
         if desc or ph:
-            body = ('<span class="body">'
+            body = ('<div class="body">'
                     '<button class="line" type="button" aria-expanded="false">'
                     '<span class="name">%s%s</span><i class="chev" aria-hidden="true"></i>%s'
                     '%s</button>%s'
-                    '<div class="detail" hidden>%s%s</div></span>'
+                    '<div class="detail" hidden>%s%s</div></div>'
                     % (esc(i["name"]), veg, tag, price_html(i), note, big,
                        ('<p class="desc">%s</p>' % esc(desc)) if desc else ""))
             cls = "item has-desc"
         else:
-            body = ('<span class="body"><span class="line">'
+            body = ('<div class="body"><span class="line">'
                     '<span class="name">%s%s</span>%s'
-                    '%s</span>%s</span>'
+                    '%s</span>%s</div>'
                     % (esc(i["name"]), veg, tag, price_html(i), note))
             cls = "item"
-        return '<li class="%s" data-q="%s">%s%s</li>' % (cls, search, tile, body)
+        return ('<li class="%s" id="i-%s" data-q="%s">%s%s</li>'
+                % (cls, slug(i["name"]), search, tile, body))
 
     secs = "".join(
         '<section class="sec reveal" id="s-%s" data-sec="%s">'
@@ -380,7 +381,7 @@ def build(cafe_id):
            '</body></html>'
            % (t["bg"], esc(cafe["blurb"]), esc(cafe["name"]), esc(cafe["name"]),
               esc(cafe["blurb"]), base_url,
-              base_url + "assets/" + (cafe["assets"].get("hero") or cafe["assets"]["logo"]),
+              base_url + "assets/" + (cafe["assets"].get("share") or cafe["assets"].get("hero") or cafe["assets"]["logo"]),
               A_rel.get("icon") or A_rel["logo"], esc(cafe["name"]), t["fontsHref"], tpl))
     with open(os.path.join(site, "index.html"), "w", encoding="utf-8") as f:
         f.write(doc)
