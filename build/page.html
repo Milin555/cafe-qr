@@ -213,6 +213,17 @@ main{padding:0 var(--pad)}
   background-size:5px 1px;background-repeat:repeat-x}
 .price{font-size:clamp(13.6px,3.7vw,15px);font-weight:400;font-variant-numeric:tabular-nums;
   white-space:nowrap;color:var(--text);font-family:var(--display);font-size:17px}
+button.line{background:none;border:0;padding:0;margin:0;width:100%;text-align:left;
+  font:inherit;color:inherit;cursor:pointer;display:flex;align-items:baseline;gap:9px}
+.chev{width:6px;height:6px;flex:none;margin-left:2px;opacity:.8;
+  border-right:1.5px solid var(--brass);border-bottom:1.5px solid var(--brass);
+  transform:rotate(45deg) translateY(-2px);
+  transition:transform .3s cubic-bezier(.2,.8,.3,1)}
+.item.open .chev{transform:rotate(-135deg) translateY(2px)}
+.has-desc:hover .name{color:var(--brass)}
+.has-desc:hover .chev{opacity:1}
+.detail{animation:openDown .32s cubic-bezier(.2,.8,.3,1)}
+@keyframes openDown{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:none}}
 .desc{margin:6px 0 0;font-size:12.5px;line-height:1.65;color:var(--muted);font-weight:300;
   max-width:52ch;padding-left:1px;border-left:2px solid var(--brass-lo);padding-left:11px}
 .note{margin:4px 0 0;font-size:12px;line-height:1.55;color:var(--muted);font-weight:300}
@@ -498,6 +509,18 @@ try{
   var hin=document.querySelector(".hero-in");
   if(hin){ requestAnimationFrame(function(){hin.classList.add("lit");});
            setTimeout(function(){hin.classList.add("lit");}, 400); }
+
+  var menuEl=document.getElementById("menu");
+  if(menuEl) menuEl.addEventListener("click", function(e){
+    var btn = e.target.closest && e.target.closest("button.line");
+    if(!btn) return;
+    var li = btn.closest(".item"), d = li && li.querySelector(".detail");
+    if(!d) return;
+    var open = !li.classList.contains("open");
+    li.classList.toggle("open", open);
+    d.hidden = !open;                       // toggle the wrapper, not the paragraph
+    btn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
 
   var tbtn=document.getElementById("theme");
   if(tbtn) tbtn.onclick=function(){
