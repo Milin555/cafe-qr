@@ -60,6 +60,7 @@
           "name": "Hot Chocolate",
           "price": 280,
           "icon": "hotchoc",
+          "desc": "Thick drinking chocolate, steamed to order.",
           "veg": true
         }
       ]
@@ -73,12 +74,14 @@
           "name": "Iced Espresso",
           "price": 150,
           "icon": "icedglass",
+          "desc": "A shot pulled straight over ice. Short, cold and sharp.",
           "veg": true
         },
         {
           "name": "Iced Americano",
           "price": 160,
           "icon": "icedglass",
+          "desc": "Espresso and cold water over ice. Long and clean.",
           "veg": true
         },
         {
@@ -100,13 +103,16 @@
           "name": "Espresso Red Bull",
           "price": 300,
           "icon": "can",
+          "desc": "A shot over chilled Red Bull. Sweet, sharp and heavily caffeinated.",
           "veg": true
         },
         {
           "name": "Godfather",
           "price": 320,
           "icon": "bombon",
-          "veg": true
+          "desc": "A house iced coffee. Ask the counter how it is built.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Cold Brew",
@@ -133,6 +139,7 @@
           "name": "Barrel Aged Cold Brew Tonic",
           "price": 270,
           "icon": "barrel",
+          "desc": "Barrel-rested cold brew lengthened with tonic over ice.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -161,18 +168,21 @@
           "name": "Tonic",
           "price": 160,
           "icon": "tonic",
+          "desc": "Chilled tonic water over ice, on its own.",
           "veg": true
         },
         {
           "name": "Red Bull",
           "price": 200,
           "icon": "can",
+          "desc": "Served chilled, by the can.",
           "veg": true
         },
         {
           "name": "Ginger Ale",
           "price": 180,
           "icon": "ginger",
+          "desc": "Chilled ginger ale over ice.",
           "veg": true
         }
       ]
@@ -194,18 +204,21 @@
           "name": "Biscoff Frappe",
           "price": 320,
           "icon": "frappe",
+          "desc": "Blended iced coffee with Biscoff, the spiced caramel biscuit.",
           "veg": true
         },
         {
           "name": "Mocha Frappe",
           "price": 320,
           "icon": "frappe",
+          "desc": "Blended iced coffee with chocolate.",
           "veg": true
         },
         {
           "name": "Nutella Frappe",
           "price": 320,
           "icon": "frappe",
+          "desc": "Blended iced coffee with Nutella.",
           "veg": true
         }
       ]
@@ -219,12 +232,14 @@
           "name": "Nutella Shake",
           "price": 300,
           "icon": "shake",
+          "desc": "Thick milkshake blended with Nutella.",
           "veg": true
         },
         {
           "name": "Biscoff Shake",
           "price": 300,
           "icon": "shake",
+          "desc": "Thick milkshake blended with Biscoff.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -232,30 +247,35 @@
           "name": "Brownie Shake",
           "price": 300,
           "icon": "shake",
+          "desc": "A whole brownie blended into the shake.",
           "veg": true
         },
         {
           "name": "Oreo Shake",
           "price": 300,
           "icon": "shake",
+          "desc": "Thick milkshake blended with Oreo, cookie pieces through it.",
           "veg": true
         },
         {
           "name": "Alphonso Mango",
           "price": 320,
           "icon": "shake",
+          "desc": "Seasonal shake made with Alphonso, the sweetest of the Indian mangoes.",
           "veg": true
         },
         {
           "name": "Strawberry Shake",
           "price": 320,
           "icon": "shake",
+          "desc": "Thick strawberry milkshake.",
           "veg": true
         },
         {
           "name": "Blueberry Shake",
           "price": 320,
           "icon": "shake",
+          "desc": "Thick blueberry milkshake.",
           "veg": true
         }
       ]
@@ -269,30 +289,36 @@
           "name": "Mint Mojito",
           "price": 250,
           "icon": "mocktail",
+          "desc": "Lime and mint muddled with soda over crushed ice. No alcohol.",
           "veg": true
         },
         {
           "name": "Cranberry Passionfruit Splash",
           "price": 270,
           "icon": "mocktail",
+          "desc": "Cranberry and passionfruit, shaken and topped with soda.",
           "veg": true
         },
         {
           "name": "Sunset Bliss",
           "price": 270,
           "icon": "mocktail",
-          "veg": true
+          "desc": "A house mocktail. Ask the counter for today's build.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Litchi Lover",
           "price": 270,
           "icon": "mocktail",
+          "desc": "Built on litchi — sweet and floral, served long over ice.",
           "veg": true
         },
         {
           "name": "Orange Mojito",
           "price": 250,
           "icon": "mocktail",
+          "desc": "Orange and mint muddled with soda over crushed ice.",
           "veg": true
         }
       ]
@@ -306,6 +332,7 @@
           "name": "Cranberry Kaffira",
           "price": 260,
           "icon": "mocktail",
+          "desc": "Coffee with cranberry and kaffir lime. Tart and aromatic rather than sweet.",
           "note": "Coffee",
           "veg": true
         },
@@ -313,18 +340,22 @@
           "name": "Twilight Jamun",
           "price": 280,
           "icon": "mocktail",
+          "desc": "Built on jamun, the Indian black plum — deep purple and lightly astringent.",
           "veg": true
         },
         {
           "name": "Tropical Heatwave",
           "price": 300,
           "icon": "mocktail",
-          "veg": true
+          "desc": "A house signature mocktail, tropical and served long.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Citras Bloom Cold Brew",
           "price": 300,
           "icon": "coldbrew",
+          "desc": "Cold brew brightened with citrus. Coffee-based and served long.",
           "note": "Coffee",
           "veg": true
         },
@@ -332,6 +363,7 @@
           "name": "Barry Gingar Twist",
           "price": 300,
           "icon": "ginger",
+          "desc": "Berries with ginger, shaken and served over ice.",
           "veg": true
         }
       ]
@@ -345,24 +377,28 @@
           "name": "Lemon Iced Tea",
           "price": 240,
           "icon": "icedtea",
+          "desc": "Black tea over ice with lemon.",
           "veg": true
         },
         {
           "name": "Peach Iced Tea",
           "price": 240,
           "icon": "icedtea",
+          "desc": "Black tea over ice with peach.",
           "veg": true
         },
         {
           "name": "Passion Fruit Iced Tea",
           "price": 240,
           "icon": "icedtea",
+          "desc": "Black tea over ice with passion fruit.",
           "veg": true
         },
         {
           "name": "Kaffir Lime Yuzu Iced Tea",
           "price": 240,
           "icon": "icedtea",
+          "desc": "Iced tea with kaffir lime and yuzu — sharper and more floral than lemon.",
           "veg": true
         }
       ]
@@ -399,24 +435,28 @@
           "name": "Cheese Garlic Bread",
           "price": 345,
           "icon": "garlicbread",
+          "desc": "Garlic bread baked under cheese.",
           "veg": true
         },
         {
           "name": "Cheese Chilli Garlic Bread",
           "price": 365,
           "icon": "garlicbread",
+          "desc": "Cheese garlic bread with chilli through it.",
           "veg": true
         },
         {
           "name": "Sundried Tomato Garlic Bread",
           "price": 375,
           "icon": "garlicbread",
+          "desc": "Garlic bread with sundried tomato and cheese.",
           "veg": true
         },
         {
           "name": "French Fries",
           "price": 215,
           "icon": "fries",
+          "desc": "Fries tossed in the seasoning you pick.",
           "note": "Salted · Piri-Piri · Indian Chaat Masala · Cajun Spice",
           "veg": true
         },
@@ -424,6 +464,7 @@
           "name": "Potato Wedges",
           "price": 300,
           "icon": "wedges",
+          "desc": "Skin-on wedges tossed in the seasoning you pick.",
           "note": "Salted · Piri-Piri · Indian Chaat Masala · Cajun Spice",
           "veg": true
         },
@@ -431,18 +472,22 @@
           "name": "Triple Thread Nachos",
           "price": 385,
           "icon": "nachos",
-          "veg": true
+          "desc": "The larger loaded nachos. Ask the counter for the toppings.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Loaded Nachos",
           "price": 345,
           "icon": "nachos",
+          "desc": "Corn chips under cheese, loaded with toppings.",
           "veg": true
         },
         {
           "name": "Avocado Collegian Bhel",
           "price": 315,
           "icon": "bhel",
+          "desc": "Bhel — the puffed rice chaat — rebuilt with avocado.",
           "veg": true
         }
       ]
@@ -456,36 +501,42 @@
           "name": "Pesto Veggie Sandwich",
           "price": 385,
           "icon": "sandwich",
+          "desc": "Vegetables and basil pesto, pressed.",
           "veg": true
         },
         {
           "name": "Paneer Makhani Sandwich",
           "price": 345,
           "icon": "sandwich",
+          "desc": "Paneer in makhani gravy, pressed into a sandwich.",
           "veg": true
         },
         {
           "name": "Avocado Open Toast",
           "price": 365,
           "icon": "toast",
+          "desc": "Avocado on toast, open-faced.",
           "veg": true
         },
         {
           "name": "Shrooms & Pepper Sandwich",
           "price": 325,
           "icon": "mushroom",
+          "desc": "Mushrooms and pepper, pressed.",
           "veg": true
         },
         {
           "name": "Grilled Veggie Bagel",
           "price": 280,
           "icon": "bagel",
+          "desc": "Grilled vegetables in a bagel.",
           "veg": true
         },
         {
           "name": "Avocado Dilight Focaccia",
           "price": 330,
           "icon": "toast",
+          "desc": "Avocado on focaccia, open-faced.",
           "veg": true
         }
       ]
@@ -499,24 +550,30 @@
           "name": "Okra Chips with Hummus",
           "price": 320,
           "icon": "hummus",
+          "desc": "Crisp okra served with hummus to dip.",
           "veg": true
         },
         {
           "name": "Loaded Hummus",
           "price": 345,
           "icon": "hummus",
-          "veg": true
+          "desc": "Hummus served loaded — ask the counter for today's toppings.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Heven Hummus",
           "price": 350,
           "icon": "hummus",
-          "veg": true
+          "desc": "A house hummus plate. Ask the counter what is on it.",
+          "veg": true,
+          "descPlaceholder": true
         },
         {
           "name": "Cucumber Twist Hummus",
           "price": 320,
           "icon": "hummus",
+          "desc": "Hummus with cucumber through it, served as a plate.",
           "veg": true
         }
       ]
@@ -530,13 +587,16 @@
           "name": "Green With Avocado Salad",
           "price": 330,
           "icon": "salad",
+          "desc": "Greens with avocado.",
           "veg": true
         },
         {
           "name": "Tanisia Salad",
           "price": 355,
           "icon": "salad",
-          "veg": true
+          "desc": "A house salad. Ask the counter for the composition.",
+          "veg": true,
+          "descPlaceholder": true
         }
       ]
     },
@@ -549,36 +609,42 @@
           "name": "Margherita",
           "price": 455,
           "icon": "pizza",
+          "desc": "Tomato, mozzarella, basil. The Neapolitan benchmark.",
           "veg": true
         },
         {
           "name": "Four Cheese Pizza",
           "price": 495,
           "icon": "pizza",
+          "desc": "Four cheeses, no tomato sauce.",
           "veg": true
         },
         {
           "name": "Paneer Makhni Pizza",
           "price": 595,
           "icon": "pizzaslice",
+          "desc": "Paneer in makhani sauce on a Neapolitan base.",
           "veg": true
         },
         {
           "name": "Pesto Veggies Pizza",
           "price": 555,
           "icon": "pizza",
+          "desc": "Basil pesto with vegetables.",
           "veg": true
         },
         {
           "name": "Piri Piri Paneer Pizza",
           "price": 575,
           "icon": "pizzaslice",
+          "desc": "Paneer with piri-piri. The hottest pizza on the menu.",
           "veg": true
         },
         {
           "name": "Organic Farm Pizza",
           "price": 565,
           "icon": "pizza",
+          "desc": "A vegetable pizza on a thinner, crisper base.",
           "note": "Thin crust",
           "veg": true
         }
@@ -593,24 +659,28 @@
           "name": "Traditional Aglio Olio",
           "price": 375,
           "icon": "spaghetti",
+          "desc": "Garlic, olive oil and chilli. Nothing else — the simplest thing here.",
           "veg": true
         },
         {
           "name": "Modern Indian Aglio Olio",
           "price": 375,
           "icon": "spaghetti",
+          "desc": "Aglio olio built with Indian spice.",
           "veg": true
         },
         {
           "name": "Creamy Pesto",
           "price": 375,
           "icon": "pasta",
+          "desc": "Basil pesto loosened with cream.",
           "veg": true
         },
         {
           "name": "Arrabbiata Pasta",
           "price": 365,
           "icon": "pasta",
+          "desc": "Tomato sauce with chilli. Arrabbiata means angry.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -618,12 +688,14 @@
           "name": "Alfredo",
           "price": 365,
           "icon": "pasta",
+          "desc": "Butter and cheese emulsified into a white sauce.",
           "veg": true
         },
         {
           "name": "Pink Sauce",
           "price": 375,
           "icon": "pasta",
+          "desc": "Tomato and cream together — milder than arrabbiata, sharper than alfredo.",
           "veg": true
         }
       ]
@@ -637,24 +709,28 @@
           "name": "Burnt Garlic Rice",
           "price": 375,
           "icon": "ricebowl",
+          "desc": "Rice tossed through garlic taken dark for a deeper, nuttier flavour.",
           "veg": true
         },
         {
           "name": "Cilantro Rice",
           "price": 345,
           "icon": "ricebowl",
+          "desc": "Rice through coriander.",
           "veg": true
         },
         {
           "name": "Mexican Rice",
           "price": 375,
           "icon": "ricebowl",
+          "desc": "Rice cooked with tomato and Mexican spice.",
           "veg": true
         },
         {
           "name": "Herbs Rice With Queso Sauce",
           "price": 375,
           "icon": "ricebowl",
+          "desc": "Herbed rice under queso, the melted cheese sauce.",
           "veg": true
         }
       ]
@@ -668,6 +744,7 @@
           "name": "Biscoff Cheesecake",
           "price": 280,
           "icon": "cheesecake",
+          "desc": "Baked cheesecake with Biscoff.",
           "tag": "Guest favourite",
           "veg": true
         },
@@ -675,30 +752,35 @@
           "name": "Nutella Cheesecake",
           "price": 280,
           "icon": "cheesecake",
+          "desc": "Baked cheesecake with Nutella.",
           "veg": true
         },
         {
           "name": "Blueberry Cheesecake",
           "price": 320,
           "icon": "cheesecake",
+          "desc": "Cheesecake under blueberry.",
           "veg": true
         },
         {
           "name": "Ferrero Rocher Cheesecake",
           "price": 380,
           "icon": "cheesecake",
+          "desc": "Cheesecake built on Ferrero Rocher — chocolate and hazelnut.",
           "veg": true
         },
         {
           "name": "Strawberry Cheesecake",
           "price": 350,
           "icon": "cheesecake",
+          "desc": "Cheesecake under strawberry.",
           "veg": true
         },
         {
           "name": "New York Style Cheesecake",
           "price": 200,
           "icon": "cheesecake",
+          "desc": "Dense, plain, baked. The classic.",
           "veg": true
         }
       ]
@@ -712,18 +794,21 @@
           "name": "Biscoff Brownie",
           "price": 320,
           "icon": "brownie",
+          "desc": "Brownie with Biscoff.",
           "veg": true
         },
         {
           "name": "Nutella Brownie",
           "price": 320,
           "icon": "brownie",
+          "desc": "Brownie with Nutella.",
           "veg": true
         },
         {
           "name": "Biscoff with Caramel Brownie",
           "price": 320,
           "icon": "brownie",
+          "desc": "Brownie with Biscoff and caramel.",
           "veg": true
         }
       ]

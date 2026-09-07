@@ -93,21 +93,16 @@ def build(cafe_id):
                'decoding="async">' % ("__IMGBASE__", ph, esc(i["name"]))) if ph else ""
         desc = i.get("desc", "")
         search = esc((i["name"] + " " + i.get("note", "") + " " + desc).lower())
-        if desc or ph:
-            body = ('<span class="body"><button class="line" type="button" aria-expanded="false">'
-                    '<span class="name">%s%s%s<i class="chev"></i></span>'
-                    '<span class="dots"></span>'
-                    '<span class="price">%s%s</span></button>%s'
-                    '<div class="detail" hidden>%s<p class="desc">%s</p></div></span>'
-                    % (esc(i["name"]), veg, tag, cur, i["price"], note, big, esc(desc)))
-            cls = "item has-desc"
-        else:
-            body = ('<span class="body"><span class="line">'
-                    '<span class="name">%s%s%s</span>'
-                    '<span class="dots"></span>'
-                    '<span class="price">%s%s</span></span>%s</span>'
-                    % (esc(i["name"]), veg, tag, cur, i["price"], note))
-            cls = "item"
+        detail = ""
+        if ph or desc:
+            detail = '<div class="detail">%s%s</div>' % (
+                big, ('<p class="desc">%s</p>' % esc(desc)) if desc else "")
+        body = ('<span class="body"><span class="line">'
+                '<span class="name">%s%s%s</span>'
+                '<span class="dots"></span>'
+                '<span class="price">%s%s</span></span>%s%s</span>'
+                % (esc(i["name"]), veg, tag, cur, i["price"], note, detail))
+        cls = "item"
         return '<li class="%s" data-q="%s">%s%s</li>' % (cls, search, tile, body)
 
     secs = "".join(
