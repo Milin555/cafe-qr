@@ -68,16 +68,8 @@
     "veg": "#1E7A42"
   },
   "assets": {
-    "logo": "logo.png",
-    "gallery": [
-      "shot-menu1.jpg",
-      "shot-menu2.jpg"
-    ]
+    "logo": "logo.png"
   },
-  "galleryCaptions": [
-    "Their card, page one",
-    "Their card, page two"
-  ],
   "source": {
     "primary": "Menu card photographed and published on their Zomato listing (3 pages).",
     "zomato": "https://www.zomato.com/surat/kaldis-goat-nana-varachha",
@@ -87,7 +79,7 @@
       "THEIR MENU CARD CARRIES NO PRICES, so this page shows 'at the counter' throughout. Every price has to come from the cafe. This is the first thing to ask them for.",
       "The logo is a typographic stand-in. Their real mark is a goat head above the wordmark — ask for the original file.",
       "Rating differs by platform: Swiggy 4.8 (90), Google listing showed 4.7 (100). Page uses Swiggy's.",
-      "No interior photos were available on the listing, so the hero is a plain block rather than a bad photo. Ask the cafe for three room shots."
+      "No photographs of this cafe exist on any listing I could reach (Justdial blocks, Swiggy returns a shell, kaldisgoat.shop does not resolve). The page therefore has no hero photo and no gallery. Three phone shots of the room would fix both."
     ]
   },
   "themeDark": {
@@ -110,6 +102,5 @@
     "surface": "#121D14",
     "text": "#EFEEDC",
     "veg": "#6FCB8E"
-  },
-  "galleryTitle": "Their menu card"
+  }
 }

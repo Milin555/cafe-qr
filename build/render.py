@@ -239,6 +239,11 @@ def build(cafe_id):
         "@@ADDONTITLE@@": esc(ad["title"]), "@@ADDONS@@": addon_groups,
         "@@ACTIONS@@": actions,
         "@@GALLERYTITLE@@": esc(cafe.get("galleryTitle", "The room")),
+        "@@GALLERY@@": ("" if not gal else
+            '<div class="gal-wrap reveal">'
+            '<div class="rail-h" style="padding-left:0;padding-right:0"><p>%s</p><i></i></div>'
+            '<div class="gal">@@SHOTS@@</div></div>'
+            % esc(cafe.get("galleryTitle", "The room"))),
         "@@ITEMCOUNT@@": str(sum(len(s["items"]) for s in menu["sections"])),
         "@@VEGNOTE@@": ('<p class="vegnote"><span class="veg"><i></i></span>'
                         'Pure vegetarian kitchen</p>') if all_veg else "",
