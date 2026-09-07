@@ -238,6 +238,7 @@ def build(cafe_id):
         "@@NAV@@": nav, "@@PICKS@@": pick_cards, "@@SECTIONS@@": secs,
         "@@ADDONTITLE@@": esc(ad["title"]), "@@ADDONS@@": addon_groups,
         "@@ACTIONS@@": actions,
+        "@@GALLERYTITLE@@": esc(cafe.get("galleryTitle", "The room")),
         "@@ITEMCOUNT@@": str(sum(len(s["items"]) for s in menu["sections"])),
         "@@VEGNOTE@@": ('<p class="vegnote"><span class="veg"><i></i></span>'
                         'Pure vegetarian kitchen</p>') if all_veg else "",
@@ -260,6 +261,8 @@ def build(cafe_id):
     }
     for k, v in t.items():
         rep["@@T_" + k.upper() + "@@"] = v
+    for k, v in cafe.get("themeDark", {}).items():
+        rep["@@D_" + k.upper() + "@@"] = v
     def render(assets, gal, imgbase):
         out = TPL.replace("__IMGBASE__", imgbase)
         local = dict(rep)

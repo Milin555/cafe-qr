@@ -21,13 +21,14 @@
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --bg:#07061A; --surface:#0B0A1E; --raised:#15142F; --sunk:#100F26;
-  --text:#F2EADB; --muted:#9A96BE; --dim:#6E6A93;
-  --edge:#242246; --edge-soft:#1B1A3A;
-  --brass:#A9C07E; --brass-lo:rgba(201,164,92,.30);
-  --footer:#050414; --pill-bg:#A9C07E; --pill-tx:#0B0A1E;
-  --glow-a:#171533; --glow-a0:rgba(23,21,51,0);
-  --glow-b:#120F2A; --glow-b0:rgba(18,15,42,0);
+  --bg:#0D160F; --surface:#121D14; --raised:#1B291D; --sunk:#16221880;
+  --text:#EFEEDC; --muted:#9DA88F; --dim:#6E7A64;
+  --edge:#26362A; --edge-soft:#1C2A20;
+  --brass:#A9C07E; --brass-lo:rgba(169,192,126,.28); --brass-lt:#A9C07E;
+  --footer:#080F0A; --pill-bg:#A9C07E; --pill-tx:#0D160F;
+  --veg:#6FCB8E;
+  --glow-a:#1A2A1D; --glow-a0:rgba(26,42,29,0);
+  --glow-b:#101B12; --glow-b0:rgba(16,27,18,0);
   --art:invert(1); --art-op:.07;
   --shadow:0 1px 2px rgba(0,0,0,.6), 0 50px 90px -50px rgba(0,0,0,1);
 }
@@ -126,11 +127,12 @@ a{color:inherit;text-decoration:none}
 .bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--surface) 92%,transparent);
   backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid var(--edge)}
 .bar-top{display:flex;align-items:center;gap:10px;padding:10px 14px 9px 16px}
-.bar-logo{height:16px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
+.bar-logo{order:1;margin-right:auto;height:17px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
   transition:opacity .35s,transform .35s;flex:none}
 .bar.scrolled .bar-logo{opacity:.85;transform:none}
-#theme{margin-left:auto;order:-1}
-.srch{display:flex;align-items:center;gap:8px;flex:1;min-width:0;justify-content:flex-end}
+#theme{order:2;flex:none}
+.srch{order:3;flex:0 1 auto;display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end}
+.srch.on{flex:1}
 .srch input{flex:1;min-width:0;max-width:0;opacity:0;padding:0;border:0;background:transparent;
   font-family:var(--ui);font-size:14.5px;color:var(--text);border-bottom:1px solid var(--edge);
   transition:max-width .35s cubic-bezier(.2,.8,.3,1),opacity .3s,padding .3s}
@@ -141,7 +143,7 @@ a{color:inherit;text-decoration:none}
 .srch.has #sbtn .i-find{display:none}
 .srch.has #sbtn .i-clear{display:block}
 .srch input:focus{outline:none;border-bottom-color:var(--brass)}
-.ibtn{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--edge);
+.ibtn{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--edge);
   background:transparent;color:var(--text);cursor:pointer;flex:none;transition:border-color .2s,color .2s}
 .ibtn:hover{border-color:var(--brass);color:var(--brass)}
 .ibtn .ico{width:17px;height:17px}
@@ -426,7 +428,7 @@ try{var t=localStorage.getItem("kaldisgoat-theme");if(t==="light"||t==="dark")e.
       <div class="ag"><span class="tile sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.4c0 0 5.6 6 5.6 9.7a5.6 5.6 0 1 1-11.2 0C6.4 9.4 12 3.4 12 3.4z"/><path d="M9.4 14.4a2.6 2.6 0 0 0 2.6 2.4"/></svg></span><div><p class="ag-h">Latte &amp; Frappe flavours<span class="ag-p"></span></p><p class="ag-o">Vanilla · Caramel · Mocha · Hazelnut · Cinnamon · Spanish · Biscoff · Moon mocha · Tiramisu</p></div></div><div class="ag"><span class="tile sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 5.4h8v12.8a1.9 1.9 0 0 1-1.9 1.9h-4.2A1.9 1.9 0 0 1 8 18.2z"/><circle cx="10.6" cy="12.4" r=".7"/><circle cx="13.2" cy="14.8" r=".55"/><circle cx="12" cy="9.8" r=".5"/><path d="M15.6 4.4h4a2 2 0 0 1-4 0z"/></svg></span><div><p class="ag-h">Espresso tonic infusions<span class="ag-p"></span></p><p class="ag-o">Blueberry · Strawberry · Irish · Cranberry · Yuzu · Lavender · Blood orange · Pomegranate · Coconut</p></div></div>
     </div>
     <div class="gal-wrap reveal">
-      <div class="rail-h" style="padding-left:0;padding-right:0"><p>The room</p><i></i></div>
+      <div class="rail-h" style="padding-left:0;padding-right:0"><p>Their menu card</p><i></i></div>
       <div class="gal"><figure class="shot"><img src="assets/shot-menu1.jpg" alt="Their card, page one at Kaldi's Goat" loading="lazy" decoding="async"><figcaption>Their card, page one</figcaption></figure><figure class="shot"><img src="assets/shot-menu2.jpg" alt="Their card, page two at Kaldi's Goat" loading="lazy" decoding="async"><figcaption>Their card, page two</figcaption></figure></div>
     </div>
   </main>

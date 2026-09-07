@@ -107,5 +107,27 @@
     "plusCode": "6VHX+JP Surat, Gujarat"
   },
   "liveUrl": "https://cafe-qr-sorriso.vercel.app/sorriso/",
-  "eyebrow": "Specialty coffee · Nana Varachha"
+  "eyebrow": "Specialty coffee · Nana Varachha",
+  "themeDark": {
+    "accent": "#D9B87C",
+    "accentLo": "rgba(217,184,124,.30)",
+    "bg": "#07061A",
+    "dim": "#6E6A93",
+    "edge": "#242246",
+    "edgeSoft": "#1B1A3A",
+    "footer": "#050414",
+    "glowA": "#171533",
+    "glowA0": "rgba(23,21,51,0)",
+    "glowB": "#120F2A",
+    "glowB0": "rgba(18,15,42,0)",
+    "muted": "#9A96BE",
+    "pillBg": "#D9B87C",
+    "pillTx": "#0B0A1E",
+    "raised": "#15142F",
+    "sunk": "#100F26",
+    "surface": "#0B0A1E",
+    "text": "#F2EADB",
+    "veg": "#5CC98A"
+  },
+  "galleryTitle": "The room"
 }

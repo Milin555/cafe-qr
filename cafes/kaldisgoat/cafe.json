@@ -89,5 +89,27 @@
       "Rating differs by platform: Swiggy 4.8 (90), Google listing showed 4.7 (100). Page uses Swiggy's.",
       "No interior photos were available on the listing, so the hero is a plain block rather than a bad photo. Ask the cafe for three room shots."
     ]
-  }
+  },
+  "themeDark": {
+    "accent": "#A9C07E",
+    "accentLo": "rgba(169,192,126,.28)",
+    "bg": "#0D160F",
+    "dim": "#6E7A64",
+    "edge": "#26362A",
+    "edgeSoft": "#1C2A20",
+    "footer": "#080F0A",
+    "glowA": "#1A2A1D",
+    "glowA0": "rgba(26,42,29,0)",
+    "glowB": "#101B12",
+    "glowB0": "rgba(16,27,18,0)",
+    "muted": "#9DA88F",
+    "pillBg": "#A9C07E",
+    "pillTx": "#0D160F",
+    "raised": "#1B291D",
+    "sunk": "#16221880",
+    "surface": "#121D14",
+    "text": "#EFEEDC",
+    "veg": "#6FCB8E"
+  },
+  "galleryTitle": "Their menu card"
 }

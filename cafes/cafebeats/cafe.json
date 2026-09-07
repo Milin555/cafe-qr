@@ -95,5 +95,27 @@
     ]
   },
   "eyebrow": "Coffee with music · Nana Varachha",
-  "liveUrl": "https://cafe-qr-cafebeats.vercel.app/cafebeats/"
+  "liveUrl": "https://cafe-qr-cafebeats.vercel.app/cafebeats/",
+  "themeDark": {
+    "accent": "#6FD3E8",
+    "accentLo": "rgba(111,211,232,.28)",
+    "bg": "#06181D",
+    "dim": "#5F818A",
+    "edge": "#1C3D47",
+    "edgeSoft": "#14313A",
+    "footer": "#041216",
+    "glowA": "#10333D",
+    "glowA0": "rgba(16,51,61,0)",
+    "glowB": "#0A2229",
+    "glowB0": "rgba(10,34,41,0)",
+    "muted": "#8FB0B8",
+    "pillBg": "#6FD3E8",
+    "pillTx": "#06181D",
+    "raised": "#122E37",
+    "sunk": "#0E262E",
+    "surface": "#0A1F26",
+    "text": "#E9F4F5",
+    "veg": "#5CC98A"
+  },
+  "galleryTitle": "The room"
 }

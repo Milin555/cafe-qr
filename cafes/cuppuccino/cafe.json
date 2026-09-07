@@ -7,14 +7,23 @@
   "blurb": "Fourth door on the third floor — volcano pizzas, fondue, matcha and a mocktail list that runs to sixteen. Everything made to order, nothing coloured.",
   "liveUrl": "https://cafe-qr-cuppuccino.vercel.app/cuppuccino/",
   "meta": {
-    "cuisines": ["Cafe", "Italian", "Mexican"],
+    "cuisines": [
+      "Cafe",
+      "Italian",
+      "Mexican"
+    ],
     "priceForTwo": 900,
     "priceBand": "₹900",
     "rating": 3.5,
     "ratingCount": 9,
     "ratingSource": "Zomato"
   },
-  "hours": { "open": "11:00", "close": "23:00", "label": "11:00 AM – 11:00 PM", "days": "Open all days" },
+  "hours": {
+    "open": "11:00",
+    "close": "23:00",
+    "label": "11:00 AM – 11:00 PM",
+    "days": "Open all days"
+  },
   "contact": {
     "phone": "+919099922040",
     "phoneDisplay": "090999 22040",
@@ -43,11 +52,14 @@
     "edgeSoft": "#E1E8DB",
     "fontsHref": "https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap",
     "footer": "#22301F",
-    "glowA": "#FBFDF7", "glowA0": "rgba(251,253,247,0)",
-    "glowB": "#D6DECE", "glowB0": "rgba(214,222,206,0)",
+    "glowA": "#FBFDF7",
+    "glowA0": "rgba(251,253,247,0)",
+    "glowB": "#D6DECE",
+    "glowB0": "rgba(214,222,206,0)",
     "heroVeil": "34,48,31",
     "muted": "#5E6D5B",
-    "pillBg": "#2C3A2C", "pillTx": "#F7FAF3",
+    "pillBg": "#2C3A2C",
+    "pillTx": "#F7FAF3",
     "raised": "#FFFFFF",
     "sunk": "#EDF1E7",
     "surface": "#F7FAF3",
@@ -58,9 +70,19 @@
   "assets": {
     "logo": "logo.png",
     "hero": "hero.jpg",
-    "gallery": ["shot-sandwich.jpg", "shot-pizza.jpg", "shot-room.jpg", "shot-counter.jpg"]
+    "gallery": [
+      "shot-sandwich.jpg",
+      "shot-pizza.jpg",
+      "shot-room.jpg",
+      "shot-counter.jpg"
+    ]
   },
-  "galleryCaptions": ["Club sandwich", "Stone pizza", "The room", "The counter"],
+  "galleryCaptions": [
+    "Club sandwich",
+    "Stone pizza",
+    "The room",
+    "The counter"
+  ],
   "source": {
     "primary": "Menu photographed and published on their Zomato listing (7 pages, with descriptions).",
     "zomato": "https://www.zomato.com/surat/cuppuccino-nana-varachha",
@@ -73,5 +95,27 @@
       "The one dish photo (Dal Makhani Platter) is their own listing photo, matched to the item by its printed description. Confirm before publishing.",
       "Their printed menu says GST 5% extra, so prices here exclude tax."
     ]
-  }
+  },
+  "themeDark": {
+    "accent": "#DCB878",
+    "accentLo": "rgba(220,184,120,.28)",
+    "bg": "#0F1710",
+    "dim": "#6C7C69",
+    "edge": "#28382A",
+    "edgeSoft": "#1E2C20",
+    "footer": "#0A110B",
+    "glowA": "#1C2B1E",
+    "glowA0": "rgba(28,43,30,0)",
+    "glowB": "#111B13",
+    "glowB0": "rgba(17,27,19,0)",
+    "muted": "#9CAB98",
+    "pillBg": "#DCB878",
+    "pillTx": "#0F1710",
+    "raised": "#1E2B1F",
+    "sunk": "#18241A",
+    "surface": "#141E15",
+    "text": "#F1F0E4",
+    "veg": "#6FCB8E"
+  },
+  "galleryTitle": "The room"
 }

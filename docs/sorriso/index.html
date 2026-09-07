@@ -24,8 +24,9 @@
   --bg:#07061A; --surface:#0B0A1E; --raised:#15142F; --sunk:#100F26;
   --text:#F2EADB; --muted:#9A96BE; --dim:#6E6A93;
   --edge:#242246; --edge-soft:#1B1A3A;
-  --brass:#D9B87C; --brass-lo:rgba(201,164,92,.30);
+  --brass:#D9B87C; --brass-lo:rgba(217,184,124,.30); --brass-lt:#D9B87C;
   --footer:#050414; --pill-bg:#D9B87C; --pill-tx:#0B0A1E;
+  --veg:#5CC98A;
   --glow-a:#171533; --glow-a0:rgba(23,21,51,0);
   --glow-b:#120F2A; --glow-b0:rgba(18,15,42,0);
   --art:invert(1); --art-op:.07;
@@ -126,11 +127,12 @@ a{color:inherit;text-decoration:none}
 .bar{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--surface) 92%,transparent);
   backdrop-filter:blur(16px) saturate(1.5);border-bottom:1px solid var(--edge)}
 .bar-top{display:flex;align-items:center;gap:10px;padding:10px 14px 9px 16px}
-.bar-logo{height:16px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
+.bar-logo{order:1;margin-right:auto;height:17px;width:auto;filter:var(--art);opacity:0;transform:translateY(5px);
   transition:opacity .35s,transform .35s;flex:none}
 .bar.scrolled .bar-logo{opacity:.85;transform:none}
-#theme{margin-left:auto;order:-1}
-.srch{display:flex;align-items:center;gap:8px;flex:1;min-width:0;justify-content:flex-end}
+#theme{order:2;flex:none}
+.srch{order:3;flex:0 1 auto;display:flex;align-items:center;gap:8px;min-width:0;justify-content:flex-end}
+.srch.on{flex:1}
 .srch input{flex:1;min-width:0;max-width:0;opacity:0;padding:0;border:0;background:transparent;
   font-family:var(--ui);font-size:14.5px;color:var(--text);border-bottom:1px solid var(--edge);
   transition:max-width .35s cubic-bezier(.2,.8,.3,1),opacity .3s,padding .3s}
@@ -141,7 +143,7 @@ a{color:inherit;text-decoration:none}
 .srch.has #sbtn .i-find{display:none}
 .srch.has #sbtn .i-clear{display:block}
 .srch input:focus{outline:none;border-bottom-color:var(--brass)}
-.ibtn{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1px solid var(--edge);
+.ibtn{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--edge);
   background:transparent;color:var(--text);cursor:pointer;flex:none;transition:border-color .2s,color .2s}
 .ibtn:hover{border-color:var(--brass);color:var(--brass)}
 .ibtn .ico{width:17px;height:17px}
