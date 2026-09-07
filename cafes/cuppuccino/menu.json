@@ -1,0 +1,1476 @@
+{
+  "currency": "₹",
+  "sections": [
+    {
+      "id": "coffee-craft",
+      "name": "Coffee Craft Collection",
+      "kicker": "230 ml",
+      "items": [
+        {
+          "name": "Macchiato",
+          "price": 190,
+          "icon": "cortado",
+          "desc": "Espresso shot 30 ml with a dash of steamed milk and milk foam",
+          "veg": true
+        },
+        {
+          "name": "Hot Americano",
+          "price": 190,
+          "icon": "espresso",
+          "desc": "Espresso shot 30 ml with hot water",
+          "veg": true
+        },
+        {
+          "name": "Espresso With Cookies",
+          "price": 210,
+          "icon": "espresso",
+          "desc": "Espresso shot 30 ml",
+          "veg": true
+        },
+        {
+          "name": "Flat White Modern",
+          "price": 210,
+          "icon": "cup",
+          "desc": "Espresso shot 30 ml with steamed milk and a little milk foam",
+          "veg": true
+        },
+        {
+          "name": "Café Mocha",
+          "price": 230,
+          "icon": "mocha",
+          "desc": "Espresso shot 30 ml with steamed milk and chocolate syrup",
+          "veg": true
+        },
+        {
+          "name": "Cafe Latte",
+          "price": 260,
+          "icon": "latte",
+          "desc": "Espresso shot 30 ml, steamed milk with milk foam topping",
+          "veg": true
+        },
+        {
+          "name": "Double Espresso With Cookies",
+          "price": 280,
+          "icon": "espresso",
+          "desc": "Espresso shot 60 ml",
+          "veg": true
+        },
+        {
+          "name": "Espresso With Tonic / Ginger Ale",
+          "price": 280,
+          "icon": "tonic",
+          "desc": "Espresso shot with tonic water or ginger ale",
+          "veg": true
+        },
+        {
+          "name": "Hot Chocolate",
+          "price": 280,
+          "icon": "hotchoc",
+          "note": "Non coffee",
+          "desc": "Hot chocolate powder with steamed milk",
+          "veg": true
+        },
+        {
+          "name": "Cappuccino",
+          "price": 290,
+          "icon": "cup",
+          "desc": "Espresso shot 30 ml with 1/3 steamed milk, 1/3 milk foam",
+          "veg": true
+        },
+        {
+          "name": "Hot Toddy",
+          "price": 300,
+          "icon": "teacup",
+          "note": "Non coffee",
+          "tag": "Must try",
+          "desc": "Lime juice, honey, cinnamon, cloves, ginger, mint leaves",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "cold-coffee",
+      "name": "Cold Coffee Premium",
+      "kicker": "300 ml",
+      "items": [
+        {
+          "name": "Iced Americano",
+          "price": 210,
+          "icon": "icedglass",
+          "desc": "Espresso shot 30 ml with ice and cold water",
+          "veg": true
+        },
+        {
+          "name": "Iced Mocha",
+          "price": 230,
+          "icon": "icedlatte",
+          "desc": "Espresso shot 30 ml with cold milk and chocolate syrup",
+          "veg": true
+        },
+        {
+          "name": "Cold Brew With Tonic / Ginger Ale",
+          "price": 250,
+          "icon": "coldbrew",
+          "desc": "Cold brew with tonic water or ginger ale",
+          "veg": true
+        },
+        {
+          "name": "Classic Cold Coffee",
+          "price": 260,
+          "icon": "frappe",
+          "desc": "Espresso shot with ice, cold milk and ice cream",
+          "veg": true
+        },
+        {
+          "name": "Espresso Redbull",
+          "price": 270,
+          "icon": "can",
+          "desc": "Espresso shot 30 ml with Redbull",
+          "veg": true
+        },
+        {
+          "name": "Affogato",
+          "price": 270,
+          "icon": "affogato",
+          "desc": "Espresso shot 30 ml with vanilla ice cream",
+          "veg": true
+        },
+        {
+          "name": "Cold Brew With Flavours",
+          "price": 270,
+          "icon": "coldbrew",
+          "desc": "Cold brew with orange, cranberry, hazelnut, Irish or caramel",
+          "veg": true
+        },
+        {
+          "name": "Espresso Martini",
+          "price": 300,
+          "icon": "mocktail",
+          "desc": "Espresso shot 60 ml, vanilla syrup, cream, simple syrup",
+          "veg": true
+        },
+        {
+          "name": "Spiced Cold Brew",
+          "price": 350,
+          "icon": "coldbrew",
+          "desc": "Cold brew, apple juice, honey, cinnamon",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "matcha",
+      "name": "Matcha Luxe Series",
+      "kicker": "Ceremonial green",
+      "items": [
+        {
+          "name": "Matcha Sunset",
+          "price": 330,
+          "icon": "teacup",
+          "tag": "Best seller",
+          "desc": "Matcha, mango juice, maple juice, water",
+          "veg": true
+        },
+        {
+          "name": "Matcha Latte",
+          "price": 350,
+          "icon": "teacup",
+          "desc": "Matcha, maple syrup, barista oat milk",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Matcha",
+          "price": 370,
+          "icon": "teacup",
+          "desc": "Strawberry, banana, maple syrup, matcha, milk",
+          "veg": true
+        },
+        {
+          "name": "Dalgona Matcha",
+          "price": 370,
+          "icon": "teacup",
+          "desc": "Matcha, cream, maple syrup, oat milk",
+          "veg": true
+        },
+        {
+          "name": "Matcha Espresso Fusion",
+          "price": 370,
+          "icon": "teacup",
+          "note": "Served hot",
+          "desc": "Matcha, hot water, simple syrup, milk, espresso shot",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "tea",
+      "name": "Tea & Refreshers",
+      "kicker": "Over ice",
+      "items": [
+        {
+          "name": "Lemon Iced Tea",
+          "price": 190,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Peach Iced Tea",
+          "price": 200,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Berry Blast Ice Tea",
+          "price": 230,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Mint Ice Tea",
+          "price": 260,
+          "icon": "icedtea",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Signature Mocktails",
+      "kicker": "300 ml · any added flavour ₹50",
+      "items": [
+        {
+          "name": "Classic Virgin Mojito",
+          "price": 220,
+          "icon": "mocktail",
+          "desc": "Mint syrup with mint leaves, lemon, sprite, soda",
+          "veg": true
+        },
+        {
+          "name": "Guava Spicy Punch",
+          "price": 230,
+          "icon": "mocktail",
+          "desc": "Guava syrup, red chilli powder, tabasco, green chilli, soda",
+          "veg": true
+        },
+        {
+          "name": "Blue Lemon",
+          "price": 270,
+          "icon": "mocktail",
+          "desc": "Blue curacao syrup, lemon, mint syrup, soda",
+          "veg": true
+        },
+        {
+          "name": "Blue Ocean With Boba",
+          "price": 270,
+          "icon": "mocktail",
+          "desc": "Blue curacao syrup, lemon, soda, boba",
+          "veg": true
+        },
+        {
+          "name": "Golden River",
+          "price": 280,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Apple juice, honey, peach syrup, lime juice",
+          "veg": true
+        },
+        {
+          "name": "Pina Colada",
+          "price": 290,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Pineapple juice, coconut milk powder, ice cream, sprite, soda",
+          "veg": true
+        },
+        {
+          "name": "Rainbow Paradise",
+          "price": 290,
+          "icon": "mocktail",
+          "desc": "Pineapple juice, grenadine syrup, coconut syrup, blue curacao, soda",
+          "veg": true
+        },
+        {
+          "name": "Cinderella",
+          "price": 290,
+          "icon": "mocktail",
+          "desc": "Lime wedges, mint leaves, lime juice, sugar syrup, pomegranate juice",
+          "veg": true
+        },
+        {
+          "name": "Passion Fruit Mojito",
+          "price": 295,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Sex On The Beach",
+          "price": 300,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Cranberry juice, orange juice, sweet and sour",
+          "veg": true
+        },
+        {
+          "name": "Coconut Kiss",
+          "price": 310,
+          "icon": "mocktail",
+          "desc": "Pineapple juice, cream, grenadine syrup, orange juice",
+          "veg": true
+        },
+        {
+          "name": "Kokam Mojito",
+          "price": 315,
+          "icon": "mocktail",
+          "desc": "Salt, sugar powder, mint leaves, lemon slice, cumin powder, rock salt, kokam syrup, topped with soda",
+          "veg": true
+        },
+        {
+          "name": "Caribbean Sunset",
+          "price": 325,
+          "icon": "mocktail",
+          "desc": "Orange juice, Yakult, cool blue Gatorade",
+          "veg": true
+        },
+        {
+          "name": "Pink Lady Delight",
+          "price": 340,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Cranberry juice, passion juice, rose water, sweet and sour",
+          "veg": true
+        },
+        {
+          "name": "Sangria",
+          "price": 350,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Pomegranate juice, apple juice, orange juice, grape juice",
+          "veg": true
+        },
+        {
+          "name": "Swimming Pool Aqua Splash",
+          "price": 350,
+          "icon": "mocktail",
+          "tag": "Must try",
+          "desc": "Pineapple juice, cream, blue curacao, coconut syrup",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "shakes",
+      "name": "Premium Shakes",
+      "kicker": "330 ml",
+      "items": [
+        {
+          "name": "Oreo Shake",
+          "price": 260,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Blueberry Shake",
+          "price": 265,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Nutella Shake",
+          "price": 270,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Shake",
+          "price": 275,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Kitkat Shake",
+          "price": 280,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Chocolate Shake",
+          "price": 280,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Chocochips Shake",
+          "price": 285,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Brownie Shake",
+          "price": 290,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Ferrero Shake",
+          "price": 290,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Shake",
+          "price": 310,
+          "icon": "shake",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "soups",
+      "name": "Soups",
+      "kicker": "210 gm",
+      "items": [
+        {
+          "name": "Manchow",
+          "price": 205,
+          "icon": "noodles",
+          "desc": "Chopped veggies with chilli sauce and soya sauce",
+          "veg": true
+        },
+        {
+          "name": "Burnt Garlic",
+          "price": 230,
+          "icon": "noodles",
+          "desc": "Fried garlic, celery, onion, cream",
+          "veg": true
+        },
+        {
+          "name": "Hot & Sour",
+          "price": 240,
+          "icon": "noodles",
+          "desc": "Chopped veggies with ginger, chilli sauce, soya sauce",
+          "veg": true
+        },
+        {
+          "name": "Basil Tomato",
+          "price": 260,
+          "icon": "noodles",
+          "desc": "Tomato base with basil leaves",
+          "veg": true
+        },
+        {
+          "name": "Roasted Veggies",
+          "price": 260,
+          "icon": "noodles",
+          "desc": "Roasted veggies with cream",
+          "veg": true
+        },
+        {
+          "name": "Cream of Tomato",
+          "price": 280,
+          "icon": "noodles",
+          "desc": "Tomato base with cream",
+          "veg": true
+        },
+        {
+          "name": "Broccoli Almond",
+          "price": 290,
+          "icon": "noodles",
+          "desc": "Broccoli, almond, cream, green base",
+          "veg": true
+        },
+        {
+          "name": "Mexican Tortilla",
+          "price": 320,
+          "icon": "nachos",
+          "desc": "Chopped beans and corn with bell pepper",
+          "veg": true
+        },
+        {
+          "name": "Burmese Khow Suey",
+          "price": 340,
+          "icon": "noodles",
+          "desc": "Coconut milk powder, peanut, khow suey, fried garlic",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "salad",
+      "name": "Salad",
+      "kicker": "Fresh",
+      "items": [
+        {
+          "name": "Italian Greek Salad",
+          "price": 280,
+          "icon": "salad",
+          "desc": "Olive, onion, lettuce, bell pepper, cherry tomato, feta cheese",
+          "veg": true
+        },
+        {
+          "name": "Farm House Caesar Salad",
+          "price": 320,
+          "icon": "salad",
+          "desc": "Bread croutons, mustard sauce, lolo rosso, lettuce, olives, fried garlic",
+          "veg": true
+        },
+        {
+          "name": "Mexican Crunch Salad",
+          "price": 360,
+          "icon": "salad",
+          "desc": "Beans, crunchy veggies, nachos, bell pepper, corn, onion",
+          "veg": true
+        },
+        {
+          "name": "Russian Salad",
+          "price": 390,
+          "icon": "salad",
+          "desc": "Apple, pineapple, mayonnaise, sweet sauce, seasoning",
+          "veg": true
+        },
+        {
+          "name": "Protein Punch",
+          "price": 445,
+          "icon": "salad",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "small-bites",
+      "name": "Small Bites",
+      "kicker": "To pick at",
+      "items": [
+        {
+          "name": "Garlic Bread",
+          "price": 240,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Salted French Fries",
+          "price": 260,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Cheese Chilli Garlic Toast",
+          "price": 280,
+          "icon": "garlicbread",
+          "note": "8 pieces",
+          "desc": "Mozzarella cheese, green chilli, garlic, oregano",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri French Fries",
+          "price": 290,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Cheese Chilli Corn Toast",
+          "price": 290,
+          "icon": "garlicbread",
+          "note": "8 pieces",
+          "desc": "Mozzarella cheese, chilli flakes, corn",
+          "veg": true
+        },
+        {
+          "name": "Mexican Fries",
+          "price": 310,
+          "icon": "fries",
+          "note": "350 gm",
+          "desc": "Topped with Mexican masala",
+          "veg": true
+        },
+        {
+          "name": "Bruschetta",
+          "price": 320,
+          "icon": "garlicbread",
+          "note": "8 pieces",
+          "desc": "Black olive, jalapeño, tomato, bell pepper, basil",
+          "veg": true
+        },
+        {
+          "name": "Cheese Chilli Fries",
+          "price": 320,
+          "icon": "fries",
+          "note": "350 gm",
+          "desc": "Processed cheese, green chilli, seasoning in hot sauce",
+          "veg": true
+        },
+        {
+          "name": "Cheese Fries",
+          "price": 330,
+          "icon": "fries",
+          "note": "350 gm",
+          "desc": "Processed cheese and yellow cheese",
+          "veg": true
+        },
+        {
+          "name": "Avocado Toasty",
+          "price": 340,
+          "icon": "toast",
+          "note": "6 pieces",
+          "desc": "Avocado, basil, olive oil, pepper",
+          "veg": true
+        },
+        {
+          "name": "Honey Chilli Potatoes",
+          "price": 340,
+          "icon": "wedges",
+          "note": "400 gm",
+          "desc": "Potato wedges with seasoning in hot chilli sauce, honey, sesame seeds topping",
+          "veg": true
+        },
+        {
+          "name": "Cuppuccino Sp. Toast",
+          "price": 350,
+          "icon": "garlicbread",
+          "note": "8 pieces",
+          "desc": "Processed cheese, garlic, chilli flakes",
+          "veg": true
+        },
+        {
+          "name": "Cuppuccino Sp. Fries Bucket",
+          "price": 360,
+          "icon": "fries",
+          "note": "350 gm",
+          "desc": "Salted, peri peri and masala fries combo",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "appetizers",
+      "name": "Appetizers",
+      "kicker": "400 gm",
+      "items": [
+        {
+          "name": "Plain Nachos",
+          "price": 320,
+          "icon": "nachos",
+          "desc": "Nachos topping of liquid cheese, salsa and sour cream",
+          "veg": true
+        },
+        {
+          "name": "Crispy Veg",
+          "price": 340,
+          "icon": "noodles",
+          "desc": "Veggies, capsicum, onion, seasoning, hot sauce",
+          "veg": true
+        },
+        {
+          "name": "Cilantro Paneer",
+          "price": 340,
+          "icon": "noodles",
+          "desc": "Pesto sauce, malai paneer",
+          "veg": true
+        },
+        {
+          "name": "Crispy Manchurian",
+          "price": 360,
+          "icon": "noodles",
+          "desc": "Cabbage, seasoning with hot sauce",
+          "veg": true
+        },
+        {
+          "name": "Chilli Garlic Mushroom",
+          "price": 370,
+          "icon": "mushroom",
+          "desc": "Mushroom, garlic, green chilli",
+          "veg": true
+        },
+        {
+          "name": "Paneer Chilli Dry",
+          "price": 380,
+          "icon": "noodles",
+          "desc": "Malai paneer, capsicum, onion, seasoning, hot sauce",
+          "veg": true
+        },
+        {
+          "name": "Tex Mex Nachos",
+          "price": 390,
+          "icon": "nachos",
+          "desc": "Nachos loaded, Mexican masala, liquid cheese topping",
+          "veg": true
+        },
+        {
+          "name": "Cottage Cheese Tacos",
+          "price": 390,
+          "icon": "taco",
+          "desc": "Tacos loaded with sauté bell pepper, paneer, capsicum",
+          "veg": true
+        },
+        {
+          "name": "Dragon Lollipop",
+          "price": 410,
+          "icon": "noodles",
+          "desc": "Paneer with hot chilli sauce and bread sticks",
+          "veg": true
+        },
+        {
+          "name": "Cheese Ball",
+          "price": 440,
+          "icon": "nachos",
+          "note": "8 pieces",
+          "desc": "Spanish, cheese, herbs",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "noodles",
+      "name": "Noodles",
+      "kicker": "350 gm",
+      "items": [
+        {
+          "name": "Hakka Noodles",
+          "price": 380,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Chilly Garlic Noodles",
+          "price": 440,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Ramen Noodles",
+          "price": 445,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Manchurian Hakka Noodles",
+          "price": 480,
+          "icon": "noodles",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "club-sandwich",
+      "name": "Club Sandwich",
+      "kicker": "Stacked",
+      "items": [
+        {
+          "name": "Mexican Sandwich",
+          "price": 310,
+          "icon": "sandwich",
+          "desc": "Mexican masala with cucumber, tomato, onion",
+          "veg": true
+        },
+        {
+          "name": "Cheese Grilled Supreme",
+          "price": 320,
+          "icon": "sandwich",
+          "desc": "Processed cheese",
+          "veg": true
+        },
+        {
+          "name": "Tandoori Paneer Sandwich",
+          "price": 340,
+          "icon": "sandwich",
+          "desc": "Paneer with tandoori sauce",
+          "veg": true
+        },
+        {
+          "name": "Veggie Delight Sandwich",
+          "price": 340,
+          "icon": "sandwich",
+          "desc": "Sauté veggies with lettuce",
+          "veg": true
+        },
+        {
+          "name": "Cottage Cheese Schezwan Sandwich",
+          "price": 340,
+          "icon": "sandwich",
+          "desc": "Paneer with schezwan",
+          "veg": true
+        },
+        {
+          "name": "Avocado Sandwich",
+          "price": 390,
+          "icon": "sandwich",
+          "desc": "Avocado, broccoli, babycorn, zucchini, lolo rosso",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "panini",
+      "name": "Panini & Focaccia",
+      "kicker": "Pressed or baked",
+      "items": [
+        {
+          "name": "Italian Veggies",
+          "price": 310,
+          "icon": "panini",
+          "note": "Focaccia ₹350",
+          "desc": "Broccoli, zucchini, babycorn, bell pepper, cucumber, tomato, onion",
+          "veg": true
+        },
+        {
+          "name": "Pesto Paneer",
+          "price": 320,
+          "icon": "panini",
+          "note": "Focaccia ₹360",
+          "desc": "Basil pesto, paneer, capsicum, bell pepper",
+          "veg": true
+        },
+        {
+          "name": "Tomato Basil",
+          "price": 330,
+          "icon": "panini",
+          "note": "Focaccia ₹410",
+          "desc": "Mozzarella cheese, basil, tomato",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Paneer",
+          "price": 340,
+          "icon": "panini",
+          "note": "Focaccia ₹380",
+          "desc": "Peri peri sauce, paneer, bell pepper, jalapeño, olive",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Wraps",
+      "kicker": "Two per order",
+      "items": [
+        {
+          "name": "Italian Veggie Creamy Wrap",
+          "price": 295,
+          "icon": "wrap",
+          "desc": "Broccoli, zucchini, baby corn, bell pepper, cucumber, tomato, onion",
+          "veg": true
+        },
+        {
+          "name": "Veg Wrap",
+          "price": 330,
+          "icon": "wrap",
+          "desc": "Cabbage, carrot, cucumber, capsicum, tomato, onion",
+          "veg": true
+        },
+        {
+          "name": "Fusion Of Lollo Rosso",
+          "price": 340,
+          "icon": "wrap",
+          "desc": "Lollo rosso, lettuce, cabbage, onion, olives",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Paneer Wrap",
+          "price": 345,
+          "icon": "wrap",
+          "desc": "Peri peri paneer, peri peri sauce, bell pepper, jalapeño, olive",
+          "veg": true
+        },
+        {
+          "name": "Mexican Salsa Wrap",
+          "price": 355,
+          "icon": "wrap",
+          "desc": "Corn, salsa, olives, beans",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pull-outs",
+      "name": "Pull Outs",
+      "kicker": "350 gm",
+      "items": [
+        {
+          "name": "Simply Cheese And Garlic Pull Out",
+          "price": 360,
+          "icon": "garlicbread",
+          "desc": "Garlic, mozzarella cheese",
+          "veg": true
+        },
+        {
+          "name": "Schezwan Pull Out",
+          "price": 360,
+          "icon": "garlicbread",
+          "desc": "Schezwan sauce, mozzarella cheese",
+          "veg": true
+        },
+        {
+          "name": "Jalapeño Cheese Pull Out",
+          "price": 370,
+          "icon": "garlicbread",
+          "desc": "Jalapeño, jalapeño dip, mozzarella cheese",
+          "veg": true
+        },
+        {
+          "name": "Roasted Mushroom And Garlic Pull Out",
+          "price": 380,
+          "icon": "mushroom",
+          "desc": "Mushroom, garlic, mozzarella cheese",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "fondue",
+      "name": "Fondue",
+      "kicker": "450 gm",
+      "items": [
+        {
+          "name": "Italian Cheese Fondue",
+          "price": 490,
+          "icon": "hotchoc",
+          "desc": "Bread stick, lavas, potato wedges, nachos, sauté veggies, cheese sauce",
+          "veg": true
+        },
+        {
+          "name": "Cheese Cuppuccino Fondue",
+          "price": 525,
+          "icon": "hotchoc",
+          "desc": "Masala french fries, loaded nachos, sauté veggies, grilled focaccia, cheese sauce",
+          "veg": true
+        },
+        {
+          "name": "Cuppuccino Special Fondue",
+          "price": 585,
+          "icon": "hotchoc",
+          "tag": "Signature best seller",
+          "desc": "Trio of dips and crunchy bites",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "chef-fondue",
+      "name": "Chef Signature Fondue",
+      "kicker": "Dips",
+      "items": [
+        {
+          "name": "Italian Cheese Fondue",
+          "price": 520,
+          "icon": "hotchoc",
+          "desc": "Mild herbs, thick cream, mozzarella dip",
+          "veg": true
+        },
+        {
+          "name": "Mexican Salsa Fondue",
+          "price": 560,
+          "icon": "hotchoc",
+          "desc": "Fusion salsa fondue with a spice kick",
+          "veg": true
+        },
+        {
+          "name": "Cuppuccino Special Fondue",
+          "price": 585,
+          "icon": "hotchoc",
+          "tag": "Signature",
+          "desc": "Trio of dips and crunchy bites",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "rice-bowl",
+      "name": "Premium Rice Bowl",
+      "kicker": "One bowl",
+      "items": [
+        {
+          "name": "Truffle Mushroom Creamy Bowl",
+          "price": 430,
+          "icon": "ricebowl",
+          "tag": "Bestseller",
+          "desc": "White creamy flavour",
+          "veg": true
+        },
+        {
+          "name": "Manchurian Fried Rice",
+          "price": 450,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Rice With Salsa Curry",
+          "price": 510,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Hot Pot",
+          "price": 525,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Cheese Fiesta Burrito Bowl",
+          "price": 525,
+          "icon": "burrito",
+          "desc": "Corn, veggies, creamy sauce, nacho topping",
+          "veg": true
+        },
+        {
+          "name": "Green Thai Curry Rice",
+          "price": 550,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Creamy Cottage Cheese Spinach Rice",
+          "price": 580,
+          "icon": "ricebowl",
+          "desc": "Spinach rice, mustard gravy, vegetables, cottage cheese",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Premium Pasta Collection",
+      "kicker": "Bowls",
+      "items": [
+        {
+          "name": "Fiery Italian Arrabbiata",
+          "price": 349,
+          "icon": "pasta",
+          "desc": "Tomato and herb base with a fiery kick",
+          "veg": true
+        },
+        {
+          "name": "Classic Alfredo",
+          "price": 365,
+          "icon": "pasta",
+          "desc": "Creamy parmesan cheese with herbs",
+          "veg": true
+        },
+        {
+          "name": "Royal Cream Mix Sauce",
+          "price": 375,
+          "icon": "pasta",
+          "desc": "Balanced rich duo of alfredo and arrabbiata",
+          "veg": true
+        },
+        {
+          "name": "Aglio e Olio",
+          "price": 390,
+          "icon": "spaghetti",
+          "veg": true
+        },
+        {
+          "name": "Romano Pasta",
+          "price": 425,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Basil Pesto Spaghetti",
+          "price": 430,
+          "icon": "spaghetti",
+          "veg": true
+        },
+        {
+          "name": "Pesto Pasta",
+          "price": 435,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Mixed Sauce Ravioli Pasta",
+          "price": 450,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Ravioli Pesto",
+          "price": 460,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Triple Cheese Macaroni Pasta",
+          "price": 560,
+          "icon": "pasta",
+          "desc": "Layered cheese melt and grain finish",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizzas & Garlic Bread",
+      "kicker": "Stone baked",
+      "items": [
+        {
+          "name": "Margherita",
+          "price": 415,
+          "icon": "pizza",
+          "desc": "Basil and mozzarella",
+          "veg": true
+        },
+        {
+          "name": "Cuppuccino Sp. Garlic Bread",
+          "price": 460,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Paneer BBQ Pizza",
+          "price": 460,
+          "icon": "pizzaslice",
+          "desc": "Smokey, with barbeque sauce and paneer",
+          "veg": true
+        },
+        {
+          "name": "Italian Pizza",
+          "price": 470,
+          "icon": "pizza",
+          "desc": "Paneer, tomato, onion, bell peppers and cheese",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Pizza",
+          "price": 475,
+          "icon": "pizzaslice",
+          "desc": "A spicy one with peri peri sauce, onion and bell pepper",
+          "veg": true
+        },
+        {
+          "name": "Veggie Delight Pizza",
+          "price": 475,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "Mexican Pizza",
+          "price": 475,
+          "icon": "pizzaslice",
+          "veg": true
+        },
+        {
+          "name": "Mushroom Delight & Garlic Bread",
+          "price": 485,
+          "icon": "mushroom",
+          "veg": true
+        },
+        {
+          "name": "Tandoori Paneer Pizza",
+          "price": 490,
+          "icon": "pizzaslice",
+          "veg": true
+        },
+        {
+          "name": "Tabasco Pizza",
+          "price": 490,
+          "icon": "pizzaslice",
+          "veg": true
+        },
+        {
+          "name": "Cheff's Choice Pizza",
+          "price": 490,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "4 Cheese Pizza",
+          "price": 520,
+          "icon": "pizza",
+          "veg": true
+        },
+        {
+          "name": "Three Cheese Pizza",
+          "price": 535,
+          "icon": "pizza",
+          "desc": "Jalapeño cheese, mozzarella, processed cheese",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "masterpieces",
+      "name": "Signature Masterpieces",
+      "kicker": "Volcano & stone pizza collection",
+      "items": [
+        {
+          "name": "Chef Fusion Mix Stone Pizza",
+          "price": 620,
+          "icon": "pizza",
+          "desc": "Signature fusion of sauces, spices, processed cheese",
+          "veg": true
+        },
+        {
+          "name": "Lava Loaded Volcano Pizza",
+          "price": 640,
+          "icon": "pizzaslice",
+          "desc": "Rich molten cheese, crunchy toppings, jalapeño heat. Choice of classic, white or red cheese",
+          "veg": true
+        },
+        {
+          "name": "Cheese Fondue Pizza",
+          "price": 660,
+          "icon": "pizzaslice",
+          "desc": "Loaded molten cheese fondue, vegetables and herb drizzle",
+          "veg": true
+        },
+        {
+          "name": "Smoked Americano Pepper Pizza",
+          "price": 670,
+          "icon": "pizzaslice",
+          "desc": "Smokey chipotle flavour with crunchy veggies",
+          "veg": true
+        },
+        {
+          "name": "Tex-Mex Sizzled Volcano Pizza",
+          "price": 690,
+          "icon": "pizzaslice",
+          "tag": "Hero",
+          "desc": "Cheese crust, fiery salsa, jalapeño, creamy drizzle",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "baked",
+      "name": "Baked Dish",
+      "kicker": "From the oven",
+      "items": [
+        {
+          "name": "Enchiladas",
+          "price": 350,
+          "icon": "taco",
+          "desc": "Cheesy Mexican fusion with a sour cream finish",
+          "veg": true
+        },
+        {
+          "name": "Royal Layered Veg Lasagna",
+          "price": 415,
+          "icon": "pasta",
+          "desc": "Classic layers of veggies, cheese and thick sauce",
+          "veg": true
+        },
+        {
+          "name": "Spinach Ravioli",
+          "price": 424,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Baked Spaghetti In Mixed Sauce",
+          "price": 430,
+          "icon": "spaghetti",
+          "veg": true
+        },
+        {
+          "name": "Baked Macaroni With Pineapple",
+          "price": 425,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Fiery Chipotle Paneer Bake",
+          "price": 630,
+          "icon": "pasta",
+          "tag": "Signature",
+          "desc": "Paneer, smoky sauce, chipotle kick",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sizzlers",
+      "name": "Sizzlers",
+      "kicker": "Still going when it lands",
+      "items": [
+        {
+          "name": "Italian Sizzler",
+          "price": 550,
+          "icon": "sizzler",
+          "desc": "Pasta and veggies tossed in mixed sauce, served with garlic bread and french fries",
+          "veg": true
+        },
+        {
+          "name": "Chinese Sizzler",
+          "price": 550,
+          "icon": "sizzler",
+          "desc": "Noodles, manchurian dry, paneer chilli dry, spring roll, french fries, vegetables",
+          "veg": true
+        },
+        {
+          "name": "Mexican Sizzler",
+          "price": 590,
+          "icon": "sizzler",
+          "desc": "Mexican rice with nachos and quesadilla",
+          "veg": true
+        },
+        {
+          "name": "Cheese Bun Sizzler",
+          "price": 650,
+          "icon": "sizzler",
+          "desc": "Red cheese bun, bell pepper rice, red spicy gravy, french fries, aloo tikki, vegetables",
+          "veg": true
+        },
+        {
+          "name": "Paneer Shashlik Sizzler",
+          "price": 680,
+          "icon": "sizzler",
+          "desc": "Cooked paneer, red gravy, rice and veggies",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "platters",
+      "name": "Punjabi Platters",
+      "kicker": "350 gm",
+      "items": [
+        {
+          "name": "Rajma Masala Platter",
+          "price": 270,
+          "icon": "ricebowl",
+          "desc": "Rajma masala with rice, salad, achar",
+          "veg": true
+        },
+        {
+          "name": "Punjabi Chole Platter",
+          "price": 280,
+          "icon": "paratha",
+          "desc": "Punjabi chole with 2 kulchas, laccha onion, fried green chilli",
+          "veg": true
+        },
+        {
+          "name": "Dal Makhani Platter",
+          "price": 310,
+          "icon": "paratha",
+          "desc": "Dal makhani with 2 parathas, achaar, salad",
+          "veg": true
+        },
+        {
+          "name": "Paneer Butter Masala Platter",
+          "price": 320,
+          "icon": "paratha",
+          "desc": "Paneer butter masala with 2 parathas, achar, salad",
+          "veg": true
+        },
+        {
+          "name": "Cheese Butter Masala Platter",
+          "price": 360,
+          "icon": "paratha",
+          "desc": "Cheese butter masala with 2 parathas, achar, salad",
+          "veg": true
+        },
+        {
+          "name": "Paneer Bhurji With Bread",
+          "price": 380,
+          "icon": "pav",
+          "desc": "3 pieces",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "desserts",
+      "name": "Premium Desserts",
+      "kicker": "To finish",
+      "items": [
+        {
+          "name": "Chocolate Waffle",
+          "price": 220,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Oreo Waffle",
+          "price": 260,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Ice Cream Brownie Volcano",
+          "price": 280,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Kitkat Waffle",
+          "price": 290,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Cheese Cake",
+          "price": 290,
+          "icon": "cheesecake",
+          "desc": "Biscoff, Nutella, Chocolate or Blueberry",
+          "veg": true
+        },
+        {
+          "name": "Nutella Choco Waffle",
+          "price": 315,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Chocolate Mud Pie",
+          "price": 350,
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Chocolate Fondue",
+          "price": 425,
+          "icon": "hotchoc",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "aerated",
+      "name": "Aerated Drinks",
+      "kicker": "Cold",
+      "items": [
+        {
+          "name": "All Beverages Served In Mug With Ice",
+          "price": 150,
+          "icon": "soda",
+          "veg": true
+        },
+        {
+          "name": "Mineral Water 500 ml",
+          "price": 60,
+          "icon": "soda",
+          "veg": true
+        },
+        {
+          "name": "Mineral Water 750 ml",
+          "price": 100,
+          "icon": "soda",
+          "veg": true
+        }
+      ]
+    }
+  ],
+  "addons": {
+    "title": "Notes",
+    "groups": [
+      {
+        "label": "Mocktail flavours",
+        "price": 50,
+        "icon": "droplet",
+        "options": [
+          "Any added flavour"
+        ]
+      },
+      {
+        "label": "Good to know",
+        "icon": "leaf",
+        "options": [
+          "Jain food available",
+          "We bake our own bread",
+          "No food colours used",
+          "Allow 30 minutes to process your order",
+          "GST 5% extra"
+        ]
+      }
+    ]
+  }
+}

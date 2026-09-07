@@ -1,0 +1,77 @@
+{
+  "id": "cuppuccino",
+  "name": "Cuppuccino",
+  "legalName": "Cuppuccino Cafe & Kitchen",
+  "eyebrow": "Cafe & kitchen · Nana Varachha",
+  "tagline": "We bake our own bread",
+  "blurb": "Fourth door on the third floor — volcano pizzas, fondue, matcha and a mocktail list that runs to sixteen. Everything made to order, nothing coloured.",
+  "liveUrl": "https://cafe-qr-cuppuccino.vercel.app/cuppuccino/",
+  "meta": {
+    "cuisines": ["Cafe", "Italian", "Mexican"],
+    "priceForTwo": 900,
+    "priceBand": "₹900",
+    "rating": 3.5,
+    "ratingCount": 9,
+    "ratingSource": "Zomato"
+  },
+  "hours": { "open": "11:00", "close": "23:00", "label": "11:00 AM – 11:00 PM", "days": "Open all days" },
+  "contact": {
+    "phone": "+919099922040",
+    "phoneDisplay": "090999 22040",
+    "whatsapp": "https://wa.me/919099922040?text=Hi%20Cuppuccino%2C%20I%27d%20like%20to%20book%20a%20table",
+    "instagram": "https://www.instagram.com/explore/search/keyword/?q=cuppuccino%20surat",
+    "instagramHandle": "Cuppuccino",
+    "googleReview": "https://www.google.com/maps/search/?api=1&query=Cuppuccino%20Millennium%20Business%20Hub%20Nana%20Varachha%20Surat",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=Cuppuccino%2C%20Millennium%20Business%20Hub%2C%20Nana%20Varachha%2C%20Surat"
+  },
+  "address": {
+    "line1": "Office 304, 3rd Floor",
+    "line2": "Millennium Business Hub-1",
+    "line3": "Nana Varachha",
+    "city": "Surat",
+    "state": "Gujarat",
+    "pin": "395006"
+  },
+  "theme": {
+    "accent": "#A9762F",
+    "accentLo": "rgba(169,118,47,.32)",
+    "accentOnDark": "#DCB878",
+    "bg": "#E4E9DE",
+    "dim": "#8A968A",
+    "displayFont": "'Marcellus', Georgia, serif",
+    "edge": "#D2DBCB",
+    "edgeSoft": "#E1E8DB",
+    "fontsHref": "https://fonts.googleapis.com/css2?family=Marcellus&family=Jost:wght@300;400;500;600&display=swap",
+    "footer": "#22301F",
+    "glowA": "#FBFDF7", "glowA0": "rgba(251,253,247,0)",
+    "glowB": "#D6DECE", "glowB0": "rgba(214,222,206,0)",
+    "heroVeil": "34,48,31",
+    "muted": "#5E6D5B",
+    "pillBg": "#2C3A2C", "pillTx": "#F7FAF3",
+    "raised": "#FFFFFF",
+    "sunk": "#EDF1E7",
+    "surface": "#F7FAF3",
+    "text": "#2C3A2C",
+    "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "veg": "#1E7A42"
+  },
+  "assets": {
+    "logo": "logo.png",
+    "hero": "hero.jpg",
+    "gallery": ["shot-sandwich.jpg", "shot-pizza.jpg", "shot-room.jpg", "shot-counter.jpg"]
+  },
+  "galleryCaptions": ["Club sandwich", "Stone pizza", "The room", "The counter"],
+  "source": {
+    "primary": "Menu photographed and published on their Zomato listing (7 pages, with descriptions).",
+    "zomato": "https://www.zomato.com/surat/cuppuccino-nana-varachha",
+    "capturedOn": "2026-09-07",
+    "openQuestions": [
+      "DEMO ONLY — built from public listings, not commissioned by the cafe.",
+      "Descriptions here are the cafe's own words, transcribed from their printed menu. Nothing was invented.",
+      "The logo is a typographic stand-in; their real mark appears on the wall in the interior shots. Ask for the file.",
+      "Panini rows show the panini price; the focaccia price is noted per item.",
+      "The one dish photo (Dal Makhani Platter) is their own listing photo, matched to the item by its printed description. Confirm before publishing.",
+      "Their printed menu says GST 5% extra, so prices here exclude tax."
+    ]
+  }
+}

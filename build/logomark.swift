@@ -3,7 +3,7 @@ import AppKit
 let out = CommandLine.arguments[1]
 let W: CGFloat = 800, H: CGFloat = 250
 let cyan = NSColor(red:0.435, green:0.827, blue:0.910, alpha:1)
-let cream = NSColor(red:0.976, green:0.973, blue:0.957, alpha:1)
+let cream = NSColor(red:0.071, green:0.188, blue:0.227, alpha:1)
 
 let img = NSImage(size: NSSize(width: W, height: H))
 img.lockFocus()

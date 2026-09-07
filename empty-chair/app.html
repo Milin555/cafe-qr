@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Empty Chair</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:wght@600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+  :root{
+    --paper:#FBFAF7; --surface:#fff; --sunken:#F2F0EA;
+    --ink:#1B1F2A; --body:#3A3F4C; --muted:#6B7180;
+    --hair:#DFDBD1; --hair-soft:#EAE7DF;
+    --brass:#966D24; --brass-bg:#F6EEDC;
+    --sage:#3F6350; --sage-bg:#E7EFE9;
+    --oxblood:#8E3B3B; --oxblood-bg:#F7E8E6;
+    --wa:#1D8A5E;
+  }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]){
+    --paper:#14161C; --surface:#1B1E26; --sunken:#22262F;
+    --ink:#EFEDE7; --body:#C3C6CE; --muted:#8B909D;
+    --hair:#2F3440; --hair-soft:#262A34;
+    --brass:#D2A24E; --brass-bg:#2B2416;
+    --sage:#8FBBA0; --sage-bg:#1A2620;
+    --oxblood:#DD8B85; --oxblood-bg:#2C1B1A;
+    --wa:#4ECB8F;
+  }}
+  :root[data-theme="dark"]{
+    --paper:#14161C; --surface:#1B1E26; --sunken:#22262F;
+    --ink:#EFEDE7; --body:#C3C6CE; --muted:#8B909D;
+    --hair:#2F3440; --hair-soft:#262A34;
+    --brass:#D2A24E; --brass-bg:#2B2416;
+    --sage:#8FBBA0; --sage-bg:#1A2620;
+    --oxblood:#DD8B85; --oxblood-bg:#2C1B1A;
+    --wa:#4ECB8F;
+  }
+  *{box-sizing:border-box}
+  /* .stack/.add set display:flex, which beats the UA sheet's [hidden]{display:none} */
+  [hidden]{display:none!important}
+  html,body{margin:0}
+  body{
+    background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    font-size:16px; line-height:1.55; -webkit-font-smoothing:antialiased;
+    padding-bottom:env(safe-area-inset-bottom);
+  }
+  .wrap{max-width:600px;margin:0 auto;padding:0 16px 96px}
+  h1,h2{font-family:Spectral,Georgia,serif;color:var(--ink);margin:0;font-weight:600}
+  .mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+  header{padding:22px 0 16px;display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  header h1{font-size:1.5rem;letter-spacing:-.01em}
+  .biz{font-size:.8rem;color:var(--muted);margin-top:2px}
+  .settings-btn{
+    background:none;border:1px solid var(--hair);color:var(--muted);
+    border-radius:5px;padding:7px 11px;font-size:.78rem;cursor:pointer;
+    font-family:inherit;flex:0 0 auto;
+  }
+  .settings-btn:hover{color:var(--ink);border-color:var(--muted)}
+
+  /* recovered-revenue banner: the reason the owner renews */
+  .recovered{
+    background:var(--sage-bg);border:1px solid var(--sage);border-radius:6px;
+    padding:14px 16px;display:flex;flex-direction:column;gap:3px;margin-bottom:18px;
+  }
+  .recovered .lbl{font-size:.68rem;letter-spacing:.11em;text-transform:uppercase;color:var(--sage);font-weight:600}
+  .recovered .amt{font-family:Spectral,serif;font-size:1.75rem;color:var(--ink);font-weight:600}
+  .recovered .sub{font-size:.83rem;color:var(--body)}
+
+  .tabs{display:flex;gap:2px;background:var(--sunken);padding:3px;border-radius:7px;margin-bottom:16px}
+  .tab{
+    flex:1;padding:9px 6px;border:none;background:none;border-radius:5px;cursor:pointer;
+    font-family:inherit;font-size:.85rem;font-weight:500;color:var(--muted);
+  }
+  .tab[aria-selected="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.1)}
+
+  .row{
+    background:var(--surface);border:1px solid var(--hair);border-radius:7px;
+    padding:13px 14px;margin-bottom:9px;display:flex;gap:12px;align-items:center;
+  }
+  .row.due{border-left:3px solid var(--oxblood)}
+  .row.soon{border-left:3px solid var(--brass)}
+  .who{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+  .who .nm{color:var(--ink);font-weight:600;font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .who .meta{font-size:.78rem;color:var(--muted)}
+  .who .meta b{color:var(--oxblood);font-weight:600}
+  .who .meta.q b{color:var(--brass)}
+
+  .send{
+    background:var(--wa);color:#fff;border:none;border-radius:6px;
+    padding:9px 13px;font-family:inherit;font-size:.82rem;font-weight:600;
+    cursor:pointer;flex:0 0 auto;white-space:nowrap;
+  }
+  .send:hover{filter:brightness(1.08)}
+  .send.sent{background:var(--sunken);color:var(--muted);border:1px solid var(--hair)}
+  .back{
+    background:none;border:1px solid var(--sage);color:var(--sage);
+    border-radius:6px;padding:8px 11px;font-family:inherit;font-size:.78rem;
+    font-weight:600;cursor:pointer;flex:0 0 auto;
+  }
+  .back:hover{background:var(--sage-bg)}
+  .amt-in{width:96px;flex:0 0 auto;padding:8px 9px;font-size:.9rem;
+    font-family:"IBM Plex Mono",monospace;text-align:right}
+
+  .empty{
+    text-align:center;padding:44px 20px;color:var(--muted);font-size:.92rem;
+    border:1px dashed var(--hair);border-radius:7px;
+  }
+  .empty b{display:block;color:var(--ink);font-family:Spectral,serif;font-size:1.1rem;margin-bottom:5px;font-weight:600}
+
+  form.add{display:flex;flex-direction:column;gap:9px;background:var(--surface);
+    border:1px solid var(--hair);border-radius:7px;padding:16px}
+  .fr{display:flex;gap:9px}
+  .fr>*{flex:1;min-width:0}
+  label{font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);
+    font-weight:600;display:block;margin-bottom:4px}
+  input,select,textarea{
+    width:100%;padding:9px 10px;border:1px solid var(--hair);border-radius:5px;
+    background:var(--paper);color:var(--ink);font-family:inherit;font-size:.92rem;
+  }
+  textarea{resize:vertical;min-height:76px;font-family:"IBM Plex Mono",monospace;font-size:.82rem}
+  input:focus,select:focus,textarea:focus{outline:2px solid var(--brass);outline-offset:-1px;border-color:transparent}
+  .primary{
+    background:var(--ink);color:var(--paper);border:none;border-radius:6px;
+    padding:11px;font-family:inherit;font-size:.9rem;font-weight:600;cursor:pointer;
+  }
+  .primary:hover{filter:brightness(1.15)}
+  .ghost{background:none;border:1px solid var(--hair);color:var(--body);
+    border-radius:6px;padding:10px;font-family:inherit;font-size:.85rem;cursor:pointer}
+  .ghost:hover{border-color:var(--muted);color:var(--ink)}
+
+  .hint{font-size:.79rem;color:var(--muted);line-height:1.5}
+  .stack{display:flex;flex-direction:column;gap:13px}
+  .divider{height:1px;background:var(--hair-soft);margin:6px 0}
+
+  dialog{
+    border:1px solid var(--hair);border-radius:9px;background:var(--surface);
+    color:var(--body);padding:20px;max-width:440px;width:calc(100% - 32px);
+    font-family:inherit;
+  }
+  dialog::backdrop{background:rgba(0,0,0,.45)}
+  dialog h2{font-size:1.15rem;margin-bottom:12px}
+
+  .toast{
+    position:fixed;left:50%;transform:translateX(-50%);bottom:24px;
+    background:var(--ink);color:var(--paper);padding:11px 18px;border-radius:7px;
+    font-size:.87rem;font-weight:500;z-index:99;box-shadow:0 6px 20px rgba(0,0,0,.25);
+  }
+  @media(prefers-reduced-motion:no-preference){
+    .toast{animation:rise .22s ease-out}
+    @keyframes rise{from{opacity:0;transform:translate(-50%,8px)}}
+  }
+  :focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div>
+    <h1>Empty Chair</h1>
+    <div class="biz" id="bizline">—</div>
+  </div>
+  <button class="settings-btn" id="openSettings">Settings</button>
+</header>
+
+<div class="recovered" id="recovered" hidden>
+  <span class="lbl">Brought back so far</span>
+  <span class="amt mono" id="recAmt">₹0</span>
+  <span class="sub" id="recSub">—</span>
+</div>
+
+<div class="tabs" role="tablist">
+  <button class="tab" role="tab" id="t-due"  aria-selected="true"  aria-controls="p-due">Empty chairs</button>
+  <button class="tab" role="tab" id="t-all"  aria-selected="false" aria-controls="p-all">Everyone</button>
+  <button class="tab" role="tab" id="t-add"  aria-selected="false" aria-controls="p-add">Add</button>
+</div>
+
+<div id="p-due" role="tabpanel" aria-labelledby="t-due"></div>
+<div id="p-all" role="tabpanel" aria-labelledby="t-all" hidden></div>
+
+<div id="p-add" role="tabpanel" aria-labelledby="t-add" hidden class="stack">
+  <form class="add" id="addForm">
+    <div><label for="f-name">Name</label><input id="f-name" required autocomplete="off"></div>
+    <div class="fr">
+      <div><label for="f-phone">Phone</label><input id="f-phone" inputmode="tel" required placeholder="98xxxxxxxx" autocomplete="off"></div>
+      <div><label for="f-date">Last visit</label><input id="f-date" type="date" required></div>
+    </div>
+    <div class="fr">
+      <div><label for="f-service">Service</label><input id="f-service" placeholder="Haircut" autocomplete="off"></div>
+      <div><label for="f-amt">Amount ₹</label><input id="f-amt" inputmode="numeric" placeholder="400"></div>
+    </div>
+    <button class="primary" type="submit">Add customer</button>
+  </form>
+
+  <div class="add stack">
+    <div>
+      <label for="f-bulk">Paste the register</label>
+      <textarea id="f-bulk" placeholder="Priya Shah, 9876543210, 2026-07-14, Haircut, 400
+Meera Patel, 9825011122, 2026-06-02, Colour, 1800"></textarea>
+    </div>
+    <p class="hint">One per line: name, phone, date, service, amount. Date as YYYY-MM-DD or DD/MM/YYYY. Repeat a phone to record more visits by the same person — that is how the app learns their rhythm.</p>
+    <button class="ghost" id="importBtn" type="button">Import lines</button>
+  </div>
+
+  <div class="add stack">
+    <p class="hint"><strong>No register yet?</strong> Load a demo salon with 70 customers so you can see what the list looks like before typing anything real.</p>
+    <button class="ghost" id="demoBtn" type="button">Load demo salon</button>
+  </div>
+</div>
+
+</div>
+
+<dialog id="settings">
+  <h2>Settings</h2>
+  <div class="stack">
+    <div><label for="s-name">Business name</label><input id="s-name"></div>
+    <div class="fr">
+      <div><label for="s-type">Type</label>
+        <select id="s-type">
+          <option value="salon">Salon</option><option value="barber">Barbershop</option>
+          <option value="gym">Gym</option><option value="clinic">Clinic</option>
+          <option value="coaching">Coaching class</option>
+        </select></div>
+      <div><label for="s-lang">Message language</label>
+        <select id="s-lang">
+          <option value="gu">Gujarati</option><option value="hi">Hindi</option><option value="en">English</option>
+        </select></div>
+    </div>
+    <div><label for="s-gap">Default gap (days) until someone has 2+ visits</label>
+      <input id="s-gap" inputmode="numeric"></div>
+    <div class="divider"></div>
+    <button class="primary" id="saveSettings" type="button">Save</button>
+    <button class="ghost" id="exportBtn" type="button">Export all data (JSON)</button>
+    <button class="ghost" id="closeSettings" type="button">Close</button>
+    <p class="hint">Data lives in this browser only. Export before switching phones. Swap <code>Store</code> for Supabase when the backend is live — nothing else changes.</p>
+  </div>
+</dialog>
+
+<script>
+"use strict";
+
+/* ------------------------------------------------------------------ store
+   Everything goes through this adapter. v1 is localStorage so the app works
+   on a salon's phone today with no account, no backend and no signup. When
+   Supabase is live, reimplement these five methods against schema.sql and
+   the rest of the file is untouched. business_id is carried from line one
+   so the swap is a swap, not a migration.                                */
+const Store = {
+  KEY: "emptychair.v1",
+  _d: null,
+  load(){
+    if(this._d) return this._d;
+    let raw = null;
+    try { raw = localStorage.getItem(this.KEY); } catch(e){ /* private mode */ }
+    this._d = raw ? JSON.parse(raw) : {
+      business:{ id:crypto.randomUUID(), name:"My Salon", business_type:"salon",
+                 lang:"gu", default_interval_days:30 },
+      customers:[], visits:[], nudges:[]
+    };
+    return this._d;
+  },
+  save(){
+    try { localStorage.setItem(this.KEY, JSON.stringify(this._d)); }
+    catch(e){ toast("Couldn't save — storage is blocked in this browser"); }
+  },
+  business(){ return this.load().business; },
+  customers(){ return this.load().customers; },
+  visits(){ return this.load().visits; },
+  nudges(){ return this.load().nudges; },
+
+  addVisit({name, phone, visited_on, service, amount}){
+    const d = this.load(), bid = d.business.id;
+    phone = normPhone(phone);
+    let c = d.customers.find(x => x.phone === phone);
+    if(!c){
+      c = { id:crypto.randomUUID(), business_id:bid, name, phone,
+            muted_at:null, created_at:new Date().toISOString() };
+      d.customers.push(c);
+    } else if(name && c.name !== name){ c.name = name; }
+    d.visits.push({ id:crypto.randomUUID(), business_id:bid, customer_id:c.id,
+      visited_on, service:service||null,
+      amount: amount===""||amount==null ? null : Number(amount) });
+    this.save();
+    return c;
+  },
+  addNudge(customer_id){
+    const d = this.load();
+    d.nudges.push({ id:crypto.randomUUID(), business_id:d.business.id, customer_id,
+      sent_at:new Date().toISOString(), channel:"whatsapp_manual",
+      returned_visit_id:null });
+    this.save();
+  },
+  /* Attribution: link the newest unattributed nudge to the visit it produced.
+     Without this the owner is renewing on faith. */
+  markReturned(customer_id, visit){
+    const d = this.load();
+    const open = d.nudges.filter(n => n.customer_id===customer_id && !n.returned_visit_id)
+                         .sort((a,b)=> b.sent_at.localeCompare(a.sent_at))[0];
+    if(open) open.returned_visit_id = visit.id;
+    this.save();
+  },
+  reset(data){ this._d = data; this.save(); }
+};
+
+/* ------------------------------------------------------------------ utils */
+const DAY = 86400000;
+const today = () => new Date(new Date().toDateString());
+const days  = (a,b) => Math.round((b - a) / DAY);
+const inr   = n => "₹" + Math.round(n||0).toLocaleString("en-IN");
+const esc   = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function normPhone(p){
+  const digits = String(p).replace(/\D/g,"");
+  return digits.length > 10 ? digits.slice(-10) : digits;
+}
+function parseDate(s){
+  s = String(s).trim();
+  let m = s.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if(m) return `${m[1]}-${m[2]}-${m[3]}`;
+  m = s.match(/^(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})$/);   // DD/MM/YYYY
+  if(m) return `${m[3]}-${m[2].padStart(2,"0")}-${m[1].padStart(2,"0")}`;
+  return null;
+}
+function median(xs){
+  if(!xs.length) return null;
+  const s = [...xs].sort((a,b)=>a-b), h = s.length>>1;
+  return s.length % 2 ? s[h] : (s[h-1]+s[h])/2;
+}
+
+/* ------------------------------------------------------- the one computation
+   Each customer's own cadence, from their own history. Median, not mean, so a
+   single long absence doesn't permanently reset someone who is otherwise
+   regular. This is what the paper register cannot do.                      */
+function analyse(){
+  const b = Store.business(), now = today();
+  const byCust = new Map();
+  for(const v of Store.visits()){
+    if(!byCust.has(v.customer_id)) byCust.set(v.customer_id, []);
+    byCust.get(v.customer_id).push(v);
+  }
+  const lastNudge = new Map();
+  for(const n of Store.nudges()){
+    const t = lastNudge.get(n.customer_id);
+    if(!t || n.sent_at > t) lastNudge.set(n.customer_id, n.sent_at);
+  }
+
+  return Store.customers().map(c => {
+    const vs = (byCust.get(c.id)||[]).sort((a,b)=> a.visited_on.localeCompare(b.visited_on));
+    if(!vs.length) return null;
+    const gaps = [];
+    for(let i=1;i<vs.length;i++)
+      gaps.push(days(new Date(vs[i-1].visited_on), new Date(vs[i].visited_on)));
+
+    const expected  = median(gaps) ?? b.default_interval_days;
+    const last      = new Date(vs[vs.length-1].visited_on);
+    const since     = days(last, now);
+    const amounts   = vs.map(v=>v.amount).filter(n=>n!=null);
+    const avgSpend  = amounts.length ? amounts.reduce((a,x)=>a+x,0)/amounts.length : 0;
+    const nudgedAt  = lastNudge.get(c.id) || null;
+
+    return {
+      c, visits:vs, expected, since, lifetime: amounts.reduce((a,x)=>a+x,0),
+      avgSpend, overdue: since - expected, nudgedAt,
+      // don't re-nudge the same person inside a fortnight
+      nudgedRecently: nudgedAt ? days(new Date(nudgedAt), now) < 14 : false,
+      // most valuable × most overdue floats to the top
+      score: Math.max(0, since - expected) * Math.max(avgSpend, 1)
+    };
+  }).filter(Boolean);
+}
+
+function recovered(){
+  const visits = new Map(Store.visits().map(v=>[v.id,v]));
+  let total = 0, count = 0;
+  for(const n of Store.nudges()){
+    if(!n.returned_visit_id) continue;
+    const v = visits.get(n.returned_visit_id);
+    if(v){ total += (v.amount||0); count++; }
+  }
+  return { total, count, sent: Store.nudges().length };
+}
+
+/* ------------------------------------------------------------------ message */
+const TEMPLATES = {
+  gu: (n,b,d) => `નમસ્તે ${n}, ${b} તરફથી! તમને જોયે ${d} દિવસ થઈ ગયા. આ અઠવાડિયે આવવું છે? અમે તમારા માટે સમય રાખી શકીએ.`,
+  hi: (n,b,d) => `नमस्ते ${n}, ${b} से! आपको देखे ${d} दिन हो गए। इस हफ़्ते आना है? हम आपके लिए समय रख सकते हैं।`,
+  en: (n,b,d) => `Hi ${n}, it's ${b}. It's been ${d} days since we saw you — want to come in this week? We can keep a slot for you.`
+};
+function waLink(row){
+  const b = Store.business();
+  const msg = (TEMPLATES[b.lang]||TEMPLATES.en)(row.c.name, b.name, row.since);
+  return `https://wa.me/91${row.c.phone}?text=${encodeURIComponent(msg)}`;
+}
+
+/* ------------------------------------------------------------------ render */
+function rowHTML(r, mode){
+  const sent = r.nudgedRecently;
+  const cls  = mode==="due" ? (r.overdue > r.expected ? "due" : "soon") : "";
+  const meta = mode==="due"
+    ? `<b>${Math.round(r.overdue)} days overdue</b> · comes every ${Math.round(r.expected)}d · ${inr(r.avgSpend)} avg`
+    : `Last seen ${r.since}d ago · ${r.visits.length} visit${r.visits.length>1?"s":""} · ${inr(r.lifetime)} lifetime`;
+  return `<div class="row ${cls}" data-id="${r.c.id}">
+    <div class="who">
+      <span class="nm">${esc(r.c.name)}</span>
+      <span class="meta ${r.overdue<=r.expected?"q":""}">${meta}</span>
+    </div>
+    ${ mode==="due"
+        ? `<button class="send ${sent?"sent":""}" data-act="send" data-id="${r.c.id}">${sent?"Sent":"WhatsApp"}</button>
+           <button class="back" data-act="back" data-id="${r.c.id}">Came back</button>`
+        : `<button class="back" data-act="back" data-id="${r.c.id}">Came back</button>` }
+  </div>`;
+}
+
+function render(){
+  const b = Store.business();
+  document.getElementById("bizline").textContent =
+    `${b.name} · ${Store.customers().length} customers`;
+  document.title = `Empty Chair — ${b.name}`;
+
+  const rows = analyse();
+  const due  = rows.filter(r => r.overdue > 0).sort((a,c)=> c.score - a.score);
+  const all  = [...rows].sort((a,c)=> a.since - c.since);
+
+  const rec = recovered(), recEl = document.getElementById("recovered");
+  if(rec.sent > 0){
+    recEl.hidden = false;
+    document.getElementById("recAmt").textContent = inr(rec.total);
+    document.getElementById("recSub").textContent =
+      `${rec.count} of ${rec.sent} people you messaged came back`;
+  } else { recEl.hidden = true; }
+
+  document.getElementById("p-due").innerHTML = due.length
+    ? due.map(r => rowHTML(r,"due")).join("")
+    : `<div class="empty"><b>No empty chairs today</b>Everyone is inside their usual rhythm. Come back tomorrow.</div>`;
+
+  document.getElementById("p-all").innerHTML = all.length
+    ? all.map(r => rowHTML(r,"all")).join("")
+    : `<div class="empty"><b>Nobody yet</b>Add a customer, or paste your register in the Add tab.</div>`;
+}
+
+/* ------------------------------------------------------------------ events */
+function toast(msg){
+  document.querySelectorAll(".toast").forEach(t=>t.remove());
+  const t = document.createElement("div");
+  t.className = "toast"; t.textContent = msg; t.setAttribute("role","status");
+  document.body.appendChild(t);
+  setTimeout(()=>t.remove(), 2600);
+}
+
+document.addEventListener("click", e => {
+  const btn = e.target.closest("[data-act]");
+  if(!btn) return;
+  const id = btn.dataset.id;
+  const row = analyse().find(r => r.c.id === id);
+  if(!row) return;
+
+  if(btn.dataset.act === "send"){
+    // Open the owner's own WhatsApp with the message written. They press send.
+    // No API, no template approval, no consent exposure — a human sends it.
+    window.open(waLink(row), "_blank", "noopener");
+    Store.addNudge(id);
+    render();
+    return;
+  }
+  // Inline, never prompt(): a modal dialog blocks the page, looks broken on a
+  // phone, and browsers may suppress it outright.
+  if(btn.dataset.act === "back"){
+    const el = btn.closest(".row");
+    el.innerHTML = `<div class="who">
+        <span class="nm">${esc(row.c.name)}</span>
+        <span class="meta">What did they spend today?</span></div>
+      <input class="amt-in" inputmode="numeric" data-id="${id}"
+             value="${Math.round(row.avgSpend)||""}" aria-label="Amount in rupees">
+      <button class="send" data-act="confirm" data-id="${id}">Save</button>`;
+    const inp = el.querySelector(".amt-in");
+    inp.focus(); inp.select();
+    return;
+  }
+  if(btn.dataset.act === "confirm"){
+    const inp = btn.closest(".row").querySelector(".amt-in");
+    const amt = inp ? inp.value.trim() : "";
+    const c = Store.addVisit({ name:row.c.name, phone:row.c.phone,
+      visited_on:new Date().toISOString().slice(0,10),
+      service:null, amount: amt === "" ? null : Number(amt) });
+    const v = Store.visits()[Store.visits().length-1];
+    Store.markReturned(c.id, v);
+    render();
+    toast(`${row.c.name} marked as returned`);
+  }
+});
+
+// Enter saves the inline amount; Escape backs out.
+document.addEventListener("keydown", e => {
+  if(!e.target.classList || !e.target.classList.contains("amt-in")) return;
+  if(e.key === "Enter"){
+    e.preventDefault();
+    e.target.closest(".row").querySelector('[data-act="confirm"]').click();
+  }
+  if(e.key === "Escape"){ e.preventDefault(); render(); }
+});
+
+document.querySelectorAll(".tab").forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelectorAll(".tab").forEach(t => {
+      const on = t === tab;
+      t.setAttribute("aria-selected", on);
+      document.getElementById("p-" + t.id.slice(2)).hidden = !on;
+    });
+  });
+});
+
+document.getElementById("addForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const phone = normPhone(document.getElementById("f-phone").value);
+  if(phone.length !== 10){ toast("Phone needs 10 digits"); return; }
+  Store.addVisit({
+    name: document.getElementById("f-name").value.trim(),
+    phone,
+    visited_on: document.getElementById("f-date").value,
+    service: document.getElementById("f-service").value.trim(),
+    amount: document.getElementById("f-amt").value.trim()
+  });
+  e.target.reset();
+  render();
+  toast("Added");
+});
+
+document.getElementById("importBtn").addEventListener("click", () => {
+  const lines = document.getElementById("f-bulk").value.split("\n")
+                  .map(l=>l.trim()).filter(Boolean);
+  let ok = 0, bad = 0;
+  for(const line of lines){
+    const p = line.split(",").map(s=>s.trim());
+    const date = parseDate(p[2]||"");
+    if(p.length < 3 || !date || normPhone(p[1]||"").length !== 10){ bad++; continue; }
+    Store.addVisit({ name:p[0], phone:p[1], visited_on:date,
+                     service:p[3]||"", amount:p[4]||"" });
+    ok++;
+  }
+  document.getElementById("f-bulk").value = "";
+  render();
+  toast(bad ? `Imported ${ok}, skipped ${bad} bad line${bad>1?"s":""}` : `Imported ${ok}`);
+});
+
+/* ------------------------------------------------------------------ demo
+   A believable Surat salon. Generated, not hand-written, so the overdue list
+   looks alive the moment the owner opens it during a walk-in demo.        */
+document.getElementById("demoBtn").addEventListener("click", () => {
+  if(Store.customers().length &&
+     !confirm("This replaces what's here. Continue?")) return;
+
+  const first = ["Priya","Meera","Nisha","Krupa","Hetal","Bhavna","Riya","Ankita","Dhara","Foram",
+                 "Jigar","Rahul","Nikunj","Parth","Vivek","Mitesh","Chirag","Harsh","Kunal","Devang"];
+  const last  = ["Shah","Patel","Desai","Mehta","Joshi","Trivedi","Bhatt","Parikh","Modi","Vyas"];
+  const svc   = [["Haircut",350],["Hair colour",1800],["Facial",900],["Threading",120],
+                 ["Beard trim",200],["Keratin",4500],["Pedicure",700],["Head massage",400]];
+
+  const d = { business:{ id:crypto.randomUUID(), name:"Sheen Studio, Vesu",
+                business_type:"salon", lang:"gu", default_interval_days:30 },
+              customers:[], visits:[], nudges:[] };
+  const now = today();
+  const rnd = (a,b) => a + Math.floor(Math.random()*(b-a+1));
+
+  for(let i=0;i<70;i++){
+    const name  = `${first[rnd(0,first.length-1)]} ${last[rnd(0,last.length-1)]}`;
+    const phone = "9" + String(rnd(100000000,999999999));
+    const cust  = { id:crypto.randomUUID(), business_id:d.business.id, name, phone,
+                    muted_at:null, created_at:new Date().toISOString() };
+    d.customers.push(cust);
+
+    const cadence = rnd(18,55);            // this person's own rhythm
+    const [s, base] = svc[rnd(0,svc.length-1)];
+    const n = rnd(2,7);
+    // 40% have drifted past their cadence — that's the list the owner sees
+    let cursor = rnd(0,10) < 4 ? rnd(cadence+8, cadence+90) : rnd(2, cadence-2);
+    for(let k=0;k<n;k++){
+      const dt = new Date(now.getTime() - cursor*DAY);
+      d.visits.push({ id:crypto.randomUUID(), business_id:d.business.id,
+        customer_id:cust.id, visited_on:dt.toISOString().slice(0,10),
+        service:s, amount: base + rnd(-40,120) });
+      cursor += cadence + rnd(-5,5);
+    }
+  }
+  Store.reset(d);
+  loadSettingsForm();
+  render();
+  document.getElementById("t-due").click();
+  toast("Demo salon loaded — 70 customers");
+});
+
+/* ------------------------------------------------------------------ settings */
+const dlg = document.getElementById("settings");
+function loadSettingsForm(){
+  const b = Store.business();
+  document.getElementById("s-name").value = b.name;
+  document.getElementById("s-type").value = b.business_type;
+  document.getElementById("s-lang").value = b.lang;
+  document.getElementById("s-gap").value  = b.default_interval_days;
+}
+document.getElementById("openSettings").addEventListener("click", ()=>{ loadSettingsForm(); dlg.showModal(); });
+document.getElementById("closeSettings").addEventListener("click", ()=> dlg.close());
+document.getElementById("saveSettings").addEventListener("click", () => {
+  const b = Store.business();
+  b.name = document.getElementById("s-name").value.trim() || "My Salon";
+  b.business_type = document.getElementById("s-type").value;
+  b.lang = document.getElementById("s-lang").value;
+  b.default_interval_days = Math.max(1, Number(document.getElementById("s-gap").value) || 30);
+  Store.save(); render(); dlg.close(); toast("Saved");
+});
+document.getElementById("exportBtn").addEventListener("click", () => {
+  const blob = new Blob([JSON.stringify(Store.load(),null,2)], {type:"application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = `empty-chair-${new Date().toISOString().slice(0,10)}.json`;
+  a.click();
+  setTimeout(()=>URL.revokeObjectURL(a.href), 1000);
+});
+
+document.getElementById("f-date").value = new Date().toISOString().slice(0,10);
+render();
+</script>
+</body>
+</html>
