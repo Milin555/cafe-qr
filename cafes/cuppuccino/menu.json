@@ -35,14 +35,14 @@
           "veg": true
         },
         {
-          "name": "Café Mocha",
+          "name": "Caffè Mocha",
           "price": 230,
           "icon": "mocha",
           "desc": "Espresso shot 30 ml with steamed milk and chocolate syrup",
           "veg": true
         },
         {
-          "name": "Cafe Latte",
+          "name": "Caffè Latte",
           "price": 260,
           "icon": "latte",
           "desc": "Espresso shot 30 ml, steamed milk with milk foam topping",
@@ -1440,14 +1440,20 @@
         ]
       },
       {
+        "label": "Prices exclude GST",
+        "icon": "leaf",
+        "options": [
+          "5% GST is added to the bill",
+          "Allow 30 minutes for your order"
+        ]
+      },
+      {
         "label": "House notes",
         "icon": "leaf",
         "options": [
           "Jain food available",
           "We bake our own bread",
-          "No food colours used",
-          "Allow 30 minutes to process your order",
-          "GST 5% extra"
+          "No food colours used"
         ]
       }
     ]

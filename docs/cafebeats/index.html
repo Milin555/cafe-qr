@@ -10,11 +10,12 @@
   --veg:#1E7A42;
   --glow-a:#FFFFFF; --glow-a0:rgba(255,255,255,0);
   --glow-b:#D6E2E1; --glow-b0:rgba(214,226,225,0);
-  --veil:8,26,33; --veil-top:.55;
+  --veil:8,26,33; --veil-top:.62;
   --art:invert(0); --art-op:.05; --logo-filter:none;
   --shadow:0 1px 2px rgba(0,0,0,.05), 0 50px 90px -50px rgba(0,0,0,.35);
   --col:680px; --pad:20px;
   --display:'Yeseva One', Georgia, serif; --ui:'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; --display-weight:400;
+  --tag-style:normal;
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
@@ -54,7 +55,9 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ---------------- hero ---------------- */
-.hero{position:relative;overflow:hidden;background-color:rgb(var(--veil))}
+.hero{position:relative;overflow:hidden;background-color:rgb(var(--veil));
+  background-image:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.07),transparent 60%),
+                   radial-gradient(90% 60% at 80% 100%,rgba(255,255,255,.04),transparent 55%)}
 /* photo + veil are one background stack on a single layer -> nothing can cover the copy */
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;
   filter:saturate(.62) contrast(1.1);transform:scale(1.08);
@@ -73,7 +76,7 @@ a{color:inherit;text-decoration:none}
 .eyebrow{margin:0 0 clamp(16px,4vw,26px);font-size:10px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--brass-lt)}
 .hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);}
-.hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:italic;
+.hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:var(--tag-style,italic);
   font-size:clamp(18px,4.8vw,23px);letter-spacing:.02em;color:#D9CBAE}
 .hero-rule{display:flex;align-items:center;justify-content:center;gap:10px;
   margin:clamp(18px,4vw,26px) auto;width:150px}
@@ -147,8 +150,8 @@ a{color:inherit;text-decoration:none}
 .ibtn .ico{width:17px;height:17px}
 .pills{display:flex;gap:7px;overflow-x:auto;padding:0 max(12px,calc(var(--pad) - 4px)) 11px;
   scrollbar-width:none;scroll-behavior:smooth;
-  -webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);
-  mask-image:linear-gradient(90deg,#000 92%,transparent)}
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 92%,transparent)}
 .pills::-webkit-scrollbar{display:none}
 .pill{flex:none;font-size:12.5px;padding:11px 15px;border-radius:999px;border:1px solid var(--edge);
   color:var(--muted);white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
@@ -281,7 +284,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 .f-row b{display:block;font-weight:500;color:var(--ftx)}
 .f-links{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:24px 0 0}
 .f-btn{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;padding:10px 16px;border-radius:999px;
-  border:1px solid rgba(242,234,219,.2);transition:border-color .25s,color .25s,background .25s,transform .25s}
+  border:1px solid rgba(242,234,219,.38);transition:border-color .25s,color .25s,background .25s,transform .25s}
 .f-btn .ico{width:16px;height:16px}
 .f-btn:hover{border-color:var(--brass-lt);color:var(--brass-lt);transform:translateY(-2px)}
 .f-btn.gold{border-color:var(--brass-lt);color:var(--brass-lt)}
@@ -377,7 +380,7 @@ try{var t=localStorage.getItem("cafebeats-theme");if(t==="light"||t==="dark")e.s
     <img class="hero-bg" src="assets/hero.jpg" alt="" aria-hidden="true" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-in">
-      <p class="eyebrow">Cafe &amp; restaurant · Nana Varachha</p>
+      <p class="eyebrow">Café &amp; kitchen · Nana Varachha</p>
       <h1 style="margin:0"><img class="hero-logo" src="assets/logo.png" alt="Café Beats"></h1>
       <p class="hero-tag">Coffee with music</p>
       <span class="hero-rule"><i></i></span>
@@ -435,7 +438,7 @@ try{var t=localStorage.getItem("cafebeats-theme");if(t==="light"||t==="dark")e.s
     <img class="f-logo" src="assets/logo.png" alt="Café Beats">
     <span class="f-rule"></span>
     <div class="f-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.6"/><path d="M12 7v5.4l3.4 2"/></svg><span><b id="fhours">10:00 AM – 11:30 PM</b>Open all days<span id="fstatus"></span></span></div>
-    <div class="f-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2s6.8-6.2 6.8-11a6.8 6.8 0 1 0-13.6 0c0 4.8 6.8 11 6.8 11z"/><circle cx="12" cy="10.2" r="2.6"/></svg><span><b>G-11, Blue Stone Complex</b>Sarthana, near Surat Ford Showroom, Nana Varachha<br>Surat, Gujarat 395006</span></div>
+    <div class="f-row"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21.2s6.8-6.2 6.8-11a6.8 6.8 0 1 0-13.6 0c0 4.8 6.8 11 6.8 11z"/><circle cx="12" cy="10.2" r="2.6"/></svg><span><b>G-11, Blue Stone Complex</b>Sarthana, near Surat Ford Showroom<br>Nana Varachha<br>Surat, Gujarat 395006</span></div>
     <div class="f-links">
       <a class="f-btn" href="https://www.google.com/maps/dir/?api=1&destination=Cafe%20Beats%2C%20Nana%20Varachha%2C%20Surat" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2.6 9.4 9.4L12 21.4 2.6 12z"/><path d="M9.4 14v-2.6a2 2 0 0 1 2-2h3.6"/><path d="m13.4 7.8 1.8 1.6-1.8 1.6"/></svg>Directions</a><a class="f-btn" href="tel:+917874565657"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3.6h3l1.6 4-2 1.4a11.4 11.4 0 0 0 5.4 5.4l1.4-2 4 1.6v3a1.8 1.8 0 0 1-1.9 1.8C10.6 18.2 5.8 13.4 5.2 5.5A1.8 1.8 0 0 1 7 3.6z"/></svg>078745 65657</a><a class="f-btn" href="https://wa.me/917874565657?text=Hi%20Caf%C3%A9%20Beats%2C%20I%27d%20like%20to%20book%20a%20table" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.6 20.4 5 16.3a8.3 8.3 0 1 1 3.1 3z"/><path d="M9 9.2c-.3 1.6 1.4 4.5 3.6 5.4.9.4 1.7.4 2.2-.4"/></svg>Book a table</a>
     </div>

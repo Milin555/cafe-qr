@@ -113,10 +113,13 @@ def build(cafe_id):
     t, c, addr, hrs = cafe["theme"], cafe["contact"], cafe["address"], cafe["hours"]
     cur = menu.get("currency", "₹")
 
+    priceless = not any(i.get("price") for sec in menu["sections"] for i in sec["items"])
+
     def price_html(i):
         if i.get("price") in (None, "", 0):
-            return ('<span class="dots"></span>'
-                    '<span class="price price-ask">at the counter</span>')
+            # a whole menu without prices states it once, in the header strip
+            return "" if priceless else ('<span class="dots"></span>'
+                    '<span class="price price-ask">ask at the counter</span>')
         return ('<span class="dots"></span>'
                 '<span class="price">%s%s</span>' % (cur, i["price"]))
 
@@ -146,7 +149,7 @@ def build(cafe_id):
         '<span class="pick-tag">%s</span><span class="pick-name">%s</span>'
         '<span class="pick-price">%s</span></a>'
         % (s["id"], icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]),
-           ("%s%s" % (cur, i["price"])) if i.get("price") else "at the counter")
+           ("%s%s" % (cur, i["price"])) if i.get("price") else "")
         for s, i in picks)
 
     # ---- sections
@@ -232,7 +235,7 @@ def build(cafe_id):
         "@@HOURS@@": esc(hrs["label"]), "@@DAYS@@": esc(hrs["days"]),
         "@@OPENH@@": open_h, "@@CLOSEH@@": close_h,
         "@@ADDR1@@": esc(addr["line1"]),
-        "@@ADDR2@@": esc(addr["line2"] + ", " + addr["line3"]),
+        "@@ADDR2@@": esc(addr["line2"]) + "<br>" + esc(addr["line3"]),
         "@@ADDR3@@": esc("%s, %s %s" % (addr["city"], addr["state"], addr["pin"])),
         "@@FULLADDR@@": esc(full_addr),
         "@@PHONE@@": c["phone"], "@@PHONEDISP@@": esc(c["phoneDisplay"]),
@@ -267,8 +270,11 @@ def build(cafe_id):
             '<div class="gal">@@SHOTS@@</div></div>'
             % esc(cafe.get("galleryTitle", "The room"))),
         "@@ITEMCOUNT@@": str(sum(len(s["items"]) for s in menu["sections"])),
-        "@@VEGNOTE@@": ('<p class="vegnote"><span class="veg"><i></i></span>'
-                        'Pure vegetarian kitchen</p>') if all_veg else "",
+        "@@VEGNOTE@@": (
+            '<p class="vegnote">%s%s</p>' % (
+                ('<span class="veg"><i></i></span>Pure vegetarian kitchen' if all_veg else ''),
+                ((' · ' if all_veg else '') + 'Prices at the counter') if priceless else '')
+            if (all_veg or priceless) else ""),
         "@@SECCOUNT@@": str(len(menu["sections"])),
         "@@CAPTURED@@": esc(__import__("datetime").datetime.strptime(
             cafe["source"]["capturedOn"], "%Y-%m-%d").strftime("%-d %B %Y")),
@@ -288,6 +294,7 @@ def build(cafe_id):
         "@@IDIR@@": icon("directions", "ico", "1.4"),
     }
     t.setdefault("displayWeight","600")
+    t.setdefault("tagStyle","italic")
     t.setdefault("veilTop",".34")
     for k, v in t.items():
         rep["@@T_" + k.upper() + "@@"] = v
@@ -315,7 +322,10 @@ def build(cafe_id):
     os.makedirs(os.path.join(ROOT, "dist"), exist_ok=True)
     frag = os.path.join(ROOT, "dist", "%s.artifact.html" % cafe_id)
     with open(frag, "w", encoding="utf-8") as f:
-        frag_html = render(A_data, gal_data, "assets/")
+        frag_html = ('<title>%s Menu</title>'
+                     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>'
+                     '<link rel="stylesheet" href="%s">'
+                     % (esc(cafe["name"]), t["fontsHref"])) + render(A_data, gal_data, "assets/")
         for name in sorted(os.listdir(idir)) if os.path.isdir(idir) else []:
             frag_html = frag_html.replace('src="assets/items/%s"' % name,
                                           'src="%s"' % data_uri(os.path.join(idir, name)))

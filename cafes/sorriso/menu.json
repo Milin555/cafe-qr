@@ -43,14 +43,14 @@
           "veg": true
         },
         {
-          "name": "Cafè Latte",
+          "name": "Caffè Latte",
           "price": 220,
           "icon": "latte",
           "desc": "Espresso with a larger volume of steamed milk. The mildest of the milk coffees.",
           "veg": true
         },
         {
-          "name": "Cafe Mocha",
+          "name": "Caffè Mocha",
           "price": 260,
           "icon": "mocha",
           "desc": "Espresso and steamed milk with chocolate.",

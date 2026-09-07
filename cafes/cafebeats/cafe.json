@@ -62,7 +62,8 @@
     "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
     "veg": "#1E7A42",
     "displayWeight": "400",
-    "veilTop": ".55"
+    "veilTop": ".62",
+    "tagStyle": "normal"
   },
   "assets": {
     "logo": "logo.png",
@@ -95,7 +96,7 @@
       "Instagram handle and the Google review deep link are missing — both buttons are hidden rather than pointed at a search page. Get the profile URL and the g.page/r/… review link from the owner."
     ]
   },
-  "eyebrow": "Cafe & restaurant · Nana Varachha",
+  "eyebrow": "Café & kitchen · Nana Varachha",
   "liveUrl": "https://cafebeats-menu.vercel.app/",
   "themeDark": {
     "accent": "#6FD3E8",

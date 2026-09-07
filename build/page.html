@@ -15,6 +15,7 @@
   --shadow:0 1px 2px rgba(0,0,0,.05), 0 50px 90px -50px rgba(0,0,0,.35);
   --col:680px; --pad:20px;
   --display:@@T_DISPLAYFONT@@; --ui:@@T_UIFONT@@; --display-weight:@@T_DISPLAYWEIGHT@@;
+  --tag-style:@@T_TAGSTYLE@@;
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
@@ -54,7 +55,9 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ---------------- hero ---------------- */
-.hero{position:relative;overflow:hidden;background-color:rgb(var(--veil))}
+.hero{position:relative;overflow:hidden;background-color:rgb(var(--veil));
+  background-image:radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.07),transparent 60%),
+                   radial-gradient(90% 60% at 80% 100%,rgba(255,255,255,.04),transparent 55%)}
 /* photo + veil are one background stack on a single layer -> nothing can cover the copy */
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;
   filter:saturate(.62) contrast(1.1);transform:scale(1.08);
@@ -73,7 +76,7 @@ a{color:inherit;text-decoration:none}
 .eyebrow{margin:0 0 clamp(16px,4vw,26px);font-size:10px;letter-spacing:.36em;text-transform:uppercase;
   color:var(--brass-lt)}
 .hero-logo{width:min(74%,300px);margin:0 auto;filter:brightness(0) invert(1);}
-.hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:italic;
+.hero-tag{margin:clamp(12px,3vw,18px) 0 0;font-family:var(--display);font-style:var(--tag-style,italic);
   font-size:clamp(18px,4.8vw,23px);letter-spacing:.02em;color:#D9CBAE}
 .hero-rule{display:flex;align-items:center;justify-content:center;gap:10px;
   margin:clamp(18px,4vw,26px) auto;width:150px}
@@ -147,8 +150,8 @@ a{color:inherit;text-decoration:none}
 .ibtn .ico{width:17px;height:17px}
 .pills{display:flex;gap:7px;overflow-x:auto;padding:0 max(12px,calc(var(--pad) - 4px)) 11px;
   scrollbar-width:none;scroll-behavior:smooth;
-  -webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);
-  mask-image:linear-gradient(90deg,#000 92%,transparent)}
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,transparent 0,#000 4%,#000 92%,transparent)}
 .pills::-webkit-scrollbar{display:none}
 .pill{flex:none;font-size:12.5px;padding:11px 15px;border-radius:999px;border:1px solid var(--edge);
   color:var(--muted);white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
@@ -281,7 +284,7 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 .f-row b{display:block;font-weight:500;color:var(--ftx)}
 .f-links{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:24px 0 0}
 .f-btn{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;padding:10px 16px;border-radius:999px;
-  border:1px solid rgba(242,234,219,.2);transition:border-color .25s,color .25s,background .25s,transform .25s}
+  border:1px solid rgba(242,234,219,.38);transition:border-color .25s,color .25s,background .25s,transform .25s}
 .f-btn .ico{width:16px;height:16px}
 .f-btn:hover{border-color:var(--brass-lt);color:var(--brass-lt);transform:translateY(-2px)}
 .f-btn.gold{border-color:var(--brass-lt);color:var(--brass-lt)}
