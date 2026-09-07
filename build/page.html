@@ -1,41 +1,36 @@
 <title>@@NAME@@ Menu</title>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Jost:wght@300;400;500;600&display=swap">
+<link rel="stylesheet" href="@@T_FONTSHREF@@">
 <style>
 :root{
   color-scheme:light;
-  --ink:@@T_INK@@; --veg:#1E7A42;
-  /* one committed world: warm ivory paper, their navy ink, brass detail */
-  --bg:#EDE7DA; --surface:#FBF8F1; --raised:#FFFFFF; --sunk:#F5F0E5;
-  --text:#232150; --muted:#6C6893; --dim:#8A86AC;
-  --edge:#E0D7C3; --edge-soft:#EBE3D3;
-  --brass:#96742F; --brass-lo:rgba(150,116,47,.34); --brass-lt:#D9B87C;
-  --footer:#141230; --ftx:#F2EADB;
-  --pill-bg:#232150; --pill-tx:#FBF6EA;
-  --glow-a:#FFFCF4; --glow-a0:rgba(255,252,244,0);
-  --glow-b:#E4DBC7; --glow-b0:rgba(228,219,199,0);
+  --bg:@@T_BG@@; --surface:@@T_SURFACE@@; --raised:@@T_RAISED@@; --sunk:@@T_SUNK@@;
+  --text:@@T_TEXT@@; --muted:@@T_MUTED@@; --dim:@@T_DIM@@;
+  --edge:@@T_EDGE@@; --edge-soft:@@T_EDGESOFT@@;
+  --brass:@@T_ACCENT@@; --brass-lo:@@T_ACCENTLO@@; --brass-lt:@@T_ACCENTONDARK@@;
+  --footer:@@T_FOOTER@@; --ftx:#F2EADB;
+  --pill-bg:@@T_PILLBG@@; --pill-tx:@@T_PILLTX@@;
+  --veg:@@T_VEG@@;
+  --glow-a:@@T_GLOWA@@; --glow-a0:@@T_GLOWA0@@;
+  --glow-b:@@T_GLOWB@@; --glow-b0:@@T_GLOWB0@@;
+  --veil:@@T_HEROVEIL@@;
   --art:invert(0); --art-op:.05;
-  --shadow:0 1px 2px rgba(35,33,80,.05), 0 50px 90px -50px rgba(35,33,80,.45);
+  --shadow:0 1px 2px rgba(0,0,0,.05), 0 50px 90px -50px rgba(0,0,0,.35);
   --col:680px; --pad:20px;
   --display:@@T_DISPLAYFONT@@; --ui:@@T_UIFONT@@;
 }
-
-/* ---- dark world: same design, night palette ---- */
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --veg:#4FBF7A;
   --bg:#07061A; --surface:#0B0A1E; --raised:#15142F; --sunk:#100F26;
   --text:#F2EADB; --muted:#9A96BE; --dim:#6E6A93;
   --edge:#242246; --edge-soft:#1B1A3A;
-  --brass:#C9A45C; --brass-lo:rgba(201,164,92,.30);
-  --footer:#050414;
-  --pill-bg:#C9A45C; --pill-tx:#0B0A1E;
+  --brass:@@T_ACCENTONDARK@@; --brass-lo:rgba(201,164,92,.30);
+  --footer:#050414; --pill-bg:@@T_ACCENTONDARK@@; --pill-tx:#0B0A1E;
   --glow-a:#171533; --glow-a0:rgba(23,21,51,0);
   --glow-b:#120F2A; --glow-b0:rgba(18,15,42,0);
-  --art:invert(1); --art-op:.06;
+  --art:invert(1); --art-op:.07;
   --shadow:0 1px 2px rgba(0,0,0,.6), 0 50px 90px -50px rgba(0,0,0,1);
 }
-
 /* toggle shows the world you would switch TO */
 .i-sun{display:none}.i-moon{display:block}
 :root[data-theme="dark"] .i-sun{display:block}
@@ -59,13 +54,13 @@ a{color:inherit;text-decoration:none}
 }
 
 /* ---------------- hero ---------------- */
-.hero{position:relative;overflow:hidden;background-color:#07061A}
+.hero{position:relative;overflow:hidden;background-color:rgb(var(--veil))}
 /* photo + veil are one background stack on a single layer -> nothing can cover the copy */
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78;
   filter:saturate(.62) contrast(1.1);transform:scale(1.08);
   animation:heroZoom 2.6s cubic-bezier(.16,.7,.3,1) forwards}
 .hero-veil{position:absolute;inset:0;
-  background:linear-gradient(180deg,rgba(7,6,26,.34) 0%,rgba(7,6,26,.58) 44%,rgba(7,6,26,.95) 100%)}
+  background:linear-gradient(180deg,rgba(var(--veil),.34) 0%,rgba(var(--veil),.58) 44%,rgba(var(--veil),.95) 100%)}
 .hero{min-height:clamp(390px,60svh,520px);display:flex;flex-direction:column;justify-content:center}
 .hero-in{position:relative;text-align:center;color:#F6F1E5;
   padding:clamp(30px,7vw,54px) var(--pad) clamp(26px,5vw,40px)}
@@ -108,6 +103,7 @@ a{color:inherit;text-decoration:none}
 @keyframes cue{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:.9;transform:translateY(5px)}}
 
 /* ---------------- strips & actions ---------------- */
+.strip:not([style*="url"]){display:none}
 .strip{height:20px;background-image:url(@@PATTERN@@);background-repeat:repeat-x;background-size:auto 100%;
   background-position:center;opacity:.4;filter:var(--art)}
 .vegnote{display:flex;align-items:center;justify-content:center;gap:9px;margin:0;
@@ -383,7 +379,7 @@ try{var t=localStorage.getItem("@@CAFEID@@-theme");if(t==="light"||t==="dark")e.
     <img class="hero-bg" src="@@HERO@@" alt="" aria-hidden="true" fetchpriority="high">
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-in">
-      <p class="eyebrow">Specialty coffee · Nana Varachha</p>
+      <p class="eyebrow">@@EYEBROW@@</p>
       <img class="hero-logo" src="@@LOGO@@" alt="@@NAME@@">
       <p class="hero-tag">@@TAGLINE@@</p>
       <span class="hero-rule"><i></i></span>

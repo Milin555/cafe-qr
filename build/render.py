@@ -95,11 +95,16 @@ def build(cafe_id):
     cafe = json.load(open(os.path.join(cdir, "cafe.json"), encoding="utf-8"))
     menu = json.load(open(os.path.join(cdir, "menu.json"), encoding="utf-8"))
     adir = os.path.join(cdir, "assets")
-    names = {k: v for k, v in cafe["assets"].items() if isinstance(v, str)}
+    names = {k: v for k, v in cafe["assets"].items()
+             if isinstance(v, str) and os.path.exists(os.path.join(adir, v))}
     A_data = {k: data_uri(os.path.join(adir, v)) for k, v in names.items()}
     A_rel = {k: "assets/" + v for k, v in names.items()}
-    gal_data = [data_uri(os.path.join(adir, g)) for g in cafe["assets"]["gallery"]]
-    gal_rel = ["assets/" + g for g in cafe["assets"]["gallery"]]
+    for k in ("logo", "hero", "pattern", "artCup", "artShake"):
+        A_data.setdefault(k, "")
+        A_rel.setdefault(k, "")
+    gal = [g for g in cafe["assets"].get("gallery", []) if os.path.exists(os.path.join(adir, g))]
+    gal_data = [data_uri(os.path.join(adir, g)) for g in gal]
+    gal_rel = ["assets/" + g for g in gal]
     A = A_data
 
     t, c, addr, hrs = cafe["theme"], cafe["contact"], cafe["address"], cafe["hours"]
@@ -202,6 +207,7 @@ def build(cafe_id):
         "@@CAFEID@@": cafe_id,
         "@@NAME@@": esc(cafe["name"]),
         "@@TAGLINE@@": esc(cafe["tagline"]),
+        "@@EYEBROW@@": esc(cafe.get("eyebrow", " · ".join(cafe["meta"]["cuisines"][:2]))),
         "@@BLURB@@": esc(cafe["blurb"]),
         "@@LOGO@@": A["logo"], "@@HERO@@": A["hero"],
         "@@PATTERN@@": A["pattern"], "@@ARTCUP@@": A["artCup"],
@@ -305,7 +311,7 @@ def build(cafe_id):
            '<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
            'navigator.serviceWorker.register("sw.js").catch(function(){})});</script>'
            '</body></html>'
-           % (t["ink"], esc(cafe["name"]), A_rel["logo"], tpl))
+           % (t["text"], esc(cafe["name"]), A_rel["logo"], tpl))
     with open(os.path.join(site, "index.html"), "w", encoding="utf-8") as f:
         f.write(doc)
 

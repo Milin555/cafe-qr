@@ -1,0 +1,99 @@
+{
+  "id": "cafebeats",
+  "name": "Café Beats",
+  "legalName": "Cafe Beats Restaurant",
+  "tagline": "Coffee with music",
+  "blurb": "Coffee, chai and a kitchen that runs from Indori poha to sizzlers — the neighbourhood all-rounder in Nana Varachha, open from morning to late.",
+  "meta": {
+    "cuisines": [
+      "Cafe",
+      "Chinese",
+      "Fast Food"
+    ],
+    "priceForTwo": 1000,
+    "priceBand": "₹1,000",
+    "rating": 4.6,
+    "ratingCount": 223,
+    "ratingSource": "Zomato"
+  },
+  "hours": {
+    "open": "10:00",
+    "close": "23:30",
+    "label": "10:00 AM – 11:30 PM",
+    "days": "Open all days"
+  },
+  "contact": {
+    "phone": "+917874565657",
+    "phoneDisplay": "078745 65657",
+    "whatsapp": "https://wa.me/917874565657?text=Hi%20Caf%C3%A9%20Beats%2C%20I%27d%20like%20to%20book%20a%20table",
+    "instagram": "https://www.instagram.com/explore/search/keyword/?q=cafebeats%20surat",
+    "instagramHandle": "Café Beats",
+    "googleReview": "https://www.google.com/maps/search/?api=1&query=Cafe%20Beats%20Nana%20Varachha%20Surat",
+    "directions": "https://www.google.com/maps/dir/?api=1&destination=Cafe%20Beats%2C%20Nana%20Varachha%2C%20Surat"
+  },
+  "address": {
+    "line1": "G-11, Blue Stone Complex",
+    "line2": "Sarthana, near Surat Ford Showroom",
+    "line3": "Nana Varachha",
+    "city": "Surat",
+    "state": "Gujarat",
+    "pin": "395006"
+  },
+  "theme": {
+    "accent": "#1E7E97",
+    "accentLo": "rgba(30,126,151,.30)",
+    "accentOnDark": "#6FD3E8",
+    "bg": "#E6E9E6",
+    "dim": "#7C959D",
+    "displayFont": "'Yeseva One', Georgia, serif",
+    "edge": "#CFDBDB",
+    "edgeSoft": "#DEE7E6",
+    "fontsHref": "https://fonts.googleapis.com/css2?family=Yeseva+One&family=Jost:wght@300;400;500;600&display=swap",
+    "footer": "#0C2029",
+    "glowA": "#FFFFFF",
+    "glowA0": "rgba(255,255,255,0)",
+    "glowB": "#D6E2E1",
+    "glowB0": "rgba(214,226,225,0)",
+    "heroVeil": "8,26,33",
+    "muted": "#4F6E78",
+    "pillBg": "#12303A",
+    "pillTx": "#F4FAFB",
+    "raised": "#FFFFFF",
+    "sunk": "#EFF3F2",
+    "surface": "#F8FAF8",
+    "text": "#12303A",
+    "uiFont": "'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    "veg": "#1E7A42"
+  },
+  "assets": {
+    "logo": "logo.png",
+    "hero": "hero.jpg",
+    "gallery": [
+      "shot-food.jpg",
+      "shot-room.jpg",
+      "shot-bar.jpg",
+      "shot-seating.jpg"
+    ]
+  },
+  "galleryCaptions": [
+    "The food",
+    "The room",
+    "The bar",
+    "Seating"
+  ],
+  "source": {
+    "primary": "Menu photographed and published on their Zomato listing (4 pages).",
+    "zomato": "https://www.zomato.com/surat/cafe-beats-nana-varachha",
+    "capturedOn": "2026-09-07",
+    "openQuestions": [
+      "DEMO ONLY — built from public listings, not commissioned by the cafe. Confirm everything before showing it as theirs.",
+      "The logo here is a typographic stand-in. Their real mark is a coffee cup inside a headphone ring; ask for the original file.",
+      "Zomato lists this branch at Blue Stone Complex; Swiggy lists a 'Cafe Beats Signature' at Millennium Business Hub 305. Confirm which outlet this menu belongs to.",
+      "Pizza shows thin-crust price; pan crust is noted per item. Cheese burst add-on ₹80.",
+      "Menu prints 'Aloo Chesse Paratha' twice at ₹199 and ₹185 — one is likely a different item.",
+      "Every item is marked vegetarian based on the menu reading pure-veg. Confirm."
+    ]
+  },
+  "eyebrow": "Coffee with music · Nana Varachha",
+  "liveUrl": "https://cafe-qr-cafebeats.vercel.app/cafebeats/"
+}

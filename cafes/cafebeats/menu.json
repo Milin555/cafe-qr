@@ -1,0 +1,1228 @@
+{
+  "currency": "₹",
+  "sections": [
+    {
+      "id": "hot-coffee",
+      "name": "Hot Coffee",
+      "kicker": "The espresso bar",
+      "items": [
+        {
+          "name": "Espresso",
+          "price": 90,
+          "icon": "espresso",
+          "veg": true
+        },
+        {
+          "name": "Americano",
+          "price": 99,
+          "icon": "espresso",
+          "veg": true
+        },
+        {
+          "name": "Cappuccino",
+          "price": 119,
+          "icon": "cup",
+          "tag": "Most ordered",
+          "veg": true
+        },
+        {
+          "name": "Café Latte",
+          "price": 149,
+          "icon": "latte",
+          "veg": true
+        },
+        {
+          "name": "Mocha Latte",
+          "price": 149,
+          "icon": "mocha",
+          "veg": true
+        },
+        {
+          "name": "Flavored Cappuccino",
+          "price": 169,
+          "icon": "cup",
+          "veg": true
+        },
+        {
+          "name": "Flavored Americano",
+          "price": 149,
+          "icon": "espresso",
+          "veg": true
+        },
+        {
+          "name": "Mocha Macchiato",
+          "price": 159,
+          "icon": "mocha",
+          "veg": true
+        },
+        {
+          "name": "Affogato",
+          "price": 169,
+          "icon": "affogato",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "hot-tea",
+      "name": "Hot Tea",
+      "kicker": "Chai counter",
+      "items": [
+        {
+          "name": "Masala Chai",
+          "price": 75,
+          "icon": "chai",
+          "veg": true
+        },
+        {
+          "name": "Irani Chai",
+          "price": 75,
+          "icon": "chai",
+          "veg": true
+        },
+        {
+          "name": "Elaichi Chai",
+          "price": 75,
+          "icon": "chai",
+          "veg": true
+        },
+        {
+          "name": "Green Tea",
+          "price": 109,
+          "icon": "teacup",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "hot-chocolate",
+      "name": "Hot Chocolate",
+      "kicker": "Thick pours",
+      "items": [
+        {
+          "name": "The Classical",
+          "price": 139,
+          "icon": "hotchoc",
+          "veg": true
+        },
+        {
+          "name": "Creamy Chocolate",
+          "price": 179,
+          "icon": "hotchoc",
+          "veg": true
+        },
+        {
+          "name": "Topped Up",
+          "price": 199,
+          "icon": "hotchoc",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "cold-coffee",
+      "name": "Cold Coffee",
+      "kicker": "Over ice",
+      "items": [
+        {
+          "name": "The Classic Beaten",
+          "price": 159,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Mocha Beat",
+          "price": 199,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Flavored Frappe",
+          "price": 199,
+          "icon": "frappe",
+          "note": "Peanut · Cinnamon · Irish",
+          "veg": true
+        },
+        {
+          "name": "Brownie Mocha",
+          "price": 259,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Nutella Mocha Premium Frappe",
+          "price": 299,
+          "icon": "frappe",
+          "tag": "Most ordered",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "frappe-shakes",
+      "name": "Frappe & Shakes",
+      "kicker": "Thick and blended",
+      "items": [
+        {
+          "name": "Oreo Shake",
+          "price": 199,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Silky Choco Frappe",
+          "price": 319,
+          "icon": "frappe",
+          "veg": true
+        },
+        {
+          "name": "Ferrero Rocher Shake",
+          "price": 319,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Nutella Dark Fantasy Shake",
+          "price": 319,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Kitkat Shake",
+          "price": 319,
+          "icon": "shake",
+          "veg": true
+        },
+        {
+          "name": "Biscoff Shake",
+          "price": 385,
+          "icon": "shake",
+          "tag": "Most ordered",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "smoothies",
+      "name": "Smoothies",
+      "kicker": "Blended fruit",
+      "items": [
+        {
+          "name": "Strawberry Smoothie",
+          "price": 199,
+          "icon": "smoothie",
+          "veg": true
+        },
+        {
+          "name": "Mango Smoothie",
+          "price": 199,
+          "icon": "smoothie",
+          "veg": true
+        },
+        {
+          "name": "Kiwi Smoothie",
+          "price": 199,
+          "icon": "smoothie",
+          "veg": true
+        },
+        {
+          "name": "Green Apple Smoothie",
+          "price": 199,
+          "icon": "smoothie",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "mocktails",
+      "name": "Mocktails & Shooters",
+      "kicker": "Shaken, no alcohol",
+      "items": [
+        {
+          "name": "Mojito",
+          "price": 149,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Flovored Mojito",
+          "price": 235,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Beat Pe Booty",
+          "price": 199,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Hawaiin Blue",
+          "price": 189,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Pinacolada",
+          "price": 185,
+          "icon": "mocktail",
+          "tag": "Most ordered",
+          "veg": true
+        },
+        {
+          "name": "Lemon Ice Tea",
+          "price": 189,
+          "icon": "icedtea",
+          "veg": true
+        },
+        {
+          "name": "Peach Ice Tea",
+          "price": 189,
+          "icon": "icedtea",
+          "tag": "Most ordered",
+          "veg": true
+        },
+        {
+          "name": "Slush & Crush",
+          "price": 175,
+          "icon": "mocktail",
+          "note": "Berry · Kalakhatta · Masala",
+          "veg": true
+        },
+        {
+          "name": "Sunday Morning Breeze",
+          "price": 255,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "LIIT",
+          "price": 255,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Masala Wine Singra",
+          "price": 275,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Red Grape Kiwi Wine",
+          "price": 299,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Grape & Berry Shamp",
+          "price": 299,
+          "icon": "mocktail",
+          "veg": true
+        },
+        {
+          "name": "Mojo Jojo",
+          "price": 349,
+          "icon": "mocktail",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "soda",
+      "name": "Soda & Others",
+      "kicker": "Fizz",
+      "items": [
+        {
+          "name": "Masala Soda",
+          "price": 85,
+          "icon": "soda",
+          "veg": true
+        },
+        {
+          "name": "Jaljeera Soda",
+          "price": 85,
+          "icon": "soda",
+          "veg": true
+        },
+        {
+          "name": "Limbu Masala Soda",
+          "price": 85,
+          "icon": "soda",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "breakfast",
+      "name": "Breakfast",
+      "kicker": "Early plates",
+      "items": [
+        {
+          "name": "Indori Poha",
+          "price": 99,
+          "icon": "poha",
+          "note": "Street style, spicy, with salad and sev",
+          "veg": true
+        },
+        {
+          "name": "Protein Bowl",
+          "price": 219,
+          "icon": "salad",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "surprise-me",
+      "name": "Surprise Me",
+      "kicker": "The chef showing off",
+      "items": [
+        {
+          "name": "Crips Maggi Bhel",
+          "price": 109,
+          "icon": "maggi",
+          "note": "Crispy fried maggi served in bhel style",
+          "veg": true
+        },
+        {
+          "name": "Arancini Biryani Balls",
+          "price": 225,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Spinach Cream Mashroom Crostini",
+          "price": 275,
+          "icon": "mushroom",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "chaat",
+      "name": "Chat New Version",
+      "kicker": "Chaat, rebuilt",
+      "items": [
+        {
+          "name": "Sev Puri Chat",
+          "price": 99,
+          "icon": "papdi",
+          "veg": true
+        },
+        {
+          "name": "Papdi Chat",
+          "price": 99,
+          "icon": "papdi",
+          "veg": true
+        },
+        {
+          "name": "Aloo Tikki Chhole Chat",
+          "price": 165,
+          "icon": "papdi",
+          "veg": true
+        },
+        {
+          "name": "Masala Garlic Chat Parfrait",
+          "price": 175,
+          "icon": "papdi",
+          "veg": true
+        },
+        {
+          "name": "Paneer Tikki Chhole Chat",
+          "price": 185,
+          "icon": "papdi",
+          "veg": true
+        },
+        {
+          "name": "Paneer Bhurji Basket Chat",
+          "price": 199,
+          "icon": "papdi",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "garlic-bread",
+      "name": "Garlic Breads",
+      "kicker": "From the oven",
+      "items": [
+        {
+          "name": "Plain Garlic Bread",
+          "price": 99,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Garlic Bread Cheese",
+          "price": 159,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Cheese Garlic Bread Loaded",
+          "price": 199,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Bruschetta",
+          "price": 185,
+          "icon": "garlicbread",
+          "veg": true
+        },
+        {
+          "name": "Stuffed Garlic Rolls With Creamy Curry",
+          "price": 285,
+          "icon": "garlicbread",
+          "note": "4 pieces",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "finger-bites",
+      "name": "Finger Bites",
+      "kicker": "To pick at",
+      "items": [
+        {
+          "name": "French Fries",
+          "price": 99,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Crisp Onion Ring",
+          "price": 109,
+          "icon": "onionring",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri V Crisper",
+          "price": 125,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Fries",
+          "price": 159,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Mexican Sauce Creamy Fries",
+          "price": 199,
+          "icon": "fries",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Cheesy Creamy Fries",
+          "price": 210,
+          "icon": "fries",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "maggi",
+      "name": "Maggi",
+      "kicker": "Two minutes, more or less",
+      "items": [
+        {
+          "name": "Meri Maggi",
+          "price": 89,
+          "icon": "maggi",
+          "veg": true
+        },
+        {
+          "name": "Cheesy Maggi",
+          "price": 109,
+          "icon": "maggi",
+          "veg": true
+        },
+        {
+          "name": "Exotic Veggie Cheesy Maggi",
+          "price": 139,
+          "icon": "maggi",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "quick-bites",
+      "name": "Quick Bites",
+      "kicker": "Sharing plates",
+      "items": [
+        {
+          "name": "Nachos Mexicano",
+          "price": 185,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Mexican Tacos",
+          "price": 185,
+          "icon": "taco",
+          "veg": true
+        },
+        {
+          "name": "Chessy Blast",
+          "price": 199,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Cheese Loaded Nachos",
+          "price": 225,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Paneer Makhani Tacos",
+          "price": 250,
+          "icon": "taco",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "kicker": "Grilled",
+      "items": [
+        {
+          "name": "Bombay Grill",
+          "price": 155,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Cheesy Bombay Grill",
+          "price": 175,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Cheese Chilly Corn",
+          "price": 175,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Pickeld Veggies & Cheese S/W",
+          "price": 210,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Tandoori Paneer S/W",
+          "price": 215,
+          "icon": "sandwich",
+          "veg": true
+        },
+        {
+          "name": "Jamaican Spiced S/W",
+          "price": 235,
+          "icon": "sandwich",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "burger",
+      "name": "Burger",
+      "kicker": "In a bun",
+      "items": [
+        {
+          "name": "Desi Aloo Tikki",
+          "price": 99,
+          "icon": "burger",
+          "veg": true
+        },
+        {
+          "name": "Beats Paneer Burger",
+          "price": 185,
+          "icon": "burger",
+          "tag": "House burger",
+          "veg": true
+        },
+        {
+          "name": "Spicy Mexican Burger",
+          "price": 185,
+          "icon": "burger",
+          "veg": true
+        },
+        {
+          "name": "Jamican Jerk Pepper Burger",
+          "price": 199,
+          "icon": "burger",
+          "veg": true
+        },
+        {
+          "name": "Cheesy Overload Burger",
+          "price": 235,
+          "icon": "burger",
+          "note": "Built for the cheese lover",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "wraps",
+      "name": "Wraps",
+      "kicker": "Rolled",
+      "items": [
+        {
+          "name": "Grilled Mexcian Warp",
+          "price": 199,
+          "icon": "wrap",
+          "veg": true
+        },
+        {
+          "name": "BBQ Paneer Tikka Warp",
+          "price": 199,
+          "icon": "wrap",
+          "veg": true
+        },
+        {
+          "name": "American Lemonic Rolls",
+          "price": 199,
+          "icon": "wrap",
+          "veg": true
+        },
+        {
+          "name": "Schewzan Chessey Roll",
+          "price": 199,
+          "icon": "wrap",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Veggie Wrap",
+          "price": 235,
+          "icon": "wrap",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "paratha",
+      "name": "Paratha With Chhole",
+      "kicker": "Griddled, with chhole",
+      "items": [
+        {
+          "name": "Aloo De Paratha",
+          "price": 179,
+          "icon": "paratha",
+          "veg": true
+        },
+        {
+          "name": "Aloo Chesse Paratha",
+          "price": 185,
+          "icon": "paratha",
+          "veg": true
+        },
+        {
+          "name": "Pyaz Sev Paratha",
+          "price": 199,
+          "icon": "paratha",
+          "veg": true
+        },
+        {
+          "name": "Paneer Chesse Paratha",
+          "price": 219,
+          "icon": "paratha",
+          "veg": true
+        },
+        {
+          "name": "Paneer Masala With Tawa Paratha",
+          "price": 249,
+          "icon": "paratha",
+          "veg": true
+        },
+        {
+          "name": "Mix Veg. Curry With Tawa Paratha",
+          "price": 249,
+          "icon": "paratha",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pav-bhaji",
+      "name": "Pav Bhaji",
+      "kicker": "With butter, obviously",
+      "items": [
+        {
+          "name": "Teri Gully Ki Bhaji",
+          "price": 165,
+          "icon": "pav",
+          "veg": true
+        },
+        {
+          "name": "Jain Pav Bhaji",
+          "price": 165,
+          "icon": "pav",
+          "veg": true
+        },
+        {
+          "name": "Lasaniya Ragda Pav Bhaji",
+          "price": 175,
+          "icon": "pav",
+          "veg": true
+        },
+        {
+          "name": "Cheesy Creamy Bhaji",
+          "price": 185,
+          "icon": "pav",
+          "veg": true
+        },
+        {
+          "name": "Pav Bhaji Fundu",
+          "price": 225,
+          "icon": "pav",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "salads",
+      "name": "Healthy Salads",
+      "kicker": "Lighter",
+      "items": [
+        {
+          "name": "Sauted Veggies",
+          "price": 175,
+          "icon": "salad",
+          "veg": true
+        },
+        {
+          "name": "Sauteed Mashroom",
+          "price": 219,
+          "icon": "mushroom",
+          "veg": true
+        },
+        {
+          "name": "Exotic Veggle With Herbs",
+          "price": 255,
+          "icon": "salad",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "kicker": "Thin crust or pan, 22cm",
+      "items": [
+        {
+          "name": "Margherita",
+          "price": 265,
+          "icon": "pizza",
+          "note": "Pan crust ₹335",
+          "veg": true
+        },
+        {
+          "name": "OTC Pizza",
+          "price": 285,
+          "icon": "pizza",
+          "note": "Pan crust ₹355",
+          "veg": true
+        },
+        {
+          "name": "Sauted Mashroom Pizza",
+          "price": 285,
+          "icon": "pizza",
+          "note": "Pan crust ₹355",
+          "veg": true
+        },
+        {
+          "name": "Firangi Pizza",
+          "price": 299,
+          "icon": "pizza",
+          "note": "Pan crust ₹369",
+          "veg": true
+        },
+        {
+          "name": "Mexican Pizza",
+          "price": 319,
+          "icon": "pizzaslice",
+          "note": "Pan crust ₹389",
+          "veg": true
+        },
+        {
+          "name": "Paneer Bhuraji Pizza",
+          "price": 319,
+          "icon": "pizzaslice",
+          "note": "Pan crust ₹389",
+          "veg": true
+        },
+        {
+          "name": "Farmizza",
+          "price": 325,
+          "icon": "pizza",
+          "note": "Pan crust ₹395",
+          "veg": true
+        },
+        {
+          "name": "Paneer Tandoori Tikka",
+          "price": 345,
+          "icon": "pizzaslice",
+          "note": "Pan crust ₹415",
+          "veg": true
+        },
+        {
+          "name": "All Pepper Pizza",
+          "price": 355,
+          "icon": "pizza",
+          "note": "Pan crust ₹425",
+          "veg": true
+        },
+        {
+          "name": "Thai Green Pizza",
+          "price": 355,
+          "icon": "pizza",
+          "note": "Pan crust ₹425",
+          "veg": true
+        },
+        {
+          "name": "Mr. Bean Pizza",
+          "price": 355,
+          "icon": "pizza",
+          "note": "Pan crust ₹425",
+          "veg": true
+        },
+        {
+          "name": "Cicilia Pizza",
+          "price": 355,
+          "icon": "pizza",
+          "note": "Pan crust ₹425",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "pasta",
+      "name": "Pasta",
+      "kicker": "Bowls",
+      "items": [
+        {
+          "name": "Red Sauce Pasta",
+          "price": 225,
+          "icon": "pasta",
+          "note": "Tangy tomato, herbs, garlic",
+          "veg": true
+        },
+        {
+          "name": "White Sauce Pasta",
+          "price": 275,
+          "icon": "pasta",
+          "note": "Creamy cheese sauce",
+          "veg": true
+        },
+        {
+          "name": "Pesto Sauce",
+          "price": 285,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Spinach Cannelloni Pasta",
+          "price": 299,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Combination Pasta",
+          "price": 299,
+          "icon": "pasta",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Mac N Cheese",
+          "price": 345,
+          "icon": "pasta",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "chinese",
+      "name": "Chinese",
+      "kicker": "Wok",
+      "items": [
+        {
+          "name": "Manchurian Dry",
+          "price": 185,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Crispy Corn",
+          "price": 185,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Veg. 69",
+          "price": 185,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Hakka Noodles",
+          "price": 185,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Crispy Veg",
+          "price": 185,
+          "icon": "noodles",
+          "note": "Regular or Jain",
+          "veg": true
+        },
+        {
+          "name": "Veg. Momos",
+          "price": 185,
+          "icon": "momo",
+          "veg": true
+        },
+        {
+          "name": "Singapore Noodles",
+          "price": 199,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Paneer Chilly Dry",
+          "price": 199,
+          "icon": "noodles",
+          "note": "Regular or Jain",
+          "veg": true
+        },
+        {
+          "name": "Schewzan Paneer Momos",
+          "price": 199,
+          "icon": "momo",
+          "veg": true
+        },
+        {
+          "name": "Paneer 69",
+          "price": 225,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Chilly Garlic Tofu",
+          "price": 235,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Pad Thai Noodles",
+          "price": 245,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Spicy Chilly Bao",
+          "price": 249,
+          "icon": "momo",
+          "note": "Japanese ondogo dish with noodles and stock",
+          "veg": true
+        },
+        {
+          "name": "Peri Peri Cheese Paneer Sticks",
+          "price": 265,
+          "icon": "nachos",
+          "veg": true
+        },
+        {
+          "name": "Burmese Khow Suey",
+          "price": 299,
+          "icon": "noodles",
+          "veg": true
+        },
+        {
+          "name": "Ramen Bowl",
+          "price": 399,
+          "icon": "noodles",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "rice",
+      "name": "Rices",
+      "kicker": "One-bowl meals",
+      "items": [
+        {
+          "name": "Schezwan Rice With Manchurian",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Rice With Hot Pepper Curry",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Hydrabadi Biriyani With Mirch Salan & Raita",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Veg. Fried Rice With Paneer Chilly",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Mexican Herbs Rice With Creamy Curry",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Coconut Rice With Thai Curry",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        },
+        {
+          "name": "Garlic Rice With Paneer Chilly",
+          "price": 399,
+          "icon": "ricebowl",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "sizzler",
+      "name": "Sizzler",
+      "kicker": "Served on the plate, still going",
+      "items": [
+        {
+          "name": "Chinese Sizzler",
+          "price": 455,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "New Indian Sizzler",
+          "price": 475,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Mexican Sizzler",
+          "price": 475,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Spicy American BBQ Sizzler",
+          "price": 475,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Chef's Special Sizzler",
+          "price": 485,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Japanise Sizzler",
+          "price": 499,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Jhatka Sizzler",
+          "price": 499,
+          "icon": "sizzler",
+          "note": "Fusion into Sizzler chef special",
+          "veg": true
+        },
+        {
+          "name": "Arabians Sizzler",
+          "price": 499,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "Paneer Shashlik Sizzler",
+          "price": 499,
+          "icon": "sizzler",
+          "veg": true
+        },
+        {
+          "name": "DIY Sizzler",
+          "price": 625,
+          "icon": "sizzler",
+          "note": "Do it yourself",
+          "veg": true
+        }
+      ]
+    },
+    {
+      "id": "dessert",
+      "name": "Dessert",
+      "kicker": "To finish",
+      "items": [
+        {
+          "name": "Malai Misthan Dessert",
+          "price": 199,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Sizzling Hot Brownie",
+          "price": 199,
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Baunty Choco Dessert",
+          "price": 210,
+          "icon": "brownie",
+          "veg": true
+        },
+        {
+          "name": "Strawberry Malai Roll Dessert",
+          "price": 210,
+          "icon": "cheesecake",
+          "veg": true
+        },
+        {
+          "name": "Messy Oreo Sundae",
+          "price": 265,
+          "icon": "sundae",
+          "veg": true
+        },
+        {
+          "name": "Spiced Browine Nuttela Sundae",
+          "price": 275,
+          "icon": "sundae",
+          "veg": true
+        }
+      ]
+    }
+  ],
+  "addons": {
+    "title": "Add On",
+    "groups": [
+      {
+        "label": "Cheese Burst",
+        "price": 80,
+        "icon": "pizza",
+        "options": [
+          "On any pizza"
+        ]
+      }
+    ]
+  }
+}
