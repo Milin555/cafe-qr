@@ -1443,8 +1443,7 @@
         "label": "Prices exclude GST",
         "icon": "leaf",
         "options": [
-          "5% GST is added to the bill",
-          "Allow 30 minutes for your order"
+          "5% GST is added to the bill"
         ]
       },
       {
@@ -1453,7 +1452,8 @@
         "options": [
           "Jain food available",
           "We bake our own bread",
-          "No food colours used"
+          "No food colours used",
+          "Allow 30 minutes for your order"
         ]
       }
     ]

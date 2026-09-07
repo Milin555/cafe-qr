@@ -147,9 +147,9 @@ def build(cafe_id):
     pick_cards = "".join(
         '<a class="pick" href="#s-%s"><span class="pick-ico">%s</span>'
         '<span class="pick-tag">%s</span><span class="pick-name">%s</span>'
-        '<span class="pick-price">%s</span></a>'
+        '%s</a>'
         % (s["id"], icon(i["icon"], "ico", "1.25"), esc(s["name"]), esc(i["name"]),
-           ("%s%s" % (cur, i["price"])) if i.get("price") else "")
+           ('<span class="pick-price">%s%s</span>' % (cur, i["price"])) if i.get("price") else "")
         for s, i in picks)
 
     # ---- sections
@@ -273,8 +273,10 @@ def build(cafe_id):
         "@@VEGNOTE@@": (
             '<p class="vegnote">%s%s</p>' % (
                 ('<span class="veg"><i></i></span>Pure vegetarian kitchen' if all_veg else ''),
-                ((' · ' if all_veg else '') + 'Prices at the counter') if priceless else '')
-            if (all_veg or priceless) else ""),
+                ((' · ' if all_veg else '') + 'Prices at the counter') if priceless
+                else ((' · ' if all_veg else '') + esc(cafe["headerNote"]))
+                     if cafe.get("headerNote") else '')
+            if (all_veg or priceless or cafe.get("headerNote")) else ""),
         "@@SECCOUNT@@": str(len(menu["sections"])),
         "@@CAPTURED@@": esc(__import__("datetime").datetime.strptime(
             cafe["source"]["capturedOn"], "%Y-%m-%d").strftime("%-d %B %Y")),

@@ -40,7 +40,7 @@
     "pin": "395006"
   },
   "theme": {
-    "accent": "#8A5F22",
+    "accent": "#7E561E",
     "accentLo": "rgba(169,118,47,.32)",
     "accentOnDark": "#DCB878",
     "bg": "#E4E9DE",
@@ -125,5 +125,6 @@
   "galleryTitle": "The place",
   "priceLabel": "for two",
   "picksTitle": "Must try",
-  "searchHint": "Try “fondue”, “matcha” or “sizzler”"
+  "searchHint": "Try “fondue”, “matcha” or “sizzler”",
+  "headerNote": "Prices exclude 5% GST"
 }
