@@ -41,11 +41,11 @@
     "pin": "395013"
   },
   "theme": {
-    "accent": "#96742F",
+    "accent": "#7A5D24",
     "accentLo": "rgba(150,116,47,.34)",
     "accentOnDark": "#D9B87C",
     "bg": "#EDE7DA",
-    "dim": "#8A86AC",
+    "dim": "#5F5B84",
     "displayFont": "'Cormorant Garamond', Georgia, serif",
     "edge": "#E0D7C3",
     "edgeSoft": "#EBE3D3",
@@ -129,5 +129,8 @@
     "text": "#F2EADB",
     "veg": "#5CC98A"
   },
-  "galleryTitle": "The room"
+  "galleryTitle": "The room",
+  "priceLabel": "per person",
+  "picksTitle": "Guests keep ordering",
+  "searchHint": "Try “biscoff”, “cold brew” or “paneer”"
 }

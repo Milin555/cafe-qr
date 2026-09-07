@@ -66,7 +66,6 @@
           "name": "Hot Chocolate",
           "price": 280,
           "icon": "hotchoc",
-          "note": "Non coffee",
           "desc": "Hot chocolate powder with steamed milk",
           "veg": true
         },
@@ -81,7 +80,6 @@
           "name": "Hot Toddy",
           "price": 300,
           "icon": "teacup",
-          "note": "Non coffee",
           "tag": "Must try",
           "desc": "Lime juice, honey, cinnamon, cloves, ginger, mint leaves",
           "veg": true
@@ -270,7 +268,6 @@
           "name": "Golden River",
           "price": 280,
           "icon": "mocktail",
-          "tag": "Must try",
           "desc": "Apple juice, honey, peach syrup, lime juice",
           "veg": true
         },
@@ -278,7 +275,6 @@
           "name": "Pina Colada",
           "price": 290,
           "icon": "mocktail",
-          "tag": "Must try",
           "desc": "Pineapple juice, coconut milk powder, ice cream, sprite, soda",
           "veg": true
         },
@@ -306,7 +302,6 @@
           "name": "Sex On The Beach",
           "price": 300,
           "icon": "mocktail",
-          "tag": "Must try",
           "desc": "Cranberry juice, orange juice, sweet and sour",
           "veg": true
         },
@@ -335,7 +330,6 @@
           "name": "Pink Lady Delight",
           "price": 340,
           "icon": "mocktail",
-          "tag": "Must try",
           "desc": "Cranberry juice, passion juice, rose water, sweet and sour",
           "veg": true
         },
@@ -351,7 +345,6 @@
           "name": "Swimming Pool Aqua Splash",
           "price": 350,
           "icon": "mocktail",
-          "tag": "Must try",
           "desc": "Pineapple juice, cream, blue curacao, coconut syrup",
           "veg": true
         }
@@ -949,7 +942,7 @@
       "kicker": "Dips",
       "items": [
         {
-          "name": "Italian Cheese Fondue",
+          "name": "Italian Cheese Fondue (Chef's)",
           "price": 520,
           "icon": "hotchoc",
           "desc": "Mild herbs, thick cream, mozzarella dip",
@@ -960,14 +953,6 @@
           "price": 560,
           "icon": "hotchoc",
           "desc": "Fusion salsa fondue with a spice kick",
-          "veg": true
-        },
-        {
-          "name": "Cuppuccino Special Fondue",
-          "price": 585,
-          "icon": "hotchoc",
-          "tag": "Signature",
-          "desc": "Trio of dips and crunchy bites",
           "veg": true
         }
       ]
@@ -1428,12 +1413,6 @@
       "name": "Aerated Drinks",
       "kicker": "Cold",
       "items": [
-        {
-          "name": "All Beverages Served In Mug With Ice",
-          "price": 150,
-          "icon": "soda",
-          "veg": true
-        },
         {
           "name": "Mineral Water 500 ml",
           "price": 60,

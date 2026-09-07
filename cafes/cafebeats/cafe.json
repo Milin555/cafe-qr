@@ -26,9 +26,6 @@
     "phone": "+917874565657",
     "phoneDisplay": "078745 65657",
     "whatsapp": "https://wa.me/917874565657?text=Hi%20Caf%C3%A9%20Beats%2C%20I%27d%20like%20to%20book%20a%20table",
-    "instagram": "https://www.instagram.com/explore/search/keyword/?q=cafebeats%20surat",
-    "instagramHandle": "Café Beats",
-    "googleReview": "https://www.google.com/maps/search/?api=1&query=Cafe%20Beats%20Nana%20Varachha%20Surat",
     "directions": "https://www.google.com/maps/dir/?api=1&destination=Cafe%20Beats%2C%20Nana%20Varachha%2C%20Surat"
   },
   "address": {
@@ -40,11 +37,11 @@
     "pin": "395006"
   },
   "theme": {
-    "accent": "#1E7E97",
+    "accent": "#166477",
     "accentLo": "rgba(30,126,151,.30)",
     "accentOnDark": "#6FD3E8",
     "bg": "#E6E9E6",
-    "dim": "#7C959D",
+    "dim": "#4E6B74",
     "displayFont": "'Yeseva One', Georgia, serif",
     "edge": "#CFDBDB",
     "edgeSoft": "#DEE7E6",
@@ -91,7 +88,8 @@
       "Zomato lists this branch at Blue Stone Complex; Swiggy lists a 'Cafe Beats Signature' at Millennium Business Hub 305. Confirm which outlet this menu belongs to.",
       "Pizza shows thin-crust price; pan crust is noted per item. Cheese burst add-on ₹80.",
       "Menu prints 'Aloo Chesse Paratha' twice at ₹199 and ₹185 — one is likely a different item.",
-      "Every item is marked vegetarian based on the menu reading pure-veg. Confirm."
+      "Every item is marked vegetarian based on the menu reading pure-veg. Confirm.",
+      "Instagram handle and the Google review deep link are missing — both buttons are hidden rather than pointed at a search page. Get the profile URL and the g.page/r/… review link from the owner."
     ]
   },
   "eyebrow": "Coffee with music · Nana Varachha",
@@ -117,5 +115,8 @@
     "text": "#E9F4F5",
     "veg": "#5CC98A"
   },
-  "galleryTitle": "The room"
+  "galleryTitle": "The room",
+  "priceLabel": "for two",
+  "picksTitle": "Most ordered",
+  "searchHint": "Try “chai”, “maggi” or “sizzler”"
 }

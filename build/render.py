@@ -168,7 +168,7 @@ def build(cafe_id):
         if desc or ph:
             body = ('<span class="body">'
                     '<button class="line" type="button" aria-expanded="false">'
-                    '<span class="name">%s%s%s<i class="chev" aria-hidden="true"></i></span>'
+                    '<span class="name">%s%s<i class="chev" aria-hidden="true"></i></span>%s'
                     '%s</button>%s'
                     '<div class="detail" hidden>%s%s</div></span>'
                     % (esc(i["name"]), veg, tag, price_html(i), note, big,
@@ -176,7 +176,7 @@ def build(cafe_id):
             cls = "item has-desc"
         else:
             body = ('<span class="body"><span class="line">'
-                    '<span class="name">%s%s%s</span>'
+                    '<span class="name">%s%s</span>%s'
                     '%s</span>%s</span>'
                     % (esc(i["name"]), veg, tag, price_html(i), note))
             cls = "item"
@@ -204,10 +204,11 @@ def build(cafe_id):
     action = lambda href, ic, label, extra="": (
         '<a class="act" href="%s"%s><span>%s</span>%s</a>'
         % (href, extra, icon(ic, "ico", "1.5"), esc(label)))
-    actions = (action(c["directions"], "directions", "Directions", ' target="_blank" rel="noopener"')
-               + action(c["whatsapp"], "whatsapp", "WhatsApp", ' target="_blank" rel="noopener"')
-               + action("tel:" + c["phone"], "phone", "Call")
-               + action(c["instagram"], "instagram", "Instagram", ' target="_blank" rel="noopener"'))
+    blank = ' target="_blank" rel="noopener"'
+    actions = action(c["directions"], "directions", "Directions", blank)
+    if c.get("whatsapp"): actions += action(c["whatsapp"], "whatsapp", "WhatsApp", blank)
+    if c.get("phone"):    actions += action("tel:" + c["phone"], "phone", "Call")
+    if c.get("instagram"):actions += action(c["instagram"], "instagram", "Instagram", blank)
 
     open_h, close_h = hrs["open"], hrs["close"]
     TPL = open(os.path.join(ROOT, "build", "page.html"), encoding="utf-8").read()
@@ -232,13 +233,30 @@ def build(cafe_id):
         "@@ADDR3@@": esc("%s, %s %s" % (addr["city"], addr["state"], addr["pin"])),
         "@@FULLADDR@@": esc(full_addr),
         "@@PHONE@@": c["phone"], "@@PHONEDISP@@": esc(c["phoneDisplay"]),
-        "@@WHATSAPP@@": c["whatsapp"], "@@INSTA@@": c["instagram"],
-        "@@INSTAH@@": esc(c["instagramHandle"]),
-        "@@REVIEW@@": c["googleReview"], "@@DIRECTIONS@@": c["directions"],
+        "@@WHATSAPP@@": c.get("whatsapp",""), "@@INSTA@@": c.get("instagram",""),
+        "@@INSTAH@@": esc(c.get("instagramHandle","")),
+        "@@REVIEW@@": c.get("googleReview",""), "@@DIRECTIONS@@": c["directions"],
+        "@@FOOTERLINKS@@": "".join(filter(None, [
+            '<a class="f-btn" href="%s"%s>%sDirections</a>' % (c["directions"], blank, icon("directions","ico","1.4")),
+            ('<a class="f-btn" href="tel:%s">%s%s</a>' % (c["phone"], icon("phone","ico","1.4"), esc(c["phoneDisplay"]))) if c.get("phone") else "",
+            ('<a class="f-btn" href="%s"%s>%sBook a table</a>' % (c["whatsapp"], blank, icon("whatsapp","ico","1.4"))) if c.get("whatsapp") else "",
+            ('<a class="f-btn" href="%s"%s>%s%s</a>' % (c["instagram"], blank, icon("instagram","ico","1.4"), esc(c.get("instagramHandle","Instagram")))) if c.get("instagram") else "",
+            ('<a class="f-btn gold" href="%s"%s>%sLeave a review</a>' % (c["googleReview"], blank, icon("star","ico","1.4"))) if c.get("googleReview") else "",
+        ])),
         "@@NAV@@": nav, "@@PICKS@@": pick_cards, "@@SECTIONS@@": secs,
         "@@ADDONTITLE@@": esc(ad["title"]), "@@ADDONS@@": addon_groups,
         "@@ACTIONS@@": actions,
         "@@GALLERYTITLE@@": esc(cafe.get("galleryTitle", "The room")),
+        "@@PICKSTITLE@@": esc(cafe.get("picksTitle", "Guests keep ordering")),
+        "@@SEARCHHINT@@": esc(cafe.get("searchHint", "Try a name, or an ingredient")),
+        "@@PRICELABEL@@": esc(cafe.get("priceLabel", "per person")),
+        "@@RATINGCELL@@": ("" if not cafe["meta"].get("showRating", True) else
+            '<div><b>%s%s</b><span>%s reviews</span></div>'
+            % (icon("star", "ico", "1.3"), cafe["meta"]["rating"], cafe["meta"]["ratingCount"])),
+        "@@STRIP@@": ('<div class="strip" aria-hidden="true"></div>'
+                      if cafe["assets"].get("pattern") else ""),
+        "@@FSTRIP@@": ('<div class="f-strip" aria-hidden="true"></div>'
+                       if cafe["assets"].get("pattern") else ""),
         "@@GALLERY@@": ("" if not gal else
             '<div class="gal-wrap reveal">'
             '<div class="rail-h" style="padding-left:0;padding-right:0"><p>%s</p><i></i></div>'
@@ -248,7 +266,8 @@ def build(cafe_id):
         "@@VEGNOTE@@": ('<p class="vegnote"><span class="veg"><i></i></span>'
                         'Pure vegetarian kitchen</p>') if all_veg else "",
         "@@SECCOUNT@@": str(len(menu["sections"])),
-        "@@CAPTURED@@": esc(cafe["source"]["capturedOn"]),
+        "@@CAPTURED@@": esc(__import__("datetime").datetime.strptime(
+            cafe["source"]["capturedOn"], "%Y-%m-%d").strftime("%-d %B %Y")),
         "@@ISTAR@@": icon("star", "ico", "1.3"),
         "@@ICLOCK@@": icon("clock", "ico", "1.4"),
         "@@IPIN@@": icon("pin", "ico", "1.4"),
@@ -271,6 +290,8 @@ def build(cafe_id):
     def render(assets, gal, imgbase):
         out = TPL.replace("__IMGBASE__", imgbase)
         local = dict(rep)
+        local["@@HEROIMG@@"] = ('<img class="hero-bg" src="%s" alt="" aria-hidden="true" '
+                                'fetchpriority="high">' % assets["hero"]) if assets.get("hero") else ""
         local.update({"@@LOGO@@": assets["logo"], "@@HERO@@": assets["hero"],
                       "@@PATTERN@@": assets["pattern"], "@@ARTCUP@@": assets["artCup"],
                       "@@ARTSHAKE@@": assets["artShake"]})
@@ -318,16 +339,24 @@ def build(cafe_id):
 
     doc = ('<!doctype html><html lang="en"><head><meta charset="utf-8">'
            '<meta name="viewport" content="width=device-width,initial-scale=1">'
-           '<meta name="theme-color" media="(prefers-color-scheme:light)" content="#FBF8F1">'
+           '<meta name="theme-color" media="(prefers-color-scheme:light)" content="%s">'
            '<meta name="theme-color" media="(prefers-color-scheme:dark)" content="%s">'
-           '<meta name="description" content="%s — menu, hours and directions.">'
+           '<meta name="description" content="%s">'
+           '<meta property="og:type" content="website">'
+           '<meta property="og:site_name" content="%s">'
+           '<meta property="og:title" content="%s — Menu">'
+           '<meta property="og:description" content="%s">'
+           '<meta property="og:image" content="%s">'
+           '<meta name="twitter:card" content="summary_large_image">'
            '<link rel="icon" href="%s">'
            '<style>html,body{margin:0}img{max-width:100%%}</style>'
            '</head><body>%s'
            '<script>if("serviceWorker"in navigator)addEventListener("load",function(){'
            'navigator.serviceWorker.register("sw.js").catch(function(){})});</script>'
            '</body></html>'
-           % (t["text"], esc(cafe["name"]), A_rel["logo"], tpl))
+           % (t["bg"], cafe.get("themeDark", {}).get("bg", t["bg"]), esc(cafe["blurb"]), esc(cafe["name"]), esc(cafe["name"]),
+              esc(cafe["blurb"]), A_rel.get("hero") or A_rel["logo"],
+              A_rel["logo"], tpl))
     with open(os.path.join(site, "index.html"), "w", encoding="utf-8") as f:
         f.write(doc)
 

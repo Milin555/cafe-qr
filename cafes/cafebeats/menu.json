@@ -245,7 +245,7 @@
           "veg": true
         },
         {
-          "name": "Flovored Mojito",
+          "name": "Flavoured Mojito",
           "price": 235,
           "icon": "mocktail",
           "veg": true
@@ -378,7 +378,7 @@
       "kicker": "The chef showing off",
       "items": [
         {
-          "name": "Crips Maggi Bhel",
+          "name": "Crispy Maggi Bhel",
           "price": 109,
           "icon": "maggi",
           "note": "Crispy fried maggi served in bhel style",
@@ -391,7 +391,7 @@
           "veg": true
         },
         {
-          "name": "Spinach Cream Mashroom Crostini",
+          "name": "Spinach Cream Mushroom Crostini",
           "price": 275,
           "icon": "mushroom",
           "veg": true
@@ -400,7 +400,7 @@
     },
     {
       "id": "chaat",
-      "name": "Chat New Version",
+      "name": "Chaat",
       "kicker": "Chaat, rebuilt",
       "items": [
         {
@@ -565,7 +565,7 @@
           "veg": true
         },
         {
-          "name": "Chessy Blast",
+          "name": "Cheesy Blast",
           "price": 199,
           "icon": "nachos",
           "veg": true
@@ -608,7 +608,7 @@
           "veg": true
         },
         {
-          "name": "Pickeld Veggies & Cheese S/W",
+          "name": "Pickled Veggies & Cheese Sandwich",
           "price": 210,
           "icon": "sandwich",
           "veg": true
@@ -652,7 +652,7 @@
           "veg": true
         },
         {
-          "name": "Jamican Jerk Pepper Burger",
+          "name": "Jamaican Jerk Pepper Burger",
           "price": 199,
           "icon": "burger",
           "veg": true
@@ -672,13 +672,13 @@
       "kicker": "Rolled",
       "items": [
         {
-          "name": "Grilled Mexcian Warp",
+          "name": "Grilled Mexican Wrap",
           "price": 199,
           "icon": "wrap",
           "veg": true
         },
         {
-          "name": "BBQ Paneer Tikka Warp",
+          "name": "BBQ Paneer Tikka Wrap",
           "price": 199,
           "icon": "wrap",
           "veg": true
@@ -690,7 +690,7 @@
           "veg": true
         },
         {
-          "name": "Schewzan Chessey Roll",
+          "name": "Schezwan Cheesy Roll",
           "price": 199,
           "icon": "wrap",
           "veg": true
@@ -715,7 +715,7 @@
           "veg": true
         },
         {
-          "name": "Aloo Chesse Paratha",
+          "name": "Aloo Cheese Paratha",
           "price": 185,
           "icon": "paratha",
           "veg": true
@@ -727,7 +727,7 @@
           "veg": true
         },
         {
-          "name": "Paneer Chesse Paratha",
+          "name": "Paneer Cheese Paratha",
           "price": 219,
           "icon": "paratha",
           "veg": true
@@ -789,19 +789,19 @@
       "kicker": "Lighter",
       "items": [
         {
-          "name": "Sauted Veggies",
+          "name": "Sautéed Veggies",
           "price": 175,
           "icon": "salad",
           "veg": true
         },
         {
-          "name": "Sauteed Mashroom",
+          "name": "Sautéed Mushroom",
           "price": 219,
           "icon": "mushroom",
           "veg": true
         },
         {
-          "name": "Exotic Veggle With Herbs",
+          "name": "Exotic Veggies With Herbs",
           "price": 255,
           "icon": "salad",
           "veg": true
@@ -828,7 +828,7 @@
           "veg": true
         },
         {
-          "name": "Sauted Mashroom Pizza",
+          "name": "Sautéed Mushroom Pizza",
           "price": 285,
           "icon": "pizza",
           "note": "Pan crust ₹355",
@@ -849,7 +849,7 @@
           "veg": true
         },
         {
-          "name": "Paneer Bhuraji Pizza",
+          "name": "Paneer Bhurji Pizza",
           "price": 319,
           "icon": "pizzaslice",
           "note": "Pan crust ₹389",
@@ -891,7 +891,7 @@
           "veg": true
         },
         {
-          "name": "Cicilia Pizza",
+          "name": "Sicilia Pizza",
           "price": 355,
           "icon": "pizza",
           "note": "Pan crust ₹425",
@@ -1000,7 +1000,7 @@
           "veg": true
         },
         {
-          "name": "Schewzan Paneer Momos",
+          "name": "Schezwan Paneer Momos",
           "price": 199,
           "icon": "momo",
           "veg": true
@@ -1068,7 +1068,7 @@
           "veg": true
         },
         {
-          "name": "Hydrabadi Biriyani With Mirch Salan & Raita",
+          "name": "Hyderabadi Biryani With Mirch Salan & Raita",
           "price": 399,
           "icon": "ricebowl",
           "veg": true
@@ -1135,7 +1135,7 @@
           "veg": true
         },
         {
-          "name": "Japanise Sizzler",
+          "name": "Japanese Sizzler",
           "price": 499,
           "icon": "sizzler",
           "veg": true
@@ -1186,7 +1186,7 @@
           "veg": true
         },
         {
-          "name": "Baunty Choco Dessert",
+          "name": "Bounty Choco Dessert",
           "price": 210,
           "icon": "brownie",
           "veg": true
@@ -1204,7 +1204,7 @@
           "veg": true
         },
         {
-          "name": "Spiced Browine Nuttela Sundae",
+          "name": "Spiced Brownie Nutella Sundae",
           "price": 275,
           "icon": "sundae",
           "veg": true

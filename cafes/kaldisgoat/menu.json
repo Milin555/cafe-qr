@@ -74,7 +74,7 @@
         {
           "name": "Latte",
           "icon": "latte",
-          "note": "Hot or iced · add on: Vanilla · Caramel · Mocha · Hazelnut · Cinnamon · Spanish · Biscoff · Moon mocha · Tiramisu",
+          "note": "Hot or iced",
           "veg": true
         },
         {
@@ -155,7 +155,6 @@
         {
           "name": "Classic Frappe",
           "icon": "frappe",
-          "note": "Add on: Vanilla · Caramel · Mocha · Hazelnut · Cinnamon · Spanish · Biscoff · Moon mocha · Tiramisu",
           "veg": true
         },
         {
@@ -194,7 +193,6 @@
         {
           "name": "Espresso Tonic",
           "icon": "tonic",
-          "note": "Add on: Blueberry · Strawberry · Irish · Cranberry · Yuzu · Lavender · Blood orange · Pomegranate · Coconut",
           "tag": "Signature",
           "veg": true
         },
@@ -242,7 +240,7 @@
     },
     {
       "id": "shakes",
-      "name": "Shake's",
+      "name": "Shakes",
       "kicker": "Blended thick",
       "items": [
         {
@@ -279,7 +277,7 @@
     },
     {
       "id": "chocolate",
-      "name": "Sp. Chocolate",
+      "name": "Special Chocolate",
       "kicker": "Drinking chocolate",
       "items": [
         {
@@ -334,7 +332,7 @@
     },
     {
       "id": "sp-tea",
-      "name": "Sp. Tea",
+      "name": "Special Tea",
       "kicker": "Leaf",
       "items": [
         {

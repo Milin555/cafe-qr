@@ -16,7 +16,8 @@
     "priceBand": "₹900",
     "rating": 3.5,
     "ratingCount": 9,
-    "ratingSource": "Zomato"
+    "ratingSource": "Zomato",
+    "showRating": false
   },
   "hours": {
     "open": "11:00",
@@ -28,9 +29,6 @@
     "phone": "+919099922040",
     "phoneDisplay": "090999 22040",
     "whatsapp": "https://wa.me/919099922040?text=Hi%20Cuppuccino%2C%20I%27d%20like%20to%20book%20a%20table",
-    "instagram": "https://www.instagram.com/explore/search/keyword/?q=cuppuccino%20surat",
-    "instagramHandle": "Cuppuccino",
-    "googleReview": "https://www.google.com/maps/search/?api=1&query=Cuppuccino%20Millennium%20Business%20Hub%20Nana%20Varachha%20Surat",
     "directions": "https://www.google.com/maps/dir/?api=1&destination=Cuppuccino%2C%20Millennium%20Business%20Hub%2C%20Nana%20Varachha%2C%20Surat"
   },
   "address": {
@@ -42,11 +40,11 @@
     "pin": "395006"
   },
   "theme": {
-    "accent": "#A9762F",
+    "accent": "#8A5F22",
     "accentLo": "rgba(169,118,47,.32)",
     "accentOnDark": "#DCB878",
     "bg": "#E4E9DE",
-    "dim": "#8A968A",
+    "dim": "#5B6659",
     "displayFont": "'Marcellus', Georgia, serif",
     "edge": "#D2DBCB",
     "edgeSoft": "#E1E8DB",
@@ -93,7 +91,9 @@
       "The logo is a typographic stand-in; their real mark appears on the wall in the interior shots. Ask for the file.",
       "Panini rows show the panini price; the focaccia price is noted per item.",
       "The one dish photo (Dal Makhani Platter) is their own listing photo, matched to the item by its printed description. Confirm before publishing.",
-      "Their printed menu says GST 5% extra, so prices here exclude tax."
+      "Their printed menu says GST 5% extra, so prices here exclude tax.",
+      "Their card lists 'Italian Cheese Fondue' twice at different prices (Fondue ₹490, Chef Signature Fondue ₹520) and 'Cuppuccino Special Fondue' twice at the same ₹585. Reproduced faithfully rather than silently edited — but on one page it reads as an error, so it is the first thing to ask them to clarify.",
+      "Instagram handle and the Google review deep link are missing — both buttons are hidden rather than pointed at a search page. Get the profile URL and the g.page/r/… review link from the owner."
     ]
   },
   "themeDark": {
@@ -117,5 +117,8 @@
     "text": "#F1F0E4",
     "veg": "#6FCB8E"
   },
-  "galleryTitle": "The room"
+  "galleryTitle": "The room",
+  "priceLabel": "for two",
+  "picksTitle": "Must try",
+  "searchHint": "Try “fondue”, “matcha” or “sizzler”"
 }

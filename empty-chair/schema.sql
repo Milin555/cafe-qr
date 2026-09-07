@@ -78,7 +78,12 @@ alter table customers  enable row level security;
 alter table visits     enable row level security;
 alter table nudges     enable row level security;
 
--- Owner identity comes from Supabase phone auth; businesses.owner_phone is the join.
+-- Owner identity. NOTE: phone-OTP auth needs an SMS route, and SMS is DLT-blocked
+-- for the first sprint (7-21 business days for header/template approval), so v1 ships
+-- with a PIN set during in-person onboarding against a long-lived device token and no
+-- login screen. This helper is written against Supabase phone auth for when that route
+-- exists; until then current_business_id() is supplied by the edge function that
+-- validates the device token.
 create or replace function current_business_id() returns uuid
 language sql stable as $$
   select id from businesses

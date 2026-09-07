@@ -104,7 +104,6 @@ a{color:inherit;text-decoration:none}
 @keyframes cue{0%,100%{opacity:.25;transform:translateY(0)}50%{opacity:.9;transform:translateY(5px)}}
 
 /* ---------------- strips & actions ---------------- */
-.strip:not([style*="url"]){display:none}
 .strip{height:20px;background-image:url(@@PATTERN@@);background-repeat:repeat-x;background-size:auto 100%;
   background-position:center;opacity:.4;filter:var(--art)}
 .vegnote{display:flex;align-items:center;justify-content:center;gap:9px;margin:0;
@@ -143,14 +142,16 @@ a{color:inherit;text-decoration:none}
 .srch.has #sbtn .i-find{display:none}
 .srch.has #sbtn .i-clear{display:block}
 .srch input:focus{outline:none;border-bottom-color:var(--brass)}
-.ibtn{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;border:1px solid var(--edge);
+.ibtn{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;border:1px solid var(--edge);
   background:transparent;color:var(--text);cursor:pointer;flex:none;transition:border-color .2s,color .2s}
 .ibtn:hover{border-color:var(--brass);color:var(--brass)}
 .ibtn .ico{width:17px;height:17px}
 .pills{display:flex;gap:7px;overflow-x:auto;padding:0 max(12px,calc(var(--pad) - 4px)) 11px;
-  scrollbar-width:none;scroll-behavior:smooth}
+  scrollbar-width:none;scroll-behavior:smooth;
+  -webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);
+  mask-image:linear-gradient(90deg,#000 92%,transparent)}
 .pills::-webkit-scrollbar{display:none}
-.pill{flex:none;font-size:12.5px;padding:7px 14px;border-radius:999px;border:1px solid var(--edge);
+.pill{flex:none;font-size:12.5px;padding:11px 15px;border-radius:999px;border:1px solid var(--edge);
   color:var(--muted);white-space:nowrap;transition:background .25s,color .25s,border-color .25s}
 .pill:hover{color:var(--text);border-color:var(--muted)}
 .pill.on{background:var(--pill-bg);border-color:var(--pill-bg);color:var(--pill-tx)}
@@ -199,8 +200,8 @@ main{padding:0 var(--pad)}
 .rule{display:block;width:100%;height:1px;margin-top:15px;
   background:linear-gradient(90deg,var(--brass) 0,var(--brass-lo) 44px,var(--edge-soft) 44px,var(--edge-soft) 100%)}
 .items{list-style:none;margin:0;padding:0}
-.item{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid var(--edge-soft);align-items:flex-start}
-.item:last-child{border-bottom:0}
+.item{display:flex;gap:14px;padding:15px 0;align-items:flex-start}
+.item + .item{border-top:1px solid var(--edge-soft)}
 .tile{flex:none;width:46px;height:46px;border-radius:50%;display:grid;place-items:center;
   background:var(--sunk);border:1px solid var(--edge);color:var(--text);opacity:.82;
   transition:border-color .28s,transform .28s cubic-bezier(.2,.8,.3,1),opacity .28s}
@@ -218,7 +219,7 @@ main{padding:0 var(--pad)}
 .line{display:flex;align-items:baseline;gap:9px}
 .name{font-size:clamp(14.2px,3.9vw,15.5px);font-weight:500;display:inline-flex;align-items:center;
   gap:5px 9px;flex-wrap:wrap;overflow-wrap:anywhere;min-width:0;line-height:1.3}
-.dots{flex:1;min-width:14px;height:1px;transform:translateY(-3px);
+.dots{flex:1 1 0;min-width:0;overflow:hidden;height:1px;transform:translateY(-3px);
   background-image:radial-gradient(circle,var(--brass-lo) 1px,transparent 1px);
   background-size:5px 1px;background-repeat:repeat-x}
 .price{font-family:var(--display);font-size:clamp(16px,4.3vw,17.5px);font-weight:400;
@@ -279,8 +280,8 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 .f-logo{width:min(52%,190px);margin:0 auto 8px;filter:brightness(0) invert(1);opacity:.9}
 .f-rule{display:block;width:60px;height:1px;margin:22px auto 24px;
   background:linear-gradient(90deg,transparent,var(--brass-lt),transparent)}
-.f-row{display:flex;align-items:flex-start;justify-content:center;gap:11px;margin:0 auto 15px;
-  max-width:34ch;text-align:left;font-size:13px;line-height:1.65;color:rgba(242,234,219,.76);font-weight:300}
+.f-row{display:flex;align-items:flex-start;gap:11px;margin:0 auto 15px;
+  width:min(34ch,100%);text-align:left;font-size:13px;line-height:1.65;color:rgba(242,234,219,.76);font-weight:300}
 .f-row .ico{width:17px;height:17px;opacity:.6;margin-top:2px}
 .f-row b{display:block;font-weight:500;color:var(--ftx)}
 .f-links{display:flex;flex-wrap:wrap;gap:9px;justify-content:center;margin:24px 0 0}
@@ -378,24 +379,24 @@ footer{background:var(--footer);color:var(--ftx);margin-top:36px;
 try{var t=localStorage.getItem("@@CAFEID@@-theme");if(t==="light"||t==="dark")e.setAttribute("data-theme",t);}catch(x){}})();</script>
 <div class="page">
   <header class="hero">
-    <img class="hero-bg" src="@@HERO@@" alt="" aria-hidden="true" fetchpriority="high">
+    @@HEROIMG@@
     <div class="hero-veil" aria-hidden="true"></div>
     <div class="hero-in">
       <p class="eyebrow">@@EYEBROW@@</p>
-      <img class="hero-logo" src="@@LOGO@@" alt="@@NAME@@">
+      <h1 style="margin:0"><img class="hero-logo" src="@@LOGO@@" alt="@@NAME@@"></h1>
       <p class="hero-tag">@@TAGLINE@@</p>
       <span class="hero-rule"><i></i></span>
       <div class="band">
-        <div><b>@@ISTAR@@@@RATING@@</b><span>@@RATINGCOUNT@@ reviews</span></div>
+        @@RATINGCELL@@
         <div><b><i class="dot" id="dot"></i><span id="status">Open</span></b><span id="statussub">till late</span></div>
-        <div><b>@@PRICEBAND@@</b><span>per person</span></div>
+        <div><b>@@PRICEBAND@@</b><span>@@PRICELABEL@@</span></div>
       </div>
       <p class="hero-blurb">@@BLURB@@</p>
     </div>
     <span class="cue" aria-hidden="true"></span>
   </header>
 
-  <div class="strip" aria-hidden="true"></div>
+  @@STRIP@@
   @@VEGNOTE@@
   <nav class="acts">@@ACTIONS@@</nav>
 
@@ -417,7 +418,7 @@ try{var t=localStorage.getItem("@@CAFEID@@-theme");if(t==="light"||t==="dark")e.
   </div>
 
   <div class="rail-wrap reveal">
-    <div class="rail-h"><p>Guests keep ordering</p><i></i></div>
+    <div class="rail-h"><p>@@PICKSTITLE@@</p><i></i></div>
     <div class="rail">@@PICKS@@</div>
   </div>
 
@@ -432,7 +433,7 @@ try{var t=localStorage.getItem("@@CAFEID@@-theme");if(t==="light"||t==="dark")e.
 
   <div class="empty" id="empty">
     <p>Nothing matches that</p>
-    <small>Try “biscoff”, “hummus” or “cold brew”</small>
+    <small>@@SEARCHHINT@@</small>
   </div>
 
   <footer>
@@ -441,14 +442,10 @@ try{var t=localStorage.getItem("@@CAFEID@@-theme");if(t==="light"||t==="dark")e.
     <div class="f-row">@@ICLOCK@@<span><b id="fhours">@@HOURS@@</b>@@DAYS@@<span id="fstatus"></span></span></div>
     <div class="f-row">@@IPIN@@<span><b>@@ADDR1@@</b>@@ADDR2@@<br>@@ADDR3@@</span></div>
     <div class="f-links">
-      <a class="f-btn" href="@@DIRECTIONS@@" target="_blank" rel="noopener">@@IDIR@@Directions</a>
-      <a class="f-btn" href="tel:@@PHONE@@">@@IPHONE@@@@PHONEDISP@@</a>
-      <a class="f-btn" href="@@WHATSAPP@@" target="_blank" rel="noopener">@@IWA@@Book a table</a>
-      <a class="f-btn" href="@@INSTA@@" target="_blank" rel="noopener">@@IINSTA@@@@INSTAH@@</a>
-      <a class="f-btn gold" href="@@REVIEW@@" target="_blank" rel="noopener">@@IREVIEW@@Leave a review</a>
+      @@FOOTERLINKS@@
     </div>
-    <p class="f-note">@@ITEMCOUNT@@ items · @@SECCOUNT@@ sections · prices as of @@CAPTURED@@</p>
-    <div class="f-strip" aria-hidden="true"></div>
+    <p class="f-note">Menu as of @@CAPTURED@@</p>
+    @@FSTRIP@@
   </footer>
 </div>
 

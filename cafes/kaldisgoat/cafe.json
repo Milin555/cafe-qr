@@ -2,7 +2,7 @@
   "id": "kaldisgoat",
   "name": "Kaldi's Goat",
   "legalName": "Kaldi's Goat Coffee",
-  "eyebrow": "Specialty coffee · Nana Varachha",
+  "eyebrow": "Brew bar · Nana Varachha",
   "tagline": "Named for the goats that found coffee",
   "blurb": "A brew bar three doors down from Sorriso — V60, Chemex, syphon and French press alongside espresso tonics, cheesecakes and croissants. Coffee taken seriously.",
   "liveUrl": "https://cafe-qr-kaldisgoat.vercel.app/kaldisgoat/",
@@ -30,7 +30,6 @@
     "whatsapp": "https://wa.me/917567211711?text=Hi%20Kaldi%27s%20Goat%2C%20I%27d%20like%20to%20book%20a%20table",
     "instagram": "https://www.instagram.com/kaldisgoatcoffee/",
     "instagramHandle": "@kaldisgoatcoffee",
-    "googleReview": "https://www.google.com/maps/search/?api=1&query=Kaldi%27s%20Goat%20Coffee%20Nana%20Varachha%20Surat",
     "directions": "https://www.google.com/maps/dir/?api=1&destination=Kaldi%27s%20Goat%20Coffee%2C%20Sarthi%20Society%2C%20Nana%20Varachha%2C%20Surat"
   },
   "address": {
@@ -42,11 +41,11 @@
     "pin": "395006"
   },
   "theme": {
-    "accent": "#5C7346",
+    "accent": "#4C6339",
     "accentLo": "rgba(92,115,70,.32)",
     "accentOnDark": "#A9C07E",
     "bg": "#EDE9D3",
-    "dim": "#8A8C77",
+    "dim": "#5E604F",
     "displayFont": "'Fraunces', Georgia, serif",
     "edge": "#DAD5B8",
     "edgeSoft": "#E5E0C8",
@@ -79,7 +78,8 @@
       "THEIR MENU CARD CARRIES NO PRICES, so this page shows 'at the counter' throughout. Every price has to come from the cafe. This is the first thing to ask them for.",
       "The logo is a typographic stand-in. Their real mark is a goat head above the wordmark — ask for the original file.",
       "Rating differs by platform: Swiggy 4.8 (90), Google listing showed 4.7 (100). Page uses Swiggy's.",
-      "No photographs of this cafe exist on any listing I could reach (Justdial blocks, Swiggy returns a shell, kaldisgoat.shop does not resolve). The page therefore has no hero photo and no gallery. Three phone shots of the room would fix both."
+      "No photographs of this cafe exist on any listing I could reach (Justdial blocks, Swiggy returns a shell, kaldisgoat.shop does not resolve). The page therefore has no hero photo and no gallery. Three phone shots of the room would fix both.",
+      "Instagram handle and the Google review deep link are missing — both buttons are hidden rather than pointed at a search page. Get the profile URL and the g.page/r/… review link from the owner."
     ]
   },
   "themeDark": {
@@ -98,9 +98,12 @@
     "pillBg": "#A9C07E",
     "pillTx": "#0D160F",
     "raised": "#1B291D",
-    "sunk": "#16221880",
+    "sunk": "#16221F",
     "surface": "#121D14",
     "text": "#EFEEDC",
     "veg": "#6FCB8E"
-  }
+  },
+  "priceLabel": "for two",
+  "picksTitle": "House favourites",
+  "searchHint": "Try “tonic”, “matcha” or “cheesecake”"
 }
